@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.nantes.univ.alma.mvc.model/src" modelPluginID="fr.nantes.univ.alma.mvc.model"
+    modelName="Model" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Mvc" disposableProviderFactory="true" ecorePackage="model.ecore#/">
+    <genClasses ecoreClass="model.ecore#//UIApplication">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UIApplication/pages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UIApplication/models"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//View">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//View/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//View/actions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//View/model"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Action/nextPage"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/ownedElements"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//ModelProperty">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//ModelProperty/model"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

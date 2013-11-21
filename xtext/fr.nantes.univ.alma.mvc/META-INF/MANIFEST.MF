@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.nantes.univ.alma.mvc
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: fr.nantes.univ.alma.mvc; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ fr.nantes.univ.alma.mvc.model,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: fr.nantes.univ.alma.mvc,
+ fr.nantes.univ.alma.mvc.services,
+ fr.nantes.univ.alma.mvc.mvc,
+ fr.nantes.univ.alma.mvc.mvc.impl,
+ fr.nantes.univ.alma.mvc.mvc.util,
+ fr.nantes.univ.alma.mvc.serializer,
+ fr.nantes.univ.alma.mvc.parser.antlr,
+ fr.nantes.univ.alma.mvc.parser.antlr.internal,
+ fr.nantes.univ.alma.mvc.validation,
+ fr.nantes.univ.alma.mvc.scoping,
+ fr.nantes.univ.alma.mvc.generator,
+ fr.nantes.univ.alma.mvc.formatting

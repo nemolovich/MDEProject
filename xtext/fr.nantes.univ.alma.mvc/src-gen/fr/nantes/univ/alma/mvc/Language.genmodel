@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.nantes.univ.alma.mvc/src-gen" editDirectory="/fr.nantes.univ.alma.mvc.edit/src"
+    editorDirectory="/fr.nantes.univ.alma.mvc.editor/src" modelPluginID="fr.nantes.univ.alma.mvc"
+    forceOverwrite="true" modelName="Language" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="fr.nantes.univ.alma.mvc.edit"
+    editorPluginID="fr.nantes.univ.alma.mvc.editor" runtimeVersion="2.8">
+  <genPackages prefix="Mvc" basePackage="fr.nantes.univ.alma.mvc" disposableProviderFactory="true"
+      ecorePackage="Language.ecore#/">
+    <genClasses ecoreClass="Language.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/views"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/models"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/mainApp"/>
+    </genClasses>
+    <genClasses ecoreClass="Language.ecore#//UIApplication">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Language.ecore#//UIApplication/models"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Language.ecore#//UIApplication/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="Language.ecore#//View">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Language.ecore#//View/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Language.ecore#//View/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Language.ecore#//View/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//View/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="Language.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Language.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Model/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Language.ecore#//Model/ownedElements"/>
+    </genClasses>
+    <genClasses ecoreClass="Language.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Language.ecore#//Action/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Language.ecore#//Action/nextPage"/>
+    </genClasses>
+    <genClasses ecoreClass="Language.ecore#//ModelProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Language.ecore#//ModelProperty/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,31 @@
+@namespace(uri="http://mvc/1.0", prefix="mvc")
+package mvc;
+
+class UIApplication {
+	val View[*] pages;
+	val Model[*] models;
+}
+
+class NamedElement {
+	attr EString name;
+}
+
+class View extends NamedElement {
+	attr EString description;
+	val Action[*] actions;
+	ref Model[1] model;
+}
+
+class Action extends NamedElement {
+	ref View[0..1] nextPage;
+}
+
+class Model extends NamedElement {
+	val ModelProperty[*]#model properties;
+	val Model[*] ownedElements;
+}
+
+class ModelProperty extends NamedElement {
+	ref Model[1]#properties model;
+}
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model id=Operation >
+	<properties>
+		<modelProperty name=Numero />
+		<modelProperty name=Montant />
+	</properties>
+</model>
+
+<model id=Banque >
+</model>
+
+<model id=Compte >
+	<properties>
+		<modelProperty name=Numero />
+	</properties>
+	<ownedElements>
+		<model ref=Operation />
+	</ownedElements>
+</model>
+
+<model id=Client >
+	<properties>
+		<modelProperty name=Nom />
+		<modelProperty name=Prenom />
+		<modelProperty name=Adresse />
+	</properties>
+	<ownedElements>
+		<model ref=Compte />
+	</ownedElements>
+</model>
+
+<model id=Banque >
+	<ownedElements>
+		<model ref=Client />
+	</ownedElements>
+</model>
+
+<view id=BanqueView >
+	<model ref=Banque />
+	<actions>
+		<action id=afficherClient >
+		</action>
+		<action id=quitter >
+		</action>
+	</actions>
+</view>
+
+<view id=ClientView >
+	<model ref=Client />
+	<actions>
+		<action id=afficherCompte >
+		</action>
+		<action id=quitter >
+		</action>
+	</actions>
+</view>
+
+<view id=CompteView >
+	<model ref=Compte />
+	<actions>
+		<action id=afficherOperation >
+		</action>
+		<action id=quitter >
+		</action>
+	</actions>
+</view>
+
+<view id=OperationView >
+	<model ref=Operation />
+	<actions>
+		<action id=quitter >
+		</action>
+	</actions>
+</view>
+
+<UIApplication>
+	<models>
+		<model ref=Banque />
+	</models>
+	<pages>
+		<page ref=BanqueView />
+		<page ref=ClientView />
+		<page ref=CompteView />
+		<page ref=OperationView />
+	</pages>
+</UIApplication>
