@@ -5,12 +5,12 @@ package fr.nantes.univ.alma.mvc.generator
 
 import java.io.IOException
 import java.util.Collections
-import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
+import org.eclipse.emf.common.util.URI
 
 /**
  * Generates code from your model files on save.
@@ -18,8 +18,7 @@ import org.eclipse.xtext.generator.IGenerator
 class LanguageGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		println("STARTIIIIIIIIIIIIIIIIIING!");
-		// Renvoi l'instance ResourceFactoryRegistryImpl en tant que singleton
+//		 Renvoi l'instance ResourceFactoryRegistryImpl en tant que singleton
 		val registery = Resource.Factory.Registry.INSTANCE;
 		// La map Key, Ressource du model
 		val map = registery.getExtensionToFactoryMap();
@@ -30,9 +29,7 @@ class LanguageGenerator implements IGenerator {
 		val resSet = new ResourceSetImpl();
 		
 		// Creation d'une nouvelle ressource
-		val URI uri=URI.createURI("model/model.mvc");
-		println("URI: "+uri.path);
-		val res = resSet.createResource(uri);
+		val res = resSet.createResource(URI.createURI("model/model.mvc"));
 		// Ajout du contenu
 		res.getContents().addAll(resource.contents)
 		// Enregistrement du contenu

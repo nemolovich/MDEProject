@@ -5,6 +5,7 @@ grammar InternalLanguage;
 
 options {
 	superClass=AbstractInternalAntlrParser;
+	backtrack=true;
 	
 }
 
@@ -34,6 +35,11 @@ import fr.nantes.univ.alma.mvc.services.LanguageGrammarAccess;
 
 @parser::members {
 
+/*
+  This grammar contains a lot of empty actions to work around a bug in ANTLR.
+  Otherwise the ANTLR tool will create synpreds that cannot be compiled in some rare cases.
+*/
+ 
  	private LanguageGrammarAccess grammarAccess;
  	
     public InternalLanguageParser(TokenStream input, LanguageGrammarAccess grammarAccess) {
@@ -78,6 +84,9 @@ rulePackage returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
+	{ 
+	  /* */ 
+	}
     { 
         newCompositeNode(grammarAccess.getPackageAccess().getXMLDeclarationParserRuleCall_0()); 
     }
@@ -257,6 +266,9 @@ ruleUIApplication returns [EObject current=null]
     }
     @after { leaveRule(); }:
 ((
+	{ 
+	  /* */ 
+	}
     {
         $current = forceCreateModelElement(
             grammarAccess.getUIApplicationAccess().getUIApplicationAction_0(),
@@ -276,6 +288,9 @@ ruleUIApplication returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getUIApplicationRule());
@@ -299,6 +314,9 @@ ruleUIApplication returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getUIApplicationRule());
@@ -330,6 +348,9 @@ ruleUIApplication returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getUIApplicationRule());
@@ -353,6 +374,9 @@ ruleUIApplication returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getUIApplicationRule());
@@ -400,6 +424,9 @@ ruleView returns [EObject current=null]
     }
     @after { leaveRule(); }:
 ((
+	{ 
+	  /* */ 
+	}
     {
         $current = forceCreateModelElement(
             grammarAccess.getViewAccess().getViewAction_0(),
@@ -463,6 +490,9 @@ ruleView returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getViewRule());
@@ -550,6 +580,9 @@ ruleModel returns [EObject current=null]
     }
     @after { leaveRule(); }:
 ((
+	{ 
+	  /* */ 
+	}
     {
         $current = forceCreateModelElement(
             grammarAccess.getModelAccess().getModelAction_0(),
@@ -635,6 +668,9 @@ ruleModel returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getModelRule());
@@ -658,6 +694,9 @@ ruleModel returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getModelRule());
@@ -705,6 +744,9 @@ ruleAction returns [EObject current=null]
     }
     @after { leaveRule(); }:
 ((
+	{ 
+	  /* */ 
+	}
     {
         $current = forceCreateModelElement(
             grammarAccess.getActionAccess().getActionAction_0(),
@@ -742,6 +784,9 @@ ruleAction returns [EObject current=null]
     }
 (
 (
+		{ 
+		  /* */ 
+		}
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getActionRule());
@@ -785,6 +830,9 @@ ruleModelProperty returns [EObject current=null]
     }
     @after { leaveRule(); }:
 ((
+	{ 
+	  /* */ 
+	}
     {
         $current = forceCreateModelElement(
             grammarAccess.getModelPropertyAccess().getModelPropertyAction_0(),

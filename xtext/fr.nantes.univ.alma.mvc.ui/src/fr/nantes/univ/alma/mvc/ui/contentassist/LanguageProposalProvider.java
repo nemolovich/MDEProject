@@ -3,10 +3,9 @@
 */
 package fr.nantes.univ.alma.mvc.ui.contentassist;
 
-import fr.nantes.univ.alma.mvc.ui.contentassist.AbstractLanguageProposalProvider;
 /**
- * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#contentAssist on how to customize content assistant
+ * see http://www.eclipse.org/Xtext/documentation.html#contentAssist on how to customize content assistant
  */
-public class LanguageProposalProvider extends AbstractLanguageProposalProvider {
+public class LanguageProposalProvider extends fr.nantes.univ.alma.mvc.ui.contentassist.AbstractLanguageProposalProvider {
 
 }

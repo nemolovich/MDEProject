@@ -36,7 +36,7 @@ public class MvcFactoryImpl extends EFactoryImpl implements MvcFactory
   {
     try
     {
-      MvcFactory theMvcFactory = (MvcFactory)EPackage.Registry.INSTANCE.getEFactory("http://mvc/1.0"); 
+      MvcFactory theMvcFactory = (MvcFactory)EPackage.Registry.INSTANCE.getEFactory(MvcPackage.eNS_URI);
       if (theMvcFactory != null)
       {
         return theMvcFactory;

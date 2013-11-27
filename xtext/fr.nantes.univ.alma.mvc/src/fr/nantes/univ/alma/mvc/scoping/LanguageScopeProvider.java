@@ -3,15 +3,13 @@
  */
 package fr.nantes.univ.alma.mvc.scoping;
 
-import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-
 /**
  * This class contains custom scoping description.
  * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping
+ * see : http://www.eclipse.org/Xtext/documentation.html#scoping
  * on how and when to use it 
  *
  */
-public class LanguageScopeProvider extends AbstractDeclarativeScopeProvider {
+public class LanguageScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
 
 }

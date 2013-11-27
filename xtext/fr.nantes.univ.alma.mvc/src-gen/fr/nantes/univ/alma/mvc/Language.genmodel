@@ -4,7 +4,7 @@
     editorDirectory="/fr.nantes.univ.alma.mvc.editor/src" modelPluginID="fr.nantes.univ.alma.mvc"
     forceOverwrite="true" modelName="Language" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="fr.nantes.univ.alma.mvc.edit"
-    editorPluginID="fr.nantes.univ.alma.mvc.editor" runtimeVersion="2.8">
+    editorPluginID="fr.nantes.univ.alma.mvc.editor" runtimeVersion="2.9">
   <genPackages prefix="Mvc" basePackage="fr.nantes.univ.alma.mvc" disposableProviderFactory="true"
       ecorePackage="Language.ecore#/">
     <genClasses ecoreClass="Language.ecore#//Package">

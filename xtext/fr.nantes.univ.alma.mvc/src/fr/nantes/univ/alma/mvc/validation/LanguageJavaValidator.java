@@ -122,39 +122,39 @@ public class LanguageJavaValidator extends AbstractLanguageJavaValidator {
 		}
 	}
 
-	// @Check(CheckType.FAST)
-	// public void checkModelNameIsUnique(Package p) {
-	// boolean multiple = true;
-	// Model[] models = (Model[]) p.getModels().toArray();
-	// if (models.length < 2) {
-	// multiple = false;
-	// }
-	// if (multiple) {
-	// for (int i = 0; i < models.length - 1; i++) {
-	// for (int j = i + 1; j < models.length; j++) {
-	// if (models[i].getName().equalsIgnoreCase(
-	// models[j].getName())) {
-	// error("The Model name must be unique", models[j],
-	// MvcPackage.Literals.MODEL__NAME, -1);
-	// }
-	// }
-	// }
-	// }
-	// multiple = true;
-	// View[] pages = (View[]) p.getViews().toArray();
-	// if (pages.length < 2) {
-	// multiple = false;
-	// }
-	// if (multiple) {
-	// for (int i = 0; i < pages.length - 1; i++) {
-	// for (int j = i + 1; j < pages.length; j++) {
-	// if (pages[i].getName().equalsIgnoreCase(pages[j].getName())) {
-	// error("The Model name must be unique", pages[j],
-	// MvcPackage.Literals.VIEW__NAME, -1);
-	// }
-	// }
-	// }
-	// }
-	// }
+//	@Check(CheckType.FAST)
+//	public void checkModelNameIsUnique(Package p) {
+//		boolean multiple = true;
+//		Model[] models = (Model[]) p.getModels().toArray();
+//		if (models.length < 2) {
+//			multiple = false;
+//		}
+//		if (multiple) {
+//			for (int i = 0; i < models.length - 1; i++) {
+//				for (int j = i + 1; j < models.length; j++) {
+//					if (models[i].getName().equalsIgnoreCase(
+//							models[j].getName())) {
+//						error("The Model name must be unique", models[j],
+//								MvcPackage.Literals.MODEL__NAME, -1);
+//					}
+//				}
+//			}
+//		}
+//		multiple = true;
+//		View[] pages = (View[]) p.getViews().toArray();
+//		if (pages.length < 2) {
+//			multiple = false;
+//		}
+//		if (multiple) {
+//			for (int i = 0; i < pages.length - 1; i++) {
+//				for (int j = i + 1; j < pages.length; j++) {
+//					if (pages[i].getName().equalsIgnoreCase(pages[j].getName())) {
+//						error("The Model name must be unique", pages[j],
+//								MvcPackage.Literals.VIEW__NAME, -1);
+//					}
+//				}
+//			}
+//		}
+//	}
 
 }
