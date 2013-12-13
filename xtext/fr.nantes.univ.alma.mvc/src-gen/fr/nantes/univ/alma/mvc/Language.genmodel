@@ -7,12 +7,10 @@
     editorPluginID="fr.nantes.univ.alma.mvc.editor" runtimeVersion="2.9">
   <genPackages prefix="Mvc" basePackage="fr.nantes.univ.alma.mvc" disposableProviderFactory="true"
       ecorePackage="Language.ecore#/">
-    <genClasses ecoreClass="Language.ecore#//Package">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/views"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/models"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/actions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/properties"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//Package/mainApp"/>
+    <genClasses ecoreClass="Language.ecore#//MainPackage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//MainPackage/allModels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//MainPackage/allViews"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Language.ecore#//MainPackage/app"/>
     </genClasses>
     <genClasses ecoreClass="Language.ecore#//UIApplication">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Language.ecore#//UIApplication/models"/>

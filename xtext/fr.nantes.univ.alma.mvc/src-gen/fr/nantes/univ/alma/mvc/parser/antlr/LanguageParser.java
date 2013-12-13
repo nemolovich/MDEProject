@@ -25,7 +25,7 @@ public class LanguageParser extends org.eclipse.xtext.parser.antlr.AbstractAntlr
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Package";
+		return "MainPackage";
 	}
 	
 	public LanguageGrammarAccess getGrammarAccess() {

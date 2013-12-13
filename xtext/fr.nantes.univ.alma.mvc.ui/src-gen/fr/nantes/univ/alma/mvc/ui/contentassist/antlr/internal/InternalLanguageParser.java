@@ -22,10 +22,11 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLanguageParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_VERSION", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<?xml version='", "' encoding='", "' ?>'", "'<UIApplication>'", "'</UIApplication>'", "'<models>'", "'<model ref='", "' />'", "'</models>'", "'<pages>'", "'<page ref='", "'</pages>'", "'<view id='", "' >'", "'</view>'", "'<description>'", "'</description>'", "'<actions>'", "'</actions>'", "'<model id='", "'</model>'", "'<properties>'", "'</properties>'", "'<ownedElements>'", "'</ownedElements>'", "'<action name='", "'</action>'", "'<nextPage ref='", "'<modelProperty name='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_VERSION", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<UIApplication>'", "'</UIApplication>'", "'<models>'", "'<model ref='", "' />'", "'</models>'", "'<pages>'", "'<page ref='", "'</pages>'", "'<?xml version='", "' encoding='", "' ?>'", "'<view name='", "' >'", "'</view>'", "'<description>'", "'</description>'", "'<actions>'", "'</actions>'", "'<model name='", "'</model>'", "'<properties>'", "'</properties>'", "'<ownedElements>'", "'</ownedElements>'", "'<action name='", "'</action>'", "'<nextPage ref='", "'<modelProperty name='", "'.'"
     };
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=6;
     public static final int T__40=40;
+    public static final int T__41=41;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -42,7 +43,7 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
     public static final int RULE_ML_COMMENT=8;
     public static final int T__30=30;
     public static final int T__19=19;
-    public static final int RULE_VERSION=6;
+    public static final int RULE_VERSION=5;
     public static final int T__31=31;
     public static final int RULE_STRING=4;
     public static final int T__32=32;
@@ -100,21 +101,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
 
-    // $ANTLR start "entryRulePackage"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:60:1: entryRulePackage : rulePackage EOF ;
-    public final void entryRulePackage() throws RecognitionException {
+    // $ANTLR start "entryRuleMainPackage"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:60:1: entryRuleMainPackage : ruleMainPackage EOF ;
+    public final void entryRuleMainPackage() throws RecognitionException {
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:61:1: ( rulePackage EOF )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:62:1: rulePackage EOF
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:61:1: ( ruleMainPackage EOF )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:62:1: ruleMainPackage EOF
             {
-             before(grammarAccess.getPackageRule()); 
-            pushFollow(FOLLOW_rulePackage_in_entryRulePackage61);
-            rulePackage();
+             before(grammarAccess.getMainPackageRule()); 
+            pushFollow(FOLLOW_ruleMainPackage_in_entryRuleMainPackage61);
+            ruleMainPackage();
 
             state._fsp--;
 
-             after(grammarAccess.getPackageRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePackage68); 
+             after(grammarAccess.getMainPackageRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMainPackage68); 
 
             }
 
@@ -127,35 +128,35 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulePackage"
+    // $ANTLR end "entryRuleMainPackage"
 
 
-    // $ANTLR start "rulePackage"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:69:1: rulePackage : ( ( rule__Package__Group__0 ) ) ;
-    public final void rulePackage() throws RecognitionException {
+    // $ANTLR start "ruleMainPackage"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:69:1: ruleMainPackage : ( ( rule__MainPackage__Group__0 ) ) ;
+    public final void ruleMainPackage() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:73:2: ( ( ( rule__Package__Group__0 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:74:1: ( ( rule__Package__Group__0 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:73:2: ( ( ( rule__MainPackage__Group__0 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:74:1: ( ( rule__MainPackage__Group__0 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:74:1: ( ( rule__Package__Group__0 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:75:1: ( rule__Package__Group__0 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:74:1: ( ( rule__MainPackage__Group__0 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:75:1: ( rule__MainPackage__Group__0 )
             {
-             before(grammarAccess.getPackageAccess().getGroup()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:76:1: ( rule__Package__Group__0 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:76:2: rule__Package__Group__0
+             before(grammarAccess.getMainPackageAccess().getGroup()); 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:76:1: ( rule__MainPackage__Group__0 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:76:2: rule__MainPackage__Group__0
             {
-            pushFollow(FOLLOW_rule__Package__Group__0_in_rulePackage94);
-            rule__Package__Group__0();
+            pushFollow(FOLLOW_rule__MainPackage__Group__0_in_ruleMainPackage94);
+            rule__MainPackage__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPackageAccess().getGroup()); 
+             after(grammarAccess.getMainPackageAccess().getGroup()); 
 
             }
 
@@ -174,101 +175,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulePackage"
-
-
-    // $ANTLR start "entryRuleXMLDeclaration"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:88:1: entryRuleXMLDeclaration : ruleXMLDeclaration EOF ;
-    public final void entryRuleXMLDeclaration() throws RecognitionException {
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:89:1: ( ruleXMLDeclaration EOF )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:90:1: ruleXMLDeclaration EOF
-            {
-             before(grammarAccess.getXMLDeclarationRule()); 
-            pushFollow(FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration121);
-            ruleXMLDeclaration();
-
-            state._fsp--;
-
-             after(grammarAccess.getXMLDeclarationRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXMLDeclaration128); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleXMLDeclaration"
-
-
-    // $ANTLR start "ruleXMLDeclaration"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:97:1: ruleXMLDeclaration : ( ( rule__XMLDeclaration__Group__0 ) ) ;
-    public final void ruleXMLDeclaration() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:101:2: ( ( ( rule__XMLDeclaration__Group__0 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:102:1: ( ( rule__XMLDeclaration__Group__0 ) )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:102:1: ( ( rule__XMLDeclaration__Group__0 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:103:1: ( rule__XMLDeclaration__Group__0 )
-            {
-             before(grammarAccess.getXMLDeclarationAccess().getGroup()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:104:1: ( rule__XMLDeclaration__Group__0 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:104:2: rule__XMLDeclaration__Group__0
-            {
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__0_in_ruleXMLDeclaration154);
-            rule__XMLDeclaration__Group__0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getXMLDeclarationAccess().getGroup()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleXMLDeclaration"
+    // $ANTLR end "ruleMainPackage"
 
 
     // $ANTLR start "entryRuleUIApplication"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:116:1: entryRuleUIApplication : ruleUIApplication EOF ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:88:1: entryRuleUIApplication : ruleUIApplication EOF ;
     public final void entryRuleUIApplication() throws RecognitionException {
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:117:1: ( ruleUIApplication EOF )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:118:1: ruleUIApplication EOF
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:89:1: ( ruleUIApplication EOF )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:90:1: ruleUIApplication EOF
             {
              before(grammarAccess.getUIApplicationRule()); 
-            pushFollow(FOLLOW_ruleUIApplication_in_entryRuleUIApplication181);
+            pushFollow(FOLLOW_ruleUIApplication_in_entryRuleUIApplication121);
             ruleUIApplication();
 
             state._fsp--;
 
              after(grammarAccess.getUIApplicationRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUIApplication188); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUIApplication128); 
 
             }
 
@@ -285,23 +209,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleUIApplication"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:125:1: ruleUIApplication : ( ( rule__UIApplication__Group__0 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:97:1: ruleUIApplication : ( ( rule__UIApplication__Group__0 ) ) ;
     public final void ruleUIApplication() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:129:2: ( ( ( rule__UIApplication__Group__0 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:130:1: ( ( rule__UIApplication__Group__0 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:101:2: ( ( ( rule__UIApplication__Group__0 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:102:1: ( ( rule__UIApplication__Group__0 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:130:1: ( ( rule__UIApplication__Group__0 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:131:1: ( rule__UIApplication__Group__0 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:102:1: ( ( rule__UIApplication__Group__0 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:103:1: ( rule__UIApplication__Group__0 )
             {
              before(grammarAccess.getUIApplicationAccess().getGroup()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:132:1: ( rule__UIApplication__Group__0 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:132:2: rule__UIApplication__Group__0
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:104:1: ( rule__UIApplication__Group__0 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:104:2: rule__UIApplication__Group__0
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group__0_in_ruleUIApplication214);
+            pushFollow(FOLLOW_rule__UIApplication__Group__0_in_ruleUIApplication154);
             rule__UIApplication__Group__0();
 
             state._fsp--;
@@ -329,6 +253,83 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "ruleUIApplication"
+
+
+    // $ANTLR start "entryRuleXMLDeclaration"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:116:1: entryRuleXMLDeclaration : ruleXMLDeclaration EOF ;
+    public final void entryRuleXMLDeclaration() throws RecognitionException {
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:117:1: ( ruleXMLDeclaration EOF )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:118:1: ruleXMLDeclaration EOF
+            {
+             before(grammarAccess.getXMLDeclarationRule()); 
+            pushFollow(FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration181);
+            ruleXMLDeclaration();
+
+            state._fsp--;
+
+             after(grammarAccess.getXMLDeclarationRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXMLDeclaration188); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleXMLDeclaration"
+
+
+    // $ANTLR start "ruleXMLDeclaration"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:125:1: ruleXMLDeclaration : ( ( rule__XMLDeclaration__Group__0 ) ) ;
+    public final void ruleXMLDeclaration() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:129:2: ( ( ( rule__XMLDeclaration__Group__0 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:130:1: ( ( rule__XMLDeclaration__Group__0 ) )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:130:1: ( ( rule__XMLDeclaration__Group__0 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:131:1: ( rule__XMLDeclaration__Group__0 )
+            {
+             before(grammarAccess.getXMLDeclarationAccess().getGroup()); 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:132:1: ( rule__XMLDeclaration__Group__0 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:132:2: rule__XMLDeclaration__Group__0
+            {
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__0_in_ruleXMLDeclaration214);
+            rule__XMLDeclaration__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getXMLDeclarationAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleXMLDeclaration"
 
 
     // $ANTLR start "entryRuleView"
@@ -716,63 +717,49 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleEString"
 
 
-    // $ANTLR start "rule__Package__Alternatives_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:284:1: rule__Package__Alternatives_1 : ( ( ( rule__Package__ViewsAssignment_1_0 ) ) | ( ( rule__Package__ModelsAssignment_1_1 ) ) | ( ( rule__Package__ActionsAssignment_1_2 ) ) | ( ( rule__Package__PropertiesAssignment_1_3 ) ) );
-    public final void rule__Package__Alternatives_1() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Alternatives_1"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:284:1: rule__MainPackage__Alternatives_1 : ( ( ( rule__MainPackage__AllModelsAssignment_1_0 ) ) | ( ( rule__MainPackage__AllViewsAssignment_1_1 ) ) );
+    public final void rule__MainPackage__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:288:1: ( ( ( rule__Package__ViewsAssignment_1_0 ) ) | ( ( rule__Package__ModelsAssignment_1_1 ) ) | ( ( rule__Package__ActionsAssignment_1_2 ) ) | ( ( rule__Package__PropertiesAssignment_1_3 ) ) )
-            int alt1=4;
-            switch ( input.LA(1) ) {
-            case 24:
-                {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:288:1: ( ( ( rule__MainPackage__AllModelsAssignment_1_0 ) ) | ( ( rule__MainPackage__AllViewsAssignment_1_1 ) ) )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0==31) ) {
                 alt1=1;
-                }
-                break;
-            case 31:
-                {
+            }
+            else if ( (LA1_0==24) ) {
                 alt1=2;
-                }
-                break;
-            case 37:
-                {
-                alt1=3;
-                }
-                break;
-            case 40:
-                {
-                alt1=4;
-                }
-                break;
-            default:
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 1, 0, input);
 
                 throw nvae;
             }
-
             switch (alt1) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:289:1: ( ( rule__Package__ViewsAssignment_1_0 ) )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:289:1: ( ( rule__MainPackage__AllModelsAssignment_1_0 ) )
                     {
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:289:1: ( ( rule__Package__ViewsAssignment_1_0 ) )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:290:1: ( rule__Package__ViewsAssignment_1_0 )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:289:1: ( ( rule__MainPackage__AllModelsAssignment_1_0 ) )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:290:1: ( rule__MainPackage__AllModelsAssignment_1_0 )
                     {
-                     before(grammarAccess.getPackageAccess().getViewsAssignment_1_0()); 
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:291:1: ( rule__Package__ViewsAssignment_1_0 )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:291:2: rule__Package__ViewsAssignment_1_0
+                     before(grammarAccess.getMainPackageAccess().getAllModelsAssignment_1_0()); 
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:291:1: ( rule__MainPackage__AllModelsAssignment_1_0 )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:291:2: rule__MainPackage__AllModelsAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__Package__ViewsAssignment_1_0_in_rule__Package__Alternatives_1550);
-                    rule__Package__ViewsAssignment_1_0();
+                    pushFollow(FOLLOW_rule__MainPackage__AllModelsAssignment_1_0_in_rule__MainPackage__Alternatives_1550);
+                    rule__MainPackage__AllModelsAssignment_1_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getPackageAccess().getViewsAssignment_1_0()); 
+                     after(grammarAccess.getMainPackageAccess().getAllModelsAssignment_1_0()); 
 
                     }
 
@@ -780,74 +767,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:295:6: ( ( rule__Package__ModelsAssignment_1_1 ) )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:295:6: ( ( rule__MainPackage__AllViewsAssignment_1_1 ) )
                     {
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:295:6: ( ( rule__Package__ModelsAssignment_1_1 ) )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:296:1: ( rule__Package__ModelsAssignment_1_1 )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:295:6: ( ( rule__MainPackage__AllViewsAssignment_1_1 ) )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:296:1: ( rule__MainPackage__AllViewsAssignment_1_1 )
                     {
-                     before(grammarAccess.getPackageAccess().getModelsAssignment_1_1()); 
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:297:1: ( rule__Package__ModelsAssignment_1_1 )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:297:2: rule__Package__ModelsAssignment_1_1
+                     before(grammarAccess.getMainPackageAccess().getAllViewsAssignment_1_1()); 
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:297:1: ( rule__MainPackage__AllViewsAssignment_1_1 )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:297:2: rule__MainPackage__AllViewsAssignment_1_1
                     {
-                    pushFollow(FOLLOW_rule__Package__ModelsAssignment_1_1_in_rule__Package__Alternatives_1568);
-                    rule__Package__ModelsAssignment_1_1();
+                    pushFollow(FOLLOW_rule__MainPackage__AllViewsAssignment_1_1_in_rule__MainPackage__Alternatives_1568);
+                    rule__MainPackage__AllViewsAssignment_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getPackageAccess().getModelsAssignment_1_1()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:301:6: ( ( rule__Package__ActionsAssignment_1_2 ) )
-                    {
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:301:6: ( ( rule__Package__ActionsAssignment_1_2 ) )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:302:1: ( rule__Package__ActionsAssignment_1_2 )
-                    {
-                     before(grammarAccess.getPackageAccess().getActionsAssignment_1_2()); 
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:303:1: ( rule__Package__ActionsAssignment_1_2 )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:303:2: rule__Package__ActionsAssignment_1_2
-                    {
-                    pushFollow(FOLLOW_rule__Package__ActionsAssignment_1_2_in_rule__Package__Alternatives_1586);
-                    rule__Package__ActionsAssignment_1_2();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getPackageAccess().getActionsAssignment_1_2()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:307:6: ( ( rule__Package__PropertiesAssignment_1_3 ) )
-                    {
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:307:6: ( ( rule__Package__PropertiesAssignment_1_3 ) )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:308:1: ( rule__Package__PropertiesAssignment_1_3 )
-                    {
-                     before(grammarAccess.getPackageAccess().getPropertiesAssignment_1_3()); 
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:309:1: ( rule__Package__PropertiesAssignment_1_3 )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:309:2: rule__Package__PropertiesAssignment_1_3
-                    {
-                    pushFollow(FOLLOW_rule__Package__PropertiesAssignment_1_3_in_rule__Package__Alternatives_1604);
-                    rule__Package__PropertiesAssignment_1_3();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getPackageAccess().getPropertiesAssignment_1_3()); 
+                     after(grammarAccess.getMainPackageAccess().getAllViewsAssignment_1_1()); 
 
                     }
 
@@ -868,17 +805,17 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Alternatives_1"
+    // $ANTLR end "rule__MainPackage__Alternatives_1"
 
 
     // $ANTLR start "rule__EString__Alternatives"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:318:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:306:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( ( rule__EString__Group_1__0 ) ) );
     public final void rule__EString__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:322:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:310:1: ( ( RULE_STRING ) | ( ( rule__EString__Group_1__0 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -896,13 +833,13 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
             }
             switch (alt2) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:323:1: ( RULE_STRING )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:311:1: ( RULE_STRING )
                     {
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:323:1: ( RULE_STRING )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:324:1: RULE_STRING
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:311:1: ( RULE_STRING )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:312:1: RULE_STRING
                     {
                      before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__EString__Alternatives637); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__EString__Alternatives601); 
                      after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
 
                     }
@@ -911,14 +848,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:329:6: ( RULE_ID )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:317:6: ( ( rule__EString__Group_1__0 ) )
                     {
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:329:6: ( RULE_ID )
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:330:1: RULE_ID
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:317:6: ( ( rule__EString__Group_1__0 ) )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:318:1: ( rule__EString__Group_1__0 )
                     {
-                     before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EString__Alternatives654); 
-                     after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
+                     before(grammarAccess.getEStringAccess().getGroup_1()); 
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:319:1: ( rule__EString__Group_1__0 )
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:319:2: rule__EString__Group_1__0
+                    {
+                    pushFollow(FOLLOW_rule__EString__Group_1__0_in_rule__EString__Alternatives618);
+                    rule__EString__Group_1__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getEStringAccess().getGroup_1()); 
 
                     }
 
@@ -942,23 +889,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__EString__Alternatives"
 
 
-    // $ANTLR start "rule__Package__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:342:1: rule__Package__Group__0 : rule__Package__Group__0__Impl rule__Package__Group__1 ;
-    public final void rule__Package__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Group__0"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:330:1: rule__MainPackage__Group__0 : rule__MainPackage__Group__0__Impl rule__MainPackage__Group__1 ;
+    public final void rule__MainPackage__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:346:1: ( rule__Package__Group__0__Impl rule__Package__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:347:2: rule__Package__Group__0__Impl rule__Package__Group__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:334:1: ( rule__MainPackage__Group__0__Impl rule__MainPackage__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:335:2: rule__MainPackage__Group__0__Impl rule__MainPackage__Group__1
             {
-            pushFollow(FOLLOW_rule__Package__Group__0__Impl_in_rule__Package__Group__0684);
-            rule__Package__Group__0__Impl();
+            pushFollow(FOLLOW_rule__MainPackage__Group__0__Impl_in_rule__MainPackage__Group__0649);
+            rule__MainPackage__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Package__Group__1_in_rule__Package__Group__0687);
-            rule__Package__Group__1();
+            pushFollow(FOLLOW_rule__MainPackage__Group__1_in_rule__MainPackage__Group__0652);
+            rule__MainPackage__Group__1();
 
             state._fsp--;
 
@@ -977,29 +924,29 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Group__0"
+    // $ANTLR end "rule__MainPackage__Group__0"
 
 
-    // $ANTLR start "rule__Package__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:354:1: rule__Package__Group__0__Impl : ( ruleXMLDeclaration ) ;
-    public final void rule__Package__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Group__0__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:342:1: rule__MainPackage__Group__0__Impl : ( ruleXMLDeclaration ) ;
+    public final void rule__MainPackage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:358:1: ( ( ruleXMLDeclaration ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:359:1: ( ruleXMLDeclaration )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:346:1: ( ( ruleXMLDeclaration ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:347:1: ( ruleXMLDeclaration )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:359:1: ( ruleXMLDeclaration )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:360:1: ruleXMLDeclaration
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:347:1: ( ruleXMLDeclaration )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:348:1: ruleXMLDeclaration
             {
-             before(grammarAccess.getPackageAccess().getXMLDeclarationParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleXMLDeclaration_in_rule__Package__Group__0__Impl714);
+             before(grammarAccess.getMainPackageAccess().getXMLDeclarationParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleXMLDeclaration_in_rule__MainPackage__Group__0__Impl679);
             ruleXMLDeclaration();
 
             state._fsp--;
 
-             after(grammarAccess.getPackageAccess().getXMLDeclarationParserRuleCall_0()); 
+             after(grammarAccess.getMainPackageAccess().getXMLDeclarationParserRuleCall_0()); 
 
             }
 
@@ -1018,26 +965,26 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Group__0__Impl"
+    // $ANTLR end "rule__MainPackage__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Package__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:371:1: rule__Package__Group__1 : rule__Package__Group__1__Impl rule__Package__Group__2 ;
-    public final void rule__Package__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Group__1"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:359:1: rule__MainPackage__Group__1 : rule__MainPackage__Group__1__Impl rule__MainPackage__Group__2 ;
+    public final void rule__MainPackage__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:375:1: ( rule__Package__Group__1__Impl rule__Package__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:376:2: rule__Package__Group__1__Impl rule__Package__Group__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:363:1: ( rule__MainPackage__Group__1__Impl rule__MainPackage__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:364:2: rule__MainPackage__Group__1__Impl rule__MainPackage__Group__2
             {
-            pushFollow(FOLLOW_rule__Package__Group__1__Impl_in_rule__Package__Group__1743);
-            rule__Package__Group__1__Impl();
+            pushFollow(FOLLOW_rule__MainPackage__Group__1__Impl_in_rule__MainPackage__Group__1708);
+            rule__MainPackage__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Package__Group__2_in_rule__Package__Group__1746);
-            rule__Package__Group__2();
+            pushFollow(FOLLOW_rule__MainPackage__Group__2_in_rule__MainPackage__Group__1711);
+            rule__MainPackage__Group__2();
 
             state._fsp--;
 
@@ -1056,40 +1003,40 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Group__1"
+    // $ANTLR end "rule__MainPackage__Group__1"
 
 
-    // $ANTLR start "rule__Package__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:383:1: rule__Package__Group__1__Impl : ( ( rule__Package__Alternatives_1 )* ) ;
-    public final void rule__Package__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Group__1__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:371:1: rule__MainPackage__Group__1__Impl : ( ( rule__MainPackage__Alternatives_1 )* ) ;
+    public final void rule__MainPackage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:387:1: ( ( ( rule__Package__Alternatives_1 )* ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:388:1: ( ( rule__Package__Alternatives_1 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:375:1: ( ( ( rule__MainPackage__Alternatives_1 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:376:1: ( ( rule__MainPackage__Alternatives_1 )* )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:388:1: ( ( rule__Package__Alternatives_1 )* )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:389:1: ( rule__Package__Alternatives_1 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:376:1: ( ( rule__MainPackage__Alternatives_1 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:377:1: ( rule__MainPackage__Alternatives_1 )*
             {
-             before(grammarAccess.getPackageAccess().getAlternatives_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:390:1: ( rule__Package__Alternatives_1 )*
+             before(grammarAccess.getMainPackageAccess().getAlternatives_1()); 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:378:1: ( rule__MainPackage__Alternatives_1 )*
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==24||LA3_0==31||LA3_0==37||LA3_0==40) ) {
+                if ( (LA3_0==24||LA3_0==31) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:390:2: rule__Package__Alternatives_1
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:378:2: rule__MainPackage__Alternatives_1
             	    {
-            	    pushFollow(FOLLOW_rule__Package__Alternatives_1_in_rule__Package__Group__1__Impl773);
-            	    rule__Package__Alternatives_1();
+            	    pushFollow(FOLLOW_rule__MainPackage__Alternatives_1_in_rule__MainPackage__Group__1__Impl738);
+            	    rule__MainPackage__Alternatives_1();
 
             	    state._fsp--;
 
@@ -1102,7 +1049,7 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
                 }
             } while (true);
 
-             after(grammarAccess.getPackageAccess().getAlternatives_1()); 
+             after(grammarAccess.getMainPackageAccess().getAlternatives_1()); 
 
             }
 
@@ -1121,21 +1068,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Group__1__Impl"
+    // $ANTLR end "rule__MainPackage__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Package__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:400:1: rule__Package__Group__2 : rule__Package__Group__2__Impl ;
-    public final void rule__Package__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Group__2"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:388:1: rule__MainPackage__Group__2 : rule__MainPackage__Group__2__Impl ;
+    public final void rule__MainPackage__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:404:1: ( rule__Package__Group__2__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:405:2: rule__Package__Group__2__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:392:1: ( rule__MainPackage__Group__2__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:393:2: rule__MainPackage__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Package__Group__2__Impl_in_rule__Package__Group__2804);
-            rule__Package__Group__2__Impl();
+            pushFollow(FOLLOW_rule__MainPackage__Group__2__Impl_in_rule__MainPackage__Group__2769);
+            rule__MainPackage__Group__2__Impl();
 
             state._fsp--;
 
@@ -1154,35 +1101,35 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Group__2"
+    // $ANTLR end "rule__MainPackage__Group__2"
 
 
-    // $ANTLR start "rule__Package__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:411:1: rule__Package__Group__2__Impl : ( ( rule__Package__MainAppAssignment_2 ) ) ;
-    public final void rule__Package__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__Group__2__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:399:1: rule__MainPackage__Group__2__Impl : ( ( rule__MainPackage__AppAssignment_2 ) ) ;
+    public final void rule__MainPackage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:415:1: ( ( ( rule__Package__MainAppAssignment_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:416:1: ( ( rule__Package__MainAppAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:403:1: ( ( ( rule__MainPackage__AppAssignment_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:404:1: ( ( rule__MainPackage__AppAssignment_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:416:1: ( ( rule__Package__MainAppAssignment_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:417:1: ( rule__Package__MainAppAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:404:1: ( ( rule__MainPackage__AppAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:405:1: ( rule__MainPackage__AppAssignment_2 )
             {
-             before(grammarAccess.getPackageAccess().getMainAppAssignment_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:418:1: ( rule__Package__MainAppAssignment_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:418:2: rule__Package__MainAppAssignment_2
+             before(grammarAccess.getMainPackageAccess().getAppAssignment_2()); 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:406:1: ( rule__MainPackage__AppAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:406:2: rule__MainPackage__AppAssignment_2
             {
-            pushFollow(FOLLOW_rule__Package__MainAppAssignment_2_in_rule__Package__Group__2__Impl831);
-            rule__Package__MainAppAssignment_2();
+            pushFollow(FOLLOW_rule__MainPackage__AppAssignment_2_in_rule__MainPackage__Group__2__Impl796);
+            rule__MainPackage__AppAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPackageAccess().getMainAppAssignment_2()); 
+             after(grammarAccess.getMainPackageAccess().getAppAssignment_2()); 
 
             }
 
@@ -1201,399 +1148,25 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__Group__2__Impl"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:434:1: rule__XMLDeclaration__Group__0 : rule__XMLDeclaration__Group__0__Impl rule__XMLDeclaration__Group__1 ;
-    public final void rule__XMLDeclaration__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:438:1: ( rule__XMLDeclaration__Group__0__Impl rule__XMLDeclaration__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:439:2: rule__XMLDeclaration__Group__0__Impl rule__XMLDeclaration__Group__1
-            {
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__0__Impl_in_rule__XMLDeclaration__Group__0867);
-            rule__XMLDeclaration__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__1_in_rule__XMLDeclaration__Group__0870);
-            rule__XMLDeclaration__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__0"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:446:1: rule__XMLDeclaration__Group__0__Impl : ( '<?xml version=' ) ;
-    public final void rule__XMLDeclaration__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:450:1: ( ( '<?xml version=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:451:1: ( '<?xml version=' )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:451:1: ( '<?xml version=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:452:1: '<?xml version='
-            {
-             before(grammarAccess.getXMLDeclarationAccess().getXmlVersionKeyword_0()); 
-            match(input,12,FOLLOW_12_in_rule__XMLDeclaration__Group__0__Impl898); 
-             after(grammarAccess.getXMLDeclarationAccess().getXmlVersionKeyword_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__0__Impl"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:465:1: rule__XMLDeclaration__Group__1 : rule__XMLDeclaration__Group__1__Impl rule__XMLDeclaration__Group__2 ;
-    public final void rule__XMLDeclaration__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:469:1: ( rule__XMLDeclaration__Group__1__Impl rule__XMLDeclaration__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:470:2: rule__XMLDeclaration__Group__1__Impl rule__XMLDeclaration__Group__2
-            {
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__1__Impl_in_rule__XMLDeclaration__Group__1929);
-            rule__XMLDeclaration__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__2_in_rule__XMLDeclaration__Group__1932);
-            rule__XMLDeclaration__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__1"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:477:1: rule__XMLDeclaration__Group__1__Impl : ( RULE_VERSION ) ;
-    public final void rule__XMLDeclaration__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:481:1: ( ( RULE_VERSION ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:482:1: ( RULE_VERSION )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:482:1: ( RULE_VERSION )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:483:1: RULE_VERSION
-            {
-             before(grammarAccess.getXMLDeclarationAccess().getVERSIONTerminalRuleCall_1()); 
-            match(input,RULE_VERSION,FOLLOW_RULE_VERSION_in_rule__XMLDeclaration__Group__1__Impl959); 
-             after(grammarAccess.getXMLDeclarationAccess().getVERSIONTerminalRuleCall_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__1__Impl"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:494:1: rule__XMLDeclaration__Group__2 : rule__XMLDeclaration__Group__2__Impl rule__XMLDeclaration__Group__3 ;
-    public final void rule__XMLDeclaration__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:498:1: ( rule__XMLDeclaration__Group__2__Impl rule__XMLDeclaration__Group__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:499:2: rule__XMLDeclaration__Group__2__Impl rule__XMLDeclaration__Group__3
-            {
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__2__Impl_in_rule__XMLDeclaration__Group__2988);
-            rule__XMLDeclaration__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__3_in_rule__XMLDeclaration__Group__2991);
-            rule__XMLDeclaration__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__2"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:506:1: rule__XMLDeclaration__Group__2__Impl : ( ' encoding=' ) ;
-    public final void rule__XMLDeclaration__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:510:1: ( ( ' encoding=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:511:1: ( ' encoding=' )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:511:1: ( ' encoding=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:512:1: ' encoding='
-            {
-             before(grammarAccess.getXMLDeclarationAccess().getEncodingKeyword_2()); 
-            match(input,13,FOLLOW_13_in_rule__XMLDeclaration__Group__2__Impl1019); 
-             after(grammarAccess.getXMLDeclarationAccess().getEncodingKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__2__Impl"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:525:1: rule__XMLDeclaration__Group__3 : rule__XMLDeclaration__Group__3__Impl rule__XMLDeclaration__Group__4 ;
-    public final void rule__XMLDeclaration__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:529:1: ( rule__XMLDeclaration__Group__3__Impl rule__XMLDeclaration__Group__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:530:2: rule__XMLDeclaration__Group__3__Impl rule__XMLDeclaration__Group__4
-            {
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__3__Impl_in_rule__XMLDeclaration__Group__31050);
-            rule__XMLDeclaration__Group__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__4_in_rule__XMLDeclaration__Group__31053);
-            rule__XMLDeclaration__Group__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__3"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:537:1: rule__XMLDeclaration__Group__3__Impl : ( ruleEString ) ;
-    public final void rule__XMLDeclaration__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:541:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:542:1: ( ruleEString )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:542:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:543:1: ruleEString
-            {
-             before(grammarAccess.getXMLDeclarationAccess().getEStringParserRuleCall_3()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__XMLDeclaration__Group__3__Impl1080);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getXMLDeclarationAccess().getEStringParserRuleCall_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__3__Impl"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:554:1: rule__XMLDeclaration__Group__4 : rule__XMLDeclaration__Group__4__Impl ;
-    public final void rule__XMLDeclaration__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:558:1: ( rule__XMLDeclaration__Group__4__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:559:2: rule__XMLDeclaration__Group__4__Impl
-            {
-            pushFollow(FOLLOW_rule__XMLDeclaration__Group__4__Impl_in_rule__XMLDeclaration__Group__41109);
-            rule__XMLDeclaration__Group__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__4"
-
-
-    // $ANTLR start "rule__XMLDeclaration__Group__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:565:1: rule__XMLDeclaration__Group__4__Impl : ( ' ?>' ) ;
-    public final void rule__XMLDeclaration__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:569:1: ( ( ' ?>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:570:1: ( ' ?>' )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:570:1: ( ' ?>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:571:1: ' ?>'
-            {
-             before(grammarAccess.getXMLDeclarationAccess().getSpaceQuestionMarkGreaterThanSignKeyword_4()); 
-            match(input,14,FOLLOW_14_in_rule__XMLDeclaration__Group__4__Impl1137); 
-             after(grammarAccess.getXMLDeclarationAccess().getSpaceQuestionMarkGreaterThanSignKeyword_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__XMLDeclaration__Group__4__Impl"
+    // $ANTLR end "rule__MainPackage__Group__2__Impl"
 
 
     // $ANTLR start "rule__UIApplication__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:594:1: rule__UIApplication__Group__0 : rule__UIApplication__Group__0__Impl rule__UIApplication__Group__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:422:1: rule__UIApplication__Group__0 : rule__UIApplication__Group__0__Impl rule__UIApplication__Group__1 ;
     public final void rule__UIApplication__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:598:1: ( rule__UIApplication__Group__0__Impl rule__UIApplication__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:599:2: rule__UIApplication__Group__0__Impl rule__UIApplication__Group__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:426:1: ( rule__UIApplication__Group__0__Impl rule__UIApplication__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:427:2: rule__UIApplication__Group__0__Impl rule__UIApplication__Group__1
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group__0__Impl_in_rule__UIApplication__Group__01178);
+            pushFollow(FOLLOW_rule__UIApplication__Group__0__Impl_in_rule__UIApplication__Group__0832);
             rule__UIApplication__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group__1_in_rule__UIApplication__Group__01181);
+            pushFollow(FOLLOW_rule__UIApplication__Group__1_in_rule__UIApplication__Group__0835);
             rule__UIApplication__Group__1();
 
             state._fsp--;
@@ -1617,21 +1190,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:606:1: rule__UIApplication__Group__0__Impl : ( () ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:434:1: rule__UIApplication__Group__0__Impl : ( () ) ;
     public final void rule__UIApplication__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:610:1: ( ( () ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:611:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:438:1: ( ( () ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:439:1: ( () )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:611:1: ( () )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:612:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:439:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:440:1: ()
             {
              before(grammarAccess.getUIApplicationAccess().getUIApplicationAction_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:613:1: ()
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:615:1: 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:441:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:443:1: 
             {
             }
 
@@ -1654,21 +1227,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:625:1: rule__UIApplication__Group__1 : rule__UIApplication__Group__1__Impl rule__UIApplication__Group__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:453:1: rule__UIApplication__Group__1 : rule__UIApplication__Group__1__Impl rule__UIApplication__Group__2 ;
     public final void rule__UIApplication__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:629:1: ( rule__UIApplication__Group__1__Impl rule__UIApplication__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:630:2: rule__UIApplication__Group__1__Impl rule__UIApplication__Group__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:457:1: ( rule__UIApplication__Group__1__Impl rule__UIApplication__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:458:2: rule__UIApplication__Group__1__Impl rule__UIApplication__Group__2
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group__1__Impl_in_rule__UIApplication__Group__11239);
+            pushFollow(FOLLOW_rule__UIApplication__Group__1__Impl_in_rule__UIApplication__Group__1893);
             rule__UIApplication__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group__2_in_rule__UIApplication__Group__11242);
+            pushFollow(FOLLOW_rule__UIApplication__Group__2_in_rule__UIApplication__Group__1896);
             rule__UIApplication__Group__2();
 
             state._fsp--;
@@ -1692,20 +1265,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:637:1: rule__UIApplication__Group__1__Impl : ( '<UIApplication>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:465:1: rule__UIApplication__Group__1__Impl : ( '<UIApplication>' ) ;
     public final void rule__UIApplication__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:641:1: ( ( '<UIApplication>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:642:1: ( '<UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:469:1: ( ( '<UIApplication>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:470:1: ( '<UIApplication>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:642:1: ( '<UIApplication>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:643:1: '<UIApplication>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:470:1: ( '<UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:471:1: '<UIApplication>'
             {
              before(grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_1()); 
-            match(input,15,FOLLOW_15_in_rule__UIApplication__Group__1__Impl1270); 
+            match(input,12,FOLLOW_12_in_rule__UIApplication__Group__1__Impl924); 
              after(grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_1()); 
 
             }
@@ -1729,21 +1302,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:656:1: rule__UIApplication__Group__2 : rule__UIApplication__Group__2__Impl rule__UIApplication__Group__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:484:1: rule__UIApplication__Group__2 : rule__UIApplication__Group__2__Impl rule__UIApplication__Group__3 ;
     public final void rule__UIApplication__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:660:1: ( rule__UIApplication__Group__2__Impl rule__UIApplication__Group__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:661:2: rule__UIApplication__Group__2__Impl rule__UIApplication__Group__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:488:1: ( rule__UIApplication__Group__2__Impl rule__UIApplication__Group__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:489:2: rule__UIApplication__Group__2__Impl rule__UIApplication__Group__3
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group__2__Impl_in_rule__UIApplication__Group__21301);
+            pushFollow(FOLLOW_rule__UIApplication__Group__2__Impl_in_rule__UIApplication__Group__2955);
             rule__UIApplication__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group__3_in_rule__UIApplication__Group__21304);
+            pushFollow(FOLLOW_rule__UIApplication__Group__3_in_rule__UIApplication__Group__2958);
             rule__UIApplication__Group__3();
 
             state._fsp--;
@@ -1767,31 +1340,31 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:668:1: rule__UIApplication__Group__2__Impl : ( ( rule__UIApplication__Group_2__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:496:1: rule__UIApplication__Group__2__Impl : ( ( rule__UIApplication__Group_2__0 )? ) ;
     public final void rule__UIApplication__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:672:1: ( ( ( rule__UIApplication__Group_2__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:673:1: ( ( rule__UIApplication__Group_2__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:500:1: ( ( ( rule__UIApplication__Group_2__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:501:1: ( ( rule__UIApplication__Group_2__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:673:1: ( ( rule__UIApplication__Group_2__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:674:1: ( rule__UIApplication__Group_2__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:501:1: ( ( rule__UIApplication__Group_2__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:502:1: ( rule__UIApplication__Group_2__0 )?
             {
              before(grammarAccess.getUIApplicationAccess().getGroup_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:675:1: ( rule__UIApplication__Group_2__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:503:1: ( rule__UIApplication__Group_2__0 )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==17) ) {
+            if ( (LA4_0==14) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:675:2: rule__UIApplication__Group_2__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:503:2: rule__UIApplication__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__UIApplication__Group_2__0_in_rule__UIApplication__Group__2__Impl1331);
+                    pushFollow(FOLLOW_rule__UIApplication__Group_2__0_in_rule__UIApplication__Group__2__Impl985);
                     rule__UIApplication__Group_2__0();
 
                     state._fsp--;
@@ -1825,21 +1398,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:685:1: rule__UIApplication__Group__3 : rule__UIApplication__Group__3__Impl rule__UIApplication__Group__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:513:1: rule__UIApplication__Group__3 : rule__UIApplication__Group__3__Impl rule__UIApplication__Group__4 ;
     public final void rule__UIApplication__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:689:1: ( rule__UIApplication__Group__3__Impl rule__UIApplication__Group__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:690:2: rule__UIApplication__Group__3__Impl rule__UIApplication__Group__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:517:1: ( rule__UIApplication__Group__3__Impl rule__UIApplication__Group__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:518:2: rule__UIApplication__Group__3__Impl rule__UIApplication__Group__4
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group__3__Impl_in_rule__UIApplication__Group__31362);
+            pushFollow(FOLLOW_rule__UIApplication__Group__3__Impl_in_rule__UIApplication__Group__31016);
             rule__UIApplication__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group__4_in_rule__UIApplication__Group__31365);
+            pushFollow(FOLLOW_rule__UIApplication__Group__4_in_rule__UIApplication__Group__31019);
             rule__UIApplication__Group__4();
 
             state._fsp--;
@@ -1863,31 +1436,31 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:697:1: rule__UIApplication__Group__3__Impl : ( ( rule__UIApplication__Group_3__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:525:1: rule__UIApplication__Group__3__Impl : ( ( rule__UIApplication__Group_3__0 )? ) ;
     public final void rule__UIApplication__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:701:1: ( ( ( rule__UIApplication__Group_3__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:702:1: ( ( rule__UIApplication__Group_3__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:529:1: ( ( ( rule__UIApplication__Group_3__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:530:1: ( ( rule__UIApplication__Group_3__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:702:1: ( ( rule__UIApplication__Group_3__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:703:1: ( rule__UIApplication__Group_3__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:530:1: ( ( rule__UIApplication__Group_3__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:531:1: ( rule__UIApplication__Group_3__0 )?
             {
              before(grammarAccess.getUIApplicationAccess().getGroup_3()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:704:1: ( rule__UIApplication__Group_3__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:532:1: ( rule__UIApplication__Group_3__0 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==21) ) {
+            if ( (LA5_0==18) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:704:2: rule__UIApplication__Group_3__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:532:2: rule__UIApplication__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__UIApplication__Group_3__0_in_rule__UIApplication__Group__3__Impl1392);
+                    pushFollow(FOLLOW_rule__UIApplication__Group_3__0_in_rule__UIApplication__Group__3__Impl1046);
                     rule__UIApplication__Group_3__0();
 
                     state._fsp--;
@@ -1921,16 +1494,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:714:1: rule__UIApplication__Group__4 : rule__UIApplication__Group__4__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:542:1: rule__UIApplication__Group__4 : rule__UIApplication__Group__4__Impl ;
     public final void rule__UIApplication__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:718:1: ( rule__UIApplication__Group__4__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:719:2: rule__UIApplication__Group__4__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:546:1: ( rule__UIApplication__Group__4__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:547:2: rule__UIApplication__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group__4__Impl_in_rule__UIApplication__Group__41423);
+            pushFollow(FOLLOW_rule__UIApplication__Group__4__Impl_in_rule__UIApplication__Group__41077);
             rule__UIApplication__Group__4__Impl();
 
             state._fsp--;
@@ -1954,20 +1527,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:725:1: rule__UIApplication__Group__4__Impl : ( '</UIApplication>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:553:1: rule__UIApplication__Group__4__Impl : ( '</UIApplication>' ) ;
     public final void rule__UIApplication__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:729:1: ( ( '</UIApplication>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:730:1: ( '</UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:557:1: ( ( '</UIApplication>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:558:1: ( '</UIApplication>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:730:1: ( '</UIApplication>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:731:1: '</UIApplication>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:558:1: ( '</UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:559:1: '</UIApplication>'
             {
              before(grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_4()); 
-            match(input,16,FOLLOW_16_in_rule__UIApplication__Group__4__Impl1451); 
+            match(input,13,FOLLOW_13_in_rule__UIApplication__Group__4__Impl1105); 
              after(grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_4()); 
 
             }
@@ -1991,21 +1564,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:754:1: rule__UIApplication__Group_2__0 : rule__UIApplication__Group_2__0__Impl rule__UIApplication__Group_2__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:582:1: rule__UIApplication__Group_2__0 : rule__UIApplication__Group_2__0__Impl rule__UIApplication__Group_2__1 ;
     public final void rule__UIApplication__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:758:1: ( rule__UIApplication__Group_2__0__Impl rule__UIApplication__Group_2__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:759:2: rule__UIApplication__Group_2__0__Impl rule__UIApplication__Group_2__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:586:1: ( rule__UIApplication__Group_2__0__Impl rule__UIApplication__Group_2__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:587:2: rule__UIApplication__Group_2__0__Impl rule__UIApplication__Group_2__1
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__0__Impl_in_rule__UIApplication__Group_2__01492);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__0__Impl_in_rule__UIApplication__Group_2__01146);
             rule__UIApplication__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__1_in_rule__UIApplication__Group_2__01495);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__1_in_rule__UIApplication__Group_2__01149);
             rule__UIApplication__Group_2__1();
 
             state._fsp--;
@@ -2029,20 +1602,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:766:1: rule__UIApplication__Group_2__0__Impl : ( '<models>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:594:1: rule__UIApplication__Group_2__0__Impl : ( '<models>' ) ;
     public final void rule__UIApplication__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:770:1: ( ( '<models>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:771:1: ( '<models>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:598:1: ( ( '<models>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:599:1: ( '<models>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:771:1: ( '<models>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:772:1: '<models>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:599:1: ( '<models>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:600:1: '<models>'
             {
              before(grammarAccess.getUIApplicationAccess().getModelsKeyword_2_0()); 
-            match(input,17,FOLLOW_17_in_rule__UIApplication__Group_2__0__Impl1523); 
+            match(input,14,FOLLOW_14_in_rule__UIApplication__Group_2__0__Impl1177); 
              after(grammarAccess.getUIApplicationAccess().getModelsKeyword_2_0()); 
 
             }
@@ -2066,21 +1639,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:785:1: rule__UIApplication__Group_2__1 : rule__UIApplication__Group_2__1__Impl rule__UIApplication__Group_2__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:613:1: rule__UIApplication__Group_2__1 : rule__UIApplication__Group_2__1__Impl rule__UIApplication__Group_2__2 ;
     public final void rule__UIApplication__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:789:1: ( rule__UIApplication__Group_2__1__Impl rule__UIApplication__Group_2__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:790:2: rule__UIApplication__Group_2__1__Impl rule__UIApplication__Group_2__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:617:1: ( rule__UIApplication__Group_2__1__Impl rule__UIApplication__Group_2__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:618:2: rule__UIApplication__Group_2__1__Impl rule__UIApplication__Group_2__2
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__1__Impl_in_rule__UIApplication__Group_2__11554);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__1__Impl_in_rule__UIApplication__Group_2__11208);
             rule__UIApplication__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__2_in_rule__UIApplication__Group_2__11557);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__2_in_rule__UIApplication__Group_2__11211);
             rule__UIApplication__Group_2__2();
 
             state._fsp--;
@@ -2104,20 +1677,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:797:1: rule__UIApplication__Group_2__1__Impl : ( '<model ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:625:1: rule__UIApplication__Group_2__1__Impl : ( '<model ref=' ) ;
     public final void rule__UIApplication__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:801:1: ( ( '<model ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:802:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:629:1: ( ( '<model ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:630:1: ( '<model ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:802:1: ( '<model ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:803:1: '<model ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:630:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:631:1: '<model ref='
             {
              before(grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_1()); 
-            match(input,18,FOLLOW_18_in_rule__UIApplication__Group_2__1__Impl1585); 
+            match(input,15,FOLLOW_15_in_rule__UIApplication__Group_2__1__Impl1239); 
              after(grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_1()); 
 
             }
@@ -2141,21 +1714,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:816:1: rule__UIApplication__Group_2__2 : rule__UIApplication__Group_2__2__Impl rule__UIApplication__Group_2__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:644:1: rule__UIApplication__Group_2__2 : rule__UIApplication__Group_2__2__Impl rule__UIApplication__Group_2__3 ;
     public final void rule__UIApplication__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:820:1: ( rule__UIApplication__Group_2__2__Impl rule__UIApplication__Group_2__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:821:2: rule__UIApplication__Group_2__2__Impl rule__UIApplication__Group_2__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:648:1: ( rule__UIApplication__Group_2__2__Impl rule__UIApplication__Group_2__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:649:2: rule__UIApplication__Group_2__2__Impl rule__UIApplication__Group_2__3
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__2__Impl_in_rule__UIApplication__Group_2__21616);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__2__Impl_in_rule__UIApplication__Group_2__21270);
             rule__UIApplication__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__3_in_rule__UIApplication__Group_2__21619);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__3_in_rule__UIApplication__Group_2__21273);
             rule__UIApplication__Group_2__3();
 
             state._fsp--;
@@ -2179,23 +1752,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:828:1: rule__UIApplication__Group_2__2__Impl : ( ( rule__UIApplication__ModelsAssignment_2_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:656:1: rule__UIApplication__Group_2__2__Impl : ( ( rule__UIApplication__ModelsAssignment_2_2 ) ) ;
     public final void rule__UIApplication__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:832:1: ( ( ( rule__UIApplication__ModelsAssignment_2_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:833:1: ( ( rule__UIApplication__ModelsAssignment_2_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:660:1: ( ( ( rule__UIApplication__ModelsAssignment_2_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:661:1: ( ( rule__UIApplication__ModelsAssignment_2_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:833:1: ( ( rule__UIApplication__ModelsAssignment_2_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:834:1: ( rule__UIApplication__ModelsAssignment_2_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:661:1: ( ( rule__UIApplication__ModelsAssignment_2_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:662:1: ( rule__UIApplication__ModelsAssignment_2_2 )
             {
              before(grammarAccess.getUIApplicationAccess().getModelsAssignment_2_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:835:1: ( rule__UIApplication__ModelsAssignment_2_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:835:2: rule__UIApplication__ModelsAssignment_2_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:663:1: ( rule__UIApplication__ModelsAssignment_2_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:663:2: rule__UIApplication__ModelsAssignment_2_2
             {
-            pushFollow(FOLLOW_rule__UIApplication__ModelsAssignment_2_2_in_rule__UIApplication__Group_2__2__Impl1646);
+            pushFollow(FOLLOW_rule__UIApplication__ModelsAssignment_2_2_in_rule__UIApplication__Group_2__2__Impl1300);
             rule__UIApplication__ModelsAssignment_2_2();
 
             state._fsp--;
@@ -2226,21 +1799,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:845:1: rule__UIApplication__Group_2__3 : rule__UIApplication__Group_2__3__Impl rule__UIApplication__Group_2__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:673:1: rule__UIApplication__Group_2__3 : rule__UIApplication__Group_2__3__Impl rule__UIApplication__Group_2__4 ;
     public final void rule__UIApplication__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:849:1: ( rule__UIApplication__Group_2__3__Impl rule__UIApplication__Group_2__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:850:2: rule__UIApplication__Group_2__3__Impl rule__UIApplication__Group_2__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:677:1: ( rule__UIApplication__Group_2__3__Impl rule__UIApplication__Group_2__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:678:2: rule__UIApplication__Group_2__3__Impl rule__UIApplication__Group_2__4
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__3__Impl_in_rule__UIApplication__Group_2__31676);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__3__Impl_in_rule__UIApplication__Group_2__31330);
             rule__UIApplication__Group_2__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__4_in_rule__UIApplication__Group_2__31679);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__4_in_rule__UIApplication__Group_2__31333);
             rule__UIApplication__Group_2__4();
 
             state._fsp--;
@@ -2264,20 +1837,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:857:1: rule__UIApplication__Group_2__3__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:685:1: rule__UIApplication__Group_2__3__Impl : ( ' />' ) ;
     public final void rule__UIApplication__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:861:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:862:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:689:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:690:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:862:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:863:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:690:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:691:1: ' />'
             {
              before(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_3()); 
-            match(input,19,FOLLOW_19_in_rule__UIApplication__Group_2__3__Impl1707); 
+            match(input,16,FOLLOW_16_in_rule__UIApplication__Group_2__3__Impl1361); 
              after(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_3()); 
 
             }
@@ -2301,21 +1874,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:876:1: rule__UIApplication__Group_2__4 : rule__UIApplication__Group_2__4__Impl rule__UIApplication__Group_2__5 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:704:1: rule__UIApplication__Group_2__4 : rule__UIApplication__Group_2__4__Impl rule__UIApplication__Group_2__5 ;
     public final void rule__UIApplication__Group_2__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:880:1: ( rule__UIApplication__Group_2__4__Impl rule__UIApplication__Group_2__5 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:881:2: rule__UIApplication__Group_2__4__Impl rule__UIApplication__Group_2__5
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:708:1: ( rule__UIApplication__Group_2__4__Impl rule__UIApplication__Group_2__5 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:709:2: rule__UIApplication__Group_2__4__Impl rule__UIApplication__Group_2__5
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__4__Impl_in_rule__UIApplication__Group_2__41738);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__4__Impl_in_rule__UIApplication__Group_2__41392);
             rule__UIApplication__Group_2__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__5_in_rule__UIApplication__Group_2__41741);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__5_in_rule__UIApplication__Group_2__41395);
             rule__UIApplication__Group_2__5();
 
             state._fsp--;
@@ -2339,35 +1912,35 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:888:1: rule__UIApplication__Group_2__4__Impl : ( ( rule__UIApplication__Group_2_4__0 )* ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:716:1: rule__UIApplication__Group_2__4__Impl : ( ( rule__UIApplication__Group_2_4__0 )* ) ;
     public final void rule__UIApplication__Group_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:892:1: ( ( ( rule__UIApplication__Group_2_4__0 )* ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:893:1: ( ( rule__UIApplication__Group_2_4__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:720:1: ( ( ( rule__UIApplication__Group_2_4__0 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:721:1: ( ( rule__UIApplication__Group_2_4__0 )* )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:893:1: ( ( rule__UIApplication__Group_2_4__0 )* )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:894:1: ( rule__UIApplication__Group_2_4__0 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:721:1: ( ( rule__UIApplication__Group_2_4__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:722:1: ( rule__UIApplication__Group_2_4__0 )*
             {
              before(grammarAccess.getUIApplicationAccess().getGroup_2_4()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:895:1: ( rule__UIApplication__Group_2_4__0 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:723:1: ( rule__UIApplication__Group_2_4__0 )*
             loop6:
             do {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==18) ) {
+                if ( (LA6_0==15) ) {
                     alt6=1;
                 }
 
 
                 switch (alt6) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:895:2: rule__UIApplication__Group_2_4__0
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:723:2: rule__UIApplication__Group_2_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__UIApplication__Group_2_4__0_in_rule__UIApplication__Group_2__4__Impl1768);
+            	    pushFollow(FOLLOW_rule__UIApplication__Group_2_4__0_in_rule__UIApplication__Group_2__4__Impl1422);
             	    rule__UIApplication__Group_2_4__0();
 
             	    state._fsp--;
@@ -2404,16 +1977,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__5"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:905:1: rule__UIApplication__Group_2__5 : rule__UIApplication__Group_2__5__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:733:1: rule__UIApplication__Group_2__5 : rule__UIApplication__Group_2__5__Impl ;
     public final void rule__UIApplication__Group_2__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:909:1: ( rule__UIApplication__Group_2__5__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:910:2: rule__UIApplication__Group_2__5__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:737:1: ( rule__UIApplication__Group_2__5__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:738:2: rule__UIApplication__Group_2__5__Impl
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2__5__Impl_in_rule__UIApplication__Group_2__51799);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2__5__Impl_in_rule__UIApplication__Group_2__51453);
             rule__UIApplication__Group_2__5__Impl();
 
             state._fsp--;
@@ -2437,20 +2010,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2__5__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:916:1: rule__UIApplication__Group_2__5__Impl : ( '</models>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:744:1: rule__UIApplication__Group_2__5__Impl : ( '</models>' ) ;
     public final void rule__UIApplication__Group_2__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:920:1: ( ( '</models>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:921:1: ( '</models>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:748:1: ( ( '</models>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:749:1: ( '</models>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:921:1: ( '</models>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:922:1: '</models>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:749:1: ( '</models>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:750:1: '</models>'
             {
              before(grammarAccess.getUIApplicationAccess().getModelsKeyword_2_5()); 
-            match(input,20,FOLLOW_20_in_rule__UIApplication__Group_2__5__Impl1827); 
+            match(input,17,FOLLOW_17_in_rule__UIApplication__Group_2__5__Impl1481); 
              after(grammarAccess.getUIApplicationAccess().getModelsKeyword_2_5()); 
 
             }
@@ -2474,21 +2047,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2_4__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:947:1: rule__UIApplication__Group_2_4__0 : rule__UIApplication__Group_2_4__0__Impl rule__UIApplication__Group_2_4__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:775:1: rule__UIApplication__Group_2_4__0 : rule__UIApplication__Group_2_4__0__Impl rule__UIApplication__Group_2_4__1 ;
     public final void rule__UIApplication__Group_2_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:951:1: ( rule__UIApplication__Group_2_4__0__Impl rule__UIApplication__Group_2_4__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:952:2: rule__UIApplication__Group_2_4__0__Impl rule__UIApplication__Group_2_4__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:779:1: ( rule__UIApplication__Group_2_4__0__Impl rule__UIApplication__Group_2_4__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:780:2: rule__UIApplication__Group_2_4__0__Impl rule__UIApplication__Group_2_4__1
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__0__Impl_in_rule__UIApplication__Group_2_4__01870);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__0__Impl_in_rule__UIApplication__Group_2_4__01524);
             rule__UIApplication__Group_2_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__1_in_rule__UIApplication__Group_2_4__01873);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__1_in_rule__UIApplication__Group_2_4__01527);
             rule__UIApplication__Group_2_4__1();
 
             state._fsp--;
@@ -2512,20 +2085,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2_4__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:959:1: rule__UIApplication__Group_2_4__0__Impl : ( '<model ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:787:1: rule__UIApplication__Group_2_4__0__Impl : ( '<model ref=' ) ;
     public final void rule__UIApplication__Group_2_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:963:1: ( ( '<model ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:964:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:791:1: ( ( '<model ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:792:1: ( '<model ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:964:1: ( '<model ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:965:1: '<model ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:792:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:793:1: '<model ref='
             {
              before(grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_4_0()); 
-            match(input,18,FOLLOW_18_in_rule__UIApplication__Group_2_4__0__Impl1901); 
+            match(input,15,FOLLOW_15_in_rule__UIApplication__Group_2_4__0__Impl1555); 
              after(grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_4_0()); 
 
             }
@@ -2549,21 +2122,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2_4__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:978:1: rule__UIApplication__Group_2_4__1 : rule__UIApplication__Group_2_4__1__Impl rule__UIApplication__Group_2_4__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:806:1: rule__UIApplication__Group_2_4__1 : rule__UIApplication__Group_2_4__1__Impl rule__UIApplication__Group_2_4__2 ;
     public final void rule__UIApplication__Group_2_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:982:1: ( rule__UIApplication__Group_2_4__1__Impl rule__UIApplication__Group_2_4__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:983:2: rule__UIApplication__Group_2_4__1__Impl rule__UIApplication__Group_2_4__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:810:1: ( rule__UIApplication__Group_2_4__1__Impl rule__UIApplication__Group_2_4__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:811:2: rule__UIApplication__Group_2_4__1__Impl rule__UIApplication__Group_2_4__2
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__1__Impl_in_rule__UIApplication__Group_2_4__11932);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__1__Impl_in_rule__UIApplication__Group_2_4__11586);
             rule__UIApplication__Group_2_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__2_in_rule__UIApplication__Group_2_4__11935);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__2_in_rule__UIApplication__Group_2_4__11589);
             rule__UIApplication__Group_2_4__2();
 
             state._fsp--;
@@ -2587,23 +2160,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2_4__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:990:1: rule__UIApplication__Group_2_4__1__Impl : ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:818:1: rule__UIApplication__Group_2_4__1__Impl : ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) ) ;
     public final void rule__UIApplication__Group_2_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:994:1: ( ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:995:1: ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:822:1: ( ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:823:1: ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:995:1: ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:996:1: ( rule__UIApplication__ModelsAssignment_2_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:823:1: ( ( rule__UIApplication__ModelsAssignment_2_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:824:1: ( rule__UIApplication__ModelsAssignment_2_4_1 )
             {
              before(grammarAccess.getUIApplicationAccess().getModelsAssignment_2_4_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:997:1: ( rule__UIApplication__ModelsAssignment_2_4_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:997:2: rule__UIApplication__ModelsAssignment_2_4_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:825:1: ( rule__UIApplication__ModelsAssignment_2_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:825:2: rule__UIApplication__ModelsAssignment_2_4_1
             {
-            pushFollow(FOLLOW_rule__UIApplication__ModelsAssignment_2_4_1_in_rule__UIApplication__Group_2_4__1__Impl1962);
+            pushFollow(FOLLOW_rule__UIApplication__ModelsAssignment_2_4_1_in_rule__UIApplication__Group_2_4__1__Impl1616);
             rule__UIApplication__ModelsAssignment_2_4_1();
 
             state._fsp--;
@@ -2634,16 +2207,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2_4__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1007:1: rule__UIApplication__Group_2_4__2 : rule__UIApplication__Group_2_4__2__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:835:1: rule__UIApplication__Group_2_4__2 : rule__UIApplication__Group_2_4__2__Impl ;
     public final void rule__UIApplication__Group_2_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1011:1: ( rule__UIApplication__Group_2_4__2__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1012:2: rule__UIApplication__Group_2_4__2__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:839:1: ( rule__UIApplication__Group_2_4__2__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:840:2: rule__UIApplication__Group_2_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__2__Impl_in_rule__UIApplication__Group_2_4__21992);
+            pushFollow(FOLLOW_rule__UIApplication__Group_2_4__2__Impl_in_rule__UIApplication__Group_2_4__21646);
             rule__UIApplication__Group_2_4__2__Impl();
 
             state._fsp--;
@@ -2667,20 +2240,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_2_4__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1018:1: rule__UIApplication__Group_2_4__2__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:846:1: rule__UIApplication__Group_2_4__2__Impl : ( ' />' ) ;
     public final void rule__UIApplication__Group_2_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1022:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1023:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:850:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:851:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1023:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1024:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:851:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:852:1: ' />'
             {
              before(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_4_2()); 
-            match(input,19,FOLLOW_19_in_rule__UIApplication__Group_2_4__2__Impl2020); 
+            match(input,16,FOLLOW_16_in_rule__UIApplication__Group_2_4__2__Impl1674); 
              after(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_4_2()); 
 
             }
@@ -2704,21 +2277,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1043:1: rule__UIApplication__Group_3__0 : rule__UIApplication__Group_3__0__Impl rule__UIApplication__Group_3__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:871:1: rule__UIApplication__Group_3__0 : rule__UIApplication__Group_3__0__Impl rule__UIApplication__Group_3__1 ;
     public final void rule__UIApplication__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1047:1: ( rule__UIApplication__Group_3__0__Impl rule__UIApplication__Group_3__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1048:2: rule__UIApplication__Group_3__0__Impl rule__UIApplication__Group_3__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:875:1: ( rule__UIApplication__Group_3__0__Impl rule__UIApplication__Group_3__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:876:2: rule__UIApplication__Group_3__0__Impl rule__UIApplication__Group_3__1
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__0__Impl_in_rule__UIApplication__Group_3__02057);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__0__Impl_in_rule__UIApplication__Group_3__01711);
             rule__UIApplication__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__1_in_rule__UIApplication__Group_3__02060);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__1_in_rule__UIApplication__Group_3__01714);
             rule__UIApplication__Group_3__1();
 
             state._fsp--;
@@ -2742,20 +2315,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1055:1: rule__UIApplication__Group_3__0__Impl : ( '<pages>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:883:1: rule__UIApplication__Group_3__0__Impl : ( '<pages>' ) ;
     public final void rule__UIApplication__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1059:1: ( ( '<pages>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1060:1: ( '<pages>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:887:1: ( ( '<pages>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:888:1: ( '<pages>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1060:1: ( '<pages>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1061:1: '<pages>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:888:1: ( '<pages>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:889:1: '<pages>'
             {
              before(grammarAccess.getUIApplicationAccess().getPagesKeyword_3_0()); 
-            match(input,21,FOLLOW_21_in_rule__UIApplication__Group_3__0__Impl2088); 
+            match(input,18,FOLLOW_18_in_rule__UIApplication__Group_3__0__Impl1742); 
              after(grammarAccess.getUIApplicationAccess().getPagesKeyword_3_0()); 
 
             }
@@ -2779,21 +2352,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1074:1: rule__UIApplication__Group_3__1 : rule__UIApplication__Group_3__1__Impl rule__UIApplication__Group_3__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:902:1: rule__UIApplication__Group_3__1 : rule__UIApplication__Group_3__1__Impl rule__UIApplication__Group_3__2 ;
     public final void rule__UIApplication__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1078:1: ( rule__UIApplication__Group_3__1__Impl rule__UIApplication__Group_3__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1079:2: rule__UIApplication__Group_3__1__Impl rule__UIApplication__Group_3__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:906:1: ( rule__UIApplication__Group_3__1__Impl rule__UIApplication__Group_3__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:907:2: rule__UIApplication__Group_3__1__Impl rule__UIApplication__Group_3__2
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__1__Impl_in_rule__UIApplication__Group_3__12119);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__1__Impl_in_rule__UIApplication__Group_3__11773);
             rule__UIApplication__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__2_in_rule__UIApplication__Group_3__12122);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__2_in_rule__UIApplication__Group_3__11776);
             rule__UIApplication__Group_3__2();
 
             state._fsp--;
@@ -2817,20 +2390,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1086:1: rule__UIApplication__Group_3__1__Impl : ( '<page ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:914:1: rule__UIApplication__Group_3__1__Impl : ( '<page ref=' ) ;
     public final void rule__UIApplication__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1090:1: ( ( '<page ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1091:1: ( '<page ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:918:1: ( ( '<page ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:919:1: ( '<page ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1091:1: ( '<page ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1092:1: '<page ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:919:1: ( '<page ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:920:1: '<page ref='
             {
              before(grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_1()); 
-            match(input,22,FOLLOW_22_in_rule__UIApplication__Group_3__1__Impl2150); 
+            match(input,19,FOLLOW_19_in_rule__UIApplication__Group_3__1__Impl1804); 
              after(grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_1()); 
 
             }
@@ -2854,21 +2427,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1105:1: rule__UIApplication__Group_3__2 : rule__UIApplication__Group_3__2__Impl rule__UIApplication__Group_3__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:933:1: rule__UIApplication__Group_3__2 : rule__UIApplication__Group_3__2__Impl rule__UIApplication__Group_3__3 ;
     public final void rule__UIApplication__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1109:1: ( rule__UIApplication__Group_3__2__Impl rule__UIApplication__Group_3__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1110:2: rule__UIApplication__Group_3__2__Impl rule__UIApplication__Group_3__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:937:1: ( rule__UIApplication__Group_3__2__Impl rule__UIApplication__Group_3__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:938:2: rule__UIApplication__Group_3__2__Impl rule__UIApplication__Group_3__3
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__2__Impl_in_rule__UIApplication__Group_3__22181);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__2__Impl_in_rule__UIApplication__Group_3__21835);
             rule__UIApplication__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__3_in_rule__UIApplication__Group_3__22184);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__3_in_rule__UIApplication__Group_3__21838);
             rule__UIApplication__Group_3__3();
 
             state._fsp--;
@@ -2892,23 +2465,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1117:1: rule__UIApplication__Group_3__2__Impl : ( ( rule__UIApplication__PagesAssignment_3_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:945:1: rule__UIApplication__Group_3__2__Impl : ( ( rule__UIApplication__PagesAssignment_3_2 ) ) ;
     public final void rule__UIApplication__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1121:1: ( ( ( rule__UIApplication__PagesAssignment_3_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1122:1: ( ( rule__UIApplication__PagesAssignment_3_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:949:1: ( ( ( rule__UIApplication__PagesAssignment_3_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:950:1: ( ( rule__UIApplication__PagesAssignment_3_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1122:1: ( ( rule__UIApplication__PagesAssignment_3_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1123:1: ( rule__UIApplication__PagesAssignment_3_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:950:1: ( ( rule__UIApplication__PagesAssignment_3_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:951:1: ( rule__UIApplication__PagesAssignment_3_2 )
             {
              before(grammarAccess.getUIApplicationAccess().getPagesAssignment_3_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1124:1: ( rule__UIApplication__PagesAssignment_3_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1124:2: rule__UIApplication__PagesAssignment_3_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:952:1: ( rule__UIApplication__PagesAssignment_3_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:952:2: rule__UIApplication__PagesAssignment_3_2
             {
-            pushFollow(FOLLOW_rule__UIApplication__PagesAssignment_3_2_in_rule__UIApplication__Group_3__2__Impl2211);
+            pushFollow(FOLLOW_rule__UIApplication__PagesAssignment_3_2_in_rule__UIApplication__Group_3__2__Impl1865);
             rule__UIApplication__PagesAssignment_3_2();
 
             state._fsp--;
@@ -2939,21 +2512,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1134:1: rule__UIApplication__Group_3__3 : rule__UIApplication__Group_3__3__Impl rule__UIApplication__Group_3__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:962:1: rule__UIApplication__Group_3__3 : rule__UIApplication__Group_3__3__Impl rule__UIApplication__Group_3__4 ;
     public final void rule__UIApplication__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1138:1: ( rule__UIApplication__Group_3__3__Impl rule__UIApplication__Group_3__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1139:2: rule__UIApplication__Group_3__3__Impl rule__UIApplication__Group_3__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:966:1: ( rule__UIApplication__Group_3__3__Impl rule__UIApplication__Group_3__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:967:2: rule__UIApplication__Group_3__3__Impl rule__UIApplication__Group_3__4
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__3__Impl_in_rule__UIApplication__Group_3__32241);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__3__Impl_in_rule__UIApplication__Group_3__31895);
             rule__UIApplication__Group_3__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__4_in_rule__UIApplication__Group_3__32244);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__4_in_rule__UIApplication__Group_3__31898);
             rule__UIApplication__Group_3__4();
 
             state._fsp--;
@@ -2977,20 +2550,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1146:1: rule__UIApplication__Group_3__3__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:974:1: rule__UIApplication__Group_3__3__Impl : ( ' />' ) ;
     public final void rule__UIApplication__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1150:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1151:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:978:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:979:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1151:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1152:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:979:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:980:1: ' />'
             {
              before(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_3()); 
-            match(input,19,FOLLOW_19_in_rule__UIApplication__Group_3__3__Impl2272); 
+            match(input,16,FOLLOW_16_in_rule__UIApplication__Group_3__3__Impl1926); 
              after(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_3()); 
 
             }
@@ -3014,21 +2587,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1165:1: rule__UIApplication__Group_3__4 : rule__UIApplication__Group_3__4__Impl rule__UIApplication__Group_3__5 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:993:1: rule__UIApplication__Group_3__4 : rule__UIApplication__Group_3__4__Impl rule__UIApplication__Group_3__5 ;
     public final void rule__UIApplication__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1169:1: ( rule__UIApplication__Group_3__4__Impl rule__UIApplication__Group_3__5 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1170:2: rule__UIApplication__Group_3__4__Impl rule__UIApplication__Group_3__5
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:997:1: ( rule__UIApplication__Group_3__4__Impl rule__UIApplication__Group_3__5 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:998:2: rule__UIApplication__Group_3__4__Impl rule__UIApplication__Group_3__5
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__4__Impl_in_rule__UIApplication__Group_3__42303);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__4__Impl_in_rule__UIApplication__Group_3__41957);
             rule__UIApplication__Group_3__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__5_in_rule__UIApplication__Group_3__42306);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__5_in_rule__UIApplication__Group_3__41960);
             rule__UIApplication__Group_3__5();
 
             state._fsp--;
@@ -3052,35 +2625,35 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1177:1: rule__UIApplication__Group_3__4__Impl : ( ( rule__UIApplication__Group_3_4__0 )* ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1005:1: rule__UIApplication__Group_3__4__Impl : ( ( rule__UIApplication__Group_3_4__0 )* ) ;
     public final void rule__UIApplication__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1181:1: ( ( ( rule__UIApplication__Group_3_4__0 )* ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1182:1: ( ( rule__UIApplication__Group_3_4__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1009:1: ( ( ( rule__UIApplication__Group_3_4__0 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1010:1: ( ( rule__UIApplication__Group_3_4__0 )* )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1182:1: ( ( rule__UIApplication__Group_3_4__0 )* )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1183:1: ( rule__UIApplication__Group_3_4__0 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1010:1: ( ( rule__UIApplication__Group_3_4__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1011:1: ( rule__UIApplication__Group_3_4__0 )*
             {
              before(grammarAccess.getUIApplicationAccess().getGroup_3_4()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1184:1: ( rule__UIApplication__Group_3_4__0 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1012:1: ( rule__UIApplication__Group_3_4__0 )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==22) ) {
+                if ( (LA7_0==19) ) {
                     alt7=1;
                 }
 
 
                 switch (alt7) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1184:2: rule__UIApplication__Group_3_4__0
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1012:2: rule__UIApplication__Group_3_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__UIApplication__Group_3_4__0_in_rule__UIApplication__Group_3__4__Impl2333);
+            	    pushFollow(FOLLOW_rule__UIApplication__Group_3_4__0_in_rule__UIApplication__Group_3__4__Impl1987);
             	    rule__UIApplication__Group_3_4__0();
 
             	    state._fsp--;
@@ -3117,16 +2690,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__5"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1194:1: rule__UIApplication__Group_3__5 : rule__UIApplication__Group_3__5__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1022:1: rule__UIApplication__Group_3__5 : rule__UIApplication__Group_3__5__Impl ;
     public final void rule__UIApplication__Group_3__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1198:1: ( rule__UIApplication__Group_3__5__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1199:2: rule__UIApplication__Group_3__5__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1026:1: ( rule__UIApplication__Group_3__5__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1027:2: rule__UIApplication__Group_3__5__Impl
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3__5__Impl_in_rule__UIApplication__Group_3__52364);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3__5__Impl_in_rule__UIApplication__Group_3__52018);
             rule__UIApplication__Group_3__5__Impl();
 
             state._fsp--;
@@ -3150,20 +2723,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3__5__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1205:1: rule__UIApplication__Group_3__5__Impl : ( '</pages>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1033:1: rule__UIApplication__Group_3__5__Impl : ( '</pages>' ) ;
     public final void rule__UIApplication__Group_3__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1209:1: ( ( '</pages>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1210:1: ( '</pages>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1037:1: ( ( '</pages>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1038:1: ( '</pages>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1210:1: ( '</pages>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1211:1: '</pages>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1038:1: ( '</pages>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1039:1: '</pages>'
             {
              before(grammarAccess.getUIApplicationAccess().getPagesKeyword_3_5()); 
-            match(input,23,FOLLOW_23_in_rule__UIApplication__Group_3__5__Impl2392); 
+            match(input,20,FOLLOW_20_in_rule__UIApplication__Group_3__5__Impl2046); 
              after(grammarAccess.getUIApplicationAccess().getPagesKeyword_3_5()); 
 
             }
@@ -3187,21 +2760,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3_4__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1236:1: rule__UIApplication__Group_3_4__0 : rule__UIApplication__Group_3_4__0__Impl rule__UIApplication__Group_3_4__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1064:1: rule__UIApplication__Group_3_4__0 : rule__UIApplication__Group_3_4__0__Impl rule__UIApplication__Group_3_4__1 ;
     public final void rule__UIApplication__Group_3_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1240:1: ( rule__UIApplication__Group_3_4__0__Impl rule__UIApplication__Group_3_4__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1241:2: rule__UIApplication__Group_3_4__0__Impl rule__UIApplication__Group_3_4__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1068:1: ( rule__UIApplication__Group_3_4__0__Impl rule__UIApplication__Group_3_4__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1069:2: rule__UIApplication__Group_3_4__0__Impl rule__UIApplication__Group_3_4__1
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__0__Impl_in_rule__UIApplication__Group_3_4__02435);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__0__Impl_in_rule__UIApplication__Group_3_4__02089);
             rule__UIApplication__Group_3_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__1_in_rule__UIApplication__Group_3_4__02438);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__1_in_rule__UIApplication__Group_3_4__02092);
             rule__UIApplication__Group_3_4__1();
 
             state._fsp--;
@@ -3225,20 +2798,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3_4__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1248:1: rule__UIApplication__Group_3_4__0__Impl : ( '<page ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1076:1: rule__UIApplication__Group_3_4__0__Impl : ( '<page ref=' ) ;
     public final void rule__UIApplication__Group_3_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1252:1: ( ( '<page ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1253:1: ( '<page ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1080:1: ( ( '<page ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1081:1: ( '<page ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1253:1: ( '<page ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1254:1: '<page ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1081:1: ( '<page ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1082:1: '<page ref='
             {
              before(grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_4_0()); 
-            match(input,22,FOLLOW_22_in_rule__UIApplication__Group_3_4__0__Impl2466); 
+            match(input,19,FOLLOW_19_in_rule__UIApplication__Group_3_4__0__Impl2120); 
              after(grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_4_0()); 
 
             }
@@ -3262,21 +2835,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3_4__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1267:1: rule__UIApplication__Group_3_4__1 : rule__UIApplication__Group_3_4__1__Impl rule__UIApplication__Group_3_4__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1095:1: rule__UIApplication__Group_3_4__1 : rule__UIApplication__Group_3_4__1__Impl rule__UIApplication__Group_3_4__2 ;
     public final void rule__UIApplication__Group_3_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1271:1: ( rule__UIApplication__Group_3_4__1__Impl rule__UIApplication__Group_3_4__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1272:2: rule__UIApplication__Group_3_4__1__Impl rule__UIApplication__Group_3_4__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1099:1: ( rule__UIApplication__Group_3_4__1__Impl rule__UIApplication__Group_3_4__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1100:2: rule__UIApplication__Group_3_4__1__Impl rule__UIApplication__Group_3_4__2
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__1__Impl_in_rule__UIApplication__Group_3_4__12497);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__1__Impl_in_rule__UIApplication__Group_3_4__12151);
             rule__UIApplication__Group_3_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__2_in_rule__UIApplication__Group_3_4__12500);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__2_in_rule__UIApplication__Group_3_4__12154);
             rule__UIApplication__Group_3_4__2();
 
             state._fsp--;
@@ -3300,23 +2873,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3_4__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1279:1: rule__UIApplication__Group_3_4__1__Impl : ( ( rule__UIApplication__PagesAssignment_3_4_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1107:1: rule__UIApplication__Group_3_4__1__Impl : ( ( rule__UIApplication__PagesAssignment_3_4_1 ) ) ;
     public final void rule__UIApplication__Group_3_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1283:1: ( ( ( rule__UIApplication__PagesAssignment_3_4_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1284:1: ( ( rule__UIApplication__PagesAssignment_3_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1111:1: ( ( ( rule__UIApplication__PagesAssignment_3_4_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1112:1: ( ( rule__UIApplication__PagesAssignment_3_4_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1284:1: ( ( rule__UIApplication__PagesAssignment_3_4_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1285:1: ( rule__UIApplication__PagesAssignment_3_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1112:1: ( ( rule__UIApplication__PagesAssignment_3_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1113:1: ( rule__UIApplication__PagesAssignment_3_4_1 )
             {
              before(grammarAccess.getUIApplicationAccess().getPagesAssignment_3_4_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1286:1: ( rule__UIApplication__PagesAssignment_3_4_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1286:2: rule__UIApplication__PagesAssignment_3_4_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1114:1: ( rule__UIApplication__PagesAssignment_3_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1114:2: rule__UIApplication__PagesAssignment_3_4_1
             {
-            pushFollow(FOLLOW_rule__UIApplication__PagesAssignment_3_4_1_in_rule__UIApplication__Group_3_4__1__Impl2527);
+            pushFollow(FOLLOW_rule__UIApplication__PagesAssignment_3_4_1_in_rule__UIApplication__Group_3_4__1__Impl2181);
             rule__UIApplication__PagesAssignment_3_4_1();
 
             state._fsp--;
@@ -3347,16 +2920,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3_4__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1296:1: rule__UIApplication__Group_3_4__2 : rule__UIApplication__Group_3_4__2__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1124:1: rule__UIApplication__Group_3_4__2 : rule__UIApplication__Group_3_4__2__Impl ;
     public final void rule__UIApplication__Group_3_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1300:1: ( rule__UIApplication__Group_3_4__2__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1301:2: rule__UIApplication__Group_3_4__2__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1128:1: ( rule__UIApplication__Group_3_4__2__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1129:2: rule__UIApplication__Group_3_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__2__Impl_in_rule__UIApplication__Group_3_4__22557);
+            pushFollow(FOLLOW_rule__UIApplication__Group_3_4__2__Impl_in_rule__UIApplication__Group_3_4__22211);
             rule__UIApplication__Group_3_4__2__Impl();
 
             state._fsp--;
@@ -3380,20 +2953,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__Group_3_4__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1307:1: rule__UIApplication__Group_3_4__2__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1135:1: rule__UIApplication__Group_3_4__2__Impl : ( ' />' ) ;
     public final void rule__UIApplication__Group_3_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1311:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1312:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1139:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1140:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1312:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1313:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1140:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1141:1: ' />'
             {
              before(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_4_2()); 
-            match(input,19,FOLLOW_19_in_rule__UIApplication__Group_3_4__2__Impl2585); 
+            match(input,16,FOLLOW_16_in_rule__UIApplication__Group_3_4__2__Impl2239); 
              after(grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_4_2()); 
 
             }
@@ -3416,22 +2989,396 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__UIApplication__Group_3_4__2__Impl"
 
 
+    // $ANTLR start "rule__XMLDeclaration__Group__0"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1160:1: rule__XMLDeclaration__Group__0 : rule__XMLDeclaration__Group__0__Impl rule__XMLDeclaration__Group__1 ;
+    public final void rule__XMLDeclaration__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1164:1: ( rule__XMLDeclaration__Group__0__Impl rule__XMLDeclaration__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1165:2: rule__XMLDeclaration__Group__0__Impl rule__XMLDeclaration__Group__1
+            {
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__0__Impl_in_rule__XMLDeclaration__Group__02276);
+            rule__XMLDeclaration__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__1_in_rule__XMLDeclaration__Group__02279);
+            rule__XMLDeclaration__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__0"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__0__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1172:1: rule__XMLDeclaration__Group__0__Impl : ( '<?xml version=' ) ;
+    public final void rule__XMLDeclaration__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1176:1: ( ( '<?xml version=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1177:1: ( '<?xml version=' )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1177:1: ( '<?xml version=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1178:1: '<?xml version='
+            {
+             before(grammarAccess.getXMLDeclarationAccess().getXmlVersionKeyword_0()); 
+            match(input,21,FOLLOW_21_in_rule__XMLDeclaration__Group__0__Impl2307); 
+             after(grammarAccess.getXMLDeclarationAccess().getXmlVersionKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__0__Impl"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__1"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1191:1: rule__XMLDeclaration__Group__1 : rule__XMLDeclaration__Group__1__Impl rule__XMLDeclaration__Group__2 ;
+    public final void rule__XMLDeclaration__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1195:1: ( rule__XMLDeclaration__Group__1__Impl rule__XMLDeclaration__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1196:2: rule__XMLDeclaration__Group__1__Impl rule__XMLDeclaration__Group__2
+            {
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__1__Impl_in_rule__XMLDeclaration__Group__12338);
+            rule__XMLDeclaration__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__2_in_rule__XMLDeclaration__Group__12341);
+            rule__XMLDeclaration__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__1"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__1__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1203:1: rule__XMLDeclaration__Group__1__Impl : ( RULE_VERSION ) ;
+    public final void rule__XMLDeclaration__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1207:1: ( ( RULE_VERSION ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1208:1: ( RULE_VERSION )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1208:1: ( RULE_VERSION )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1209:1: RULE_VERSION
+            {
+             before(grammarAccess.getXMLDeclarationAccess().getVERSIONTerminalRuleCall_1()); 
+            match(input,RULE_VERSION,FOLLOW_RULE_VERSION_in_rule__XMLDeclaration__Group__1__Impl2368); 
+             after(grammarAccess.getXMLDeclarationAccess().getVERSIONTerminalRuleCall_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__1__Impl"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__2"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1220:1: rule__XMLDeclaration__Group__2 : rule__XMLDeclaration__Group__2__Impl rule__XMLDeclaration__Group__3 ;
+    public final void rule__XMLDeclaration__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1224:1: ( rule__XMLDeclaration__Group__2__Impl rule__XMLDeclaration__Group__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1225:2: rule__XMLDeclaration__Group__2__Impl rule__XMLDeclaration__Group__3
+            {
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__2__Impl_in_rule__XMLDeclaration__Group__22397);
+            rule__XMLDeclaration__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__3_in_rule__XMLDeclaration__Group__22400);
+            rule__XMLDeclaration__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__2"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__2__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1232:1: rule__XMLDeclaration__Group__2__Impl : ( ' encoding=' ) ;
+    public final void rule__XMLDeclaration__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1236:1: ( ( ' encoding=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1237:1: ( ' encoding=' )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1237:1: ( ' encoding=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1238:1: ' encoding='
+            {
+             before(grammarAccess.getXMLDeclarationAccess().getEncodingKeyword_2()); 
+            match(input,22,FOLLOW_22_in_rule__XMLDeclaration__Group__2__Impl2428); 
+             after(grammarAccess.getXMLDeclarationAccess().getEncodingKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__2__Impl"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__3"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1251:1: rule__XMLDeclaration__Group__3 : rule__XMLDeclaration__Group__3__Impl rule__XMLDeclaration__Group__4 ;
+    public final void rule__XMLDeclaration__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1255:1: ( rule__XMLDeclaration__Group__3__Impl rule__XMLDeclaration__Group__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1256:2: rule__XMLDeclaration__Group__3__Impl rule__XMLDeclaration__Group__4
+            {
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__3__Impl_in_rule__XMLDeclaration__Group__32459);
+            rule__XMLDeclaration__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__4_in_rule__XMLDeclaration__Group__32462);
+            rule__XMLDeclaration__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__3"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__3__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1263:1: rule__XMLDeclaration__Group__3__Impl : ( ruleEString ) ;
+    public final void rule__XMLDeclaration__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1267:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1268:1: ( ruleEString )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1268:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1269:1: ruleEString
+            {
+             before(grammarAccess.getXMLDeclarationAccess().getEStringParserRuleCall_3()); 
+            pushFollow(FOLLOW_ruleEString_in_rule__XMLDeclaration__Group__3__Impl2489);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getXMLDeclarationAccess().getEStringParserRuleCall_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__3__Impl"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__4"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1280:1: rule__XMLDeclaration__Group__4 : rule__XMLDeclaration__Group__4__Impl ;
+    public final void rule__XMLDeclaration__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1284:1: ( rule__XMLDeclaration__Group__4__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1285:2: rule__XMLDeclaration__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__XMLDeclaration__Group__4__Impl_in_rule__XMLDeclaration__Group__42518);
+            rule__XMLDeclaration__Group__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__4"
+
+
+    // $ANTLR start "rule__XMLDeclaration__Group__4__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1291:1: rule__XMLDeclaration__Group__4__Impl : ( ' ?>' ) ;
+    public final void rule__XMLDeclaration__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1295:1: ( ( ' ?>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1296:1: ( ' ?>' )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1296:1: ( ' ?>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1297:1: ' ?>'
+            {
+             before(grammarAccess.getXMLDeclarationAccess().getSpaceQuestionMarkGreaterThanSignKeyword_4()); 
+            match(input,23,FOLLOW_23_in_rule__XMLDeclaration__Group__4__Impl2546); 
+             after(grammarAccess.getXMLDeclarationAccess().getSpaceQuestionMarkGreaterThanSignKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__XMLDeclaration__Group__4__Impl"
+
+
     // $ANTLR start "rule__View__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1332:1: rule__View__Group__0 : rule__View__Group__0__Impl rule__View__Group__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1320:1: rule__View__Group__0 : rule__View__Group__0__Impl rule__View__Group__1 ;
     public final void rule__View__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1336:1: ( rule__View__Group__0__Impl rule__View__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1337:2: rule__View__Group__0__Impl rule__View__Group__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1324:1: ( rule__View__Group__0__Impl rule__View__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1325:2: rule__View__Group__0__Impl rule__View__Group__1
             {
-            pushFollow(FOLLOW_rule__View__Group__0__Impl_in_rule__View__Group__02622);
+            pushFollow(FOLLOW_rule__View__Group__0__Impl_in_rule__View__Group__02587);
             rule__View__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__1_in_rule__View__Group__02625);
+            pushFollow(FOLLOW_rule__View__Group__1_in_rule__View__Group__02590);
             rule__View__Group__1();
 
             state._fsp--;
@@ -3455,21 +3402,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1344:1: rule__View__Group__0__Impl : ( () ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1332:1: rule__View__Group__0__Impl : ( () ) ;
     public final void rule__View__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1348:1: ( ( () ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1349:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1336:1: ( ( () ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1337:1: ( () )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1349:1: ( () )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1350:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1337:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1338:1: ()
             {
              before(grammarAccess.getViewAccess().getViewAction_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1351:1: ()
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1353:1: 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1339:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1341:1: 
             {
             }
 
@@ -3492,21 +3439,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1363:1: rule__View__Group__1 : rule__View__Group__1__Impl rule__View__Group__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1351:1: rule__View__Group__1 : rule__View__Group__1__Impl rule__View__Group__2 ;
     public final void rule__View__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1367:1: ( rule__View__Group__1__Impl rule__View__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1368:2: rule__View__Group__1__Impl rule__View__Group__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1355:1: ( rule__View__Group__1__Impl rule__View__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1356:2: rule__View__Group__1__Impl rule__View__Group__2
             {
-            pushFollow(FOLLOW_rule__View__Group__1__Impl_in_rule__View__Group__12683);
+            pushFollow(FOLLOW_rule__View__Group__1__Impl_in_rule__View__Group__12648);
             rule__View__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__2_in_rule__View__Group__12686);
+            pushFollow(FOLLOW_rule__View__Group__2_in_rule__View__Group__12651);
             rule__View__Group__2();
 
             state._fsp--;
@@ -3530,21 +3477,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1375:1: rule__View__Group__1__Impl : ( '<view id=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1363:1: rule__View__Group__1__Impl : ( '<view name=' ) ;
     public final void rule__View__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1379:1: ( ( '<view id=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1380:1: ( '<view id=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1367:1: ( ( '<view name=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1368:1: ( '<view name=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1380:1: ( '<view id=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1381:1: '<view id='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1368:1: ( '<view name=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1369:1: '<view name='
             {
-             before(grammarAccess.getViewAccess().getViewIdKeyword_1()); 
-            match(input,24,FOLLOW_24_in_rule__View__Group__1__Impl2714); 
-             after(grammarAccess.getViewAccess().getViewIdKeyword_1()); 
+             before(grammarAccess.getViewAccess().getViewNameKeyword_1()); 
+            match(input,24,FOLLOW_24_in_rule__View__Group__1__Impl2679); 
+             after(grammarAccess.getViewAccess().getViewNameKeyword_1()); 
 
             }
 
@@ -3567,21 +3514,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1394:1: rule__View__Group__2 : rule__View__Group__2__Impl rule__View__Group__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1382:1: rule__View__Group__2 : rule__View__Group__2__Impl rule__View__Group__3 ;
     public final void rule__View__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1398:1: ( rule__View__Group__2__Impl rule__View__Group__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1399:2: rule__View__Group__2__Impl rule__View__Group__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1386:1: ( rule__View__Group__2__Impl rule__View__Group__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1387:2: rule__View__Group__2__Impl rule__View__Group__3
             {
-            pushFollow(FOLLOW_rule__View__Group__2__Impl_in_rule__View__Group__22745);
+            pushFollow(FOLLOW_rule__View__Group__2__Impl_in_rule__View__Group__22710);
             rule__View__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__3_in_rule__View__Group__22748);
+            pushFollow(FOLLOW_rule__View__Group__3_in_rule__View__Group__22713);
             rule__View__Group__3();
 
             state._fsp--;
@@ -3605,23 +3552,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1406:1: rule__View__Group__2__Impl : ( ( rule__View__NameAssignment_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1394:1: rule__View__Group__2__Impl : ( ( rule__View__NameAssignment_2 ) ) ;
     public final void rule__View__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1410:1: ( ( ( rule__View__NameAssignment_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1411:1: ( ( rule__View__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1398:1: ( ( ( rule__View__NameAssignment_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1399:1: ( ( rule__View__NameAssignment_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1411:1: ( ( rule__View__NameAssignment_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1412:1: ( rule__View__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1399:1: ( ( rule__View__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1400:1: ( rule__View__NameAssignment_2 )
             {
              before(grammarAccess.getViewAccess().getNameAssignment_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1413:1: ( rule__View__NameAssignment_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1413:2: rule__View__NameAssignment_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1401:1: ( rule__View__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1401:2: rule__View__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__View__NameAssignment_2_in_rule__View__Group__2__Impl2775);
+            pushFollow(FOLLOW_rule__View__NameAssignment_2_in_rule__View__Group__2__Impl2740);
             rule__View__NameAssignment_2();
 
             state._fsp--;
@@ -3652,21 +3599,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1423:1: rule__View__Group__3 : rule__View__Group__3__Impl rule__View__Group__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1411:1: rule__View__Group__3 : rule__View__Group__3__Impl rule__View__Group__4 ;
     public final void rule__View__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1427:1: ( rule__View__Group__3__Impl rule__View__Group__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1428:2: rule__View__Group__3__Impl rule__View__Group__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1415:1: ( rule__View__Group__3__Impl rule__View__Group__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1416:2: rule__View__Group__3__Impl rule__View__Group__4
             {
-            pushFollow(FOLLOW_rule__View__Group__3__Impl_in_rule__View__Group__32805);
+            pushFollow(FOLLOW_rule__View__Group__3__Impl_in_rule__View__Group__32770);
             rule__View__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__4_in_rule__View__Group__32808);
+            pushFollow(FOLLOW_rule__View__Group__4_in_rule__View__Group__32773);
             rule__View__Group__4();
 
             state._fsp--;
@@ -3690,20 +3637,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1435:1: rule__View__Group__3__Impl : ( ' >' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1423:1: rule__View__Group__3__Impl : ( ' >' ) ;
     public final void rule__View__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1439:1: ( ( ' >' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1440:1: ( ' >' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1427:1: ( ( ' >' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1428:1: ( ' >' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1440:1: ( ' >' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1441:1: ' >'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1428:1: ( ' >' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1429:1: ' >'
             {
              before(grammarAccess.getViewAccess().getSpaceGreaterThanSignKeyword_3()); 
-            match(input,25,FOLLOW_25_in_rule__View__Group__3__Impl2836); 
+            match(input,25,FOLLOW_25_in_rule__View__Group__3__Impl2801); 
              after(grammarAccess.getViewAccess().getSpaceGreaterThanSignKeyword_3()); 
 
             }
@@ -3727,21 +3674,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1454:1: rule__View__Group__4 : rule__View__Group__4__Impl rule__View__Group__5 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1442:1: rule__View__Group__4 : rule__View__Group__4__Impl rule__View__Group__5 ;
     public final void rule__View__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1458:1: ( rule__View__Group__4__Impl rule__View__Group__5 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1459:2: rule__View__Group__4__Impl rule__View__Group__5
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1446:1: ( rule__View__Group__4__Impl rule__View__Group__5 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1447:2: rule__View__Group__4__Impl rule__View__Group__5
             {
-            pushFollow(FOLLOW_rule__View__Group__4__Impl_in_rule__View__Group__42867);
+            pushFollow(FOLLOW_rule__View__Group__4__Impl_in_rule__View__Group__42832);
             rule__View__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__5_in_rule__View__Group__42870);
+            pushFollow(FOLLOW_rule__View__Group__5_in_rule__View__Group__42835);
             rule__View__Group__5();
 
             state._fsp--;
@@ -3765,20 +3712,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1466:1: rule__View__Group__4__Impl : ( ( rule__View__Group_4__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1454:1: rule__View__Group__4__Impl : ( ( rule__View__Group_4__0 )? ) ;
     public final void rule__View__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1470:1: ( ( ( rule__View__Group_4__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1471:1: ( ( rule__View__Group_4__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1458:1: ( ( ( rule__View__Group_4__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1459:1: ( ( rule__View__Group_4__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1471:1: ( ( rule__View__Group_4__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1472:1: ( rule__View__Group_4__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1459:1: ( ( rule__View__Group_4__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1460:1: ( rule__View__Group_4__0 )?
             {
              before(grammarAccess.getViewAccess().getGroup_4()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1473:1: ( rule__View__Group_4__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1461:1: ( rule__View__Group_4__0 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -3787,9 +3734,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
             }
             switch (alt8) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1473:2: rule__View__Group_4__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1461:2: rule__View__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__View__Group_4__0_in_rule__View__Group__4__Impl2897);
+                    pushFollow(FOLLOW_rule__View__Group_4__0_in_rule__View__Group__4__Impl2862);
                     rule__View__Group_4__0();
 
                     state._fsp--;
@@ -3823,21 +3770,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__5"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1483:1: rule__View__Group__5 : rule__View__Group__5__Impl rule__View__Group__6 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1471:1: rule__View__Group__5 : rule__View__Group__5__Impl rule__View__Group__6 ;
     public final void rule__View__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1487:1: ( rule__View__Group__5__Impl rule__View__Group__6 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1488:2: rule__View__Group__5__Impl rule__View__Group__6
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1475:1: ( rule__View__Group__5__Impl rule__View__Group__6 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1476:2: rule__View__Group__5__Impl rule__View__Group__6
             {
-            pushFollow(FOLLOW_rule__View__Group__5__Impl_in_rule__View__Group__52928);
+            pushFollow(FOLLOW_rule__View__Group__5__Impl_in_rule__View__Group__52893);
             rule__View__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__6_in_rule__View__Group__52931);
+            pushFollow(FOLLOW_rule__View__Group__6_in_rule__View__Group__52896);
             rule__View__Group__6();
 
             state._fsp--;
@@ -3861,20 +3808,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__5__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1495:1: rule__View__Group__5__Impl : ( '<model ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1483:1: rule__View__Group__5__Impl : ( '<model ref=' ) ;
     public final void rule__View__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1499:1: ( ( '<model ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1500:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1487:1: ( ( '<model ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1488:1: ( '<model ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1500:1: ( '<model ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1501:1: '<model ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1488:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1489:1: '<model ref='
             {
              before(grammarAccess.getViewAccess().getModelRefKeyword_5()); 
-            match(input,18,FOLLOW_18_in_rule__View__Group__5__Impl2959); 
+            match(input,15,FOLLOW_15_in_rule__View__Group__5__Impl2924); 
              after(grammarAccess.getViewAccess().getModelRefKeyword_5()); 
 
             }
@@ -3898,21 +3845,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__6"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1514:1: rule__View__Group__6 : rule__View__Group__6__Impl rule__View__Group__7 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1502:1: rule__View__Group__6 : rule__View__Group__6__Impl rule__View__Group__7 ;
     public final void rule__View__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1518:1: ( rule__View__Group__6__Impl rule__View__Group__7 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1519:2: rule__View__Group__6__Impl rule__View__Group__7
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1506:1: ( rule__View__Group__6__Impl rule__View__Group__7 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1507:2: rule__View__Group__6__Impl rule__View__Group__7
             {
-            pushFollow(FOLLOW_rule__View__Group__6__Impl_in_rule__View__Group__62990);
+            pushFollow(FOLLOW_rule__View__Group__6__Impl_in_rule__View__Group__62955);
             rule__View__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__7_in_rule__View__Group__62993);
+            pushFollow(FOLLOW_rule__View__Group__7_in_rule__View__Group__62958);
             rule__View__Group__7();
 
             state._fsp--;
@@ -3936,23 +3883,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__6__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1526:1: rule__View__Group__6__Impl : ( ( rule__View__ModelAssignment_6 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1514:1: rule__View__Group__6__Impl : ( ( rule__View__ModelAssignment_6 ) ) ;
     public final void rule__View__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1530:1: ( ( ( rule__View__ModelAssignment_6 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1531:1: ( ( rule__View__ModelAssignment_6 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1518:1: ( ( ( rule__View__ModelAssignment_6 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1519:1: ( ( rule__View__ModelAssignment_6 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1531:1: ( ( rule__View__ModelAssignment_6 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1532:1: ( rule__View__ModelAssignment_6 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1519:1: ( ( rule__View__ModelAssignment_6 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1520:1: ( rule__View__ModelAssignment_6 )
             {
              before(grammarAccess.getViewAccess().getModelAssignment_6()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1533:1: ( rule__View__ModelAssignment_6 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1533:2: rule__View__ModelAssignment_6
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1521:1: ( rule__View__ModelAssignment_6 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1521:2: rule__View__ModelAssignment_6
             {
-            pushFollow(FOLLOW_rule__View__ModelAssignment_6_in_rule__View__Group__6__Impl3020);
+            pushFollow(FOLLOW_rule__View__ModelAssignment_6_in_rule__View__Group__6__Impl2985);
             rule__View__ModelAssignment_6();
 
             state._fsp--;
@@ -3983,21 +3930,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__7"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1543:1: rule__View__Group__7 : rule__View__Group__7__Impl rule__View__Group__8 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1531:1: rule__View__Group__7 : rule__View__Group__7__Impl rule__View__Group__8 ;
     public final void rule__View__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1547:1: ( rule__View__Group__7__Impl rule__View__Group__8 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1548:2: rule__View__Group__7__Impl rule__View__Group__8
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1535:1: ( rule__View__Group__7__Impl rule__View__Group__8 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1536:2: rule__View__Group__7__Impl rule__View__Group__8
             {
-            pushFollow(FOLLOW_rule__View__Group__7__Impl_in_rule__View__Group__73050);
+            pushFollow(FOLLOW_rule__View__Group__7__Impl_in_rule__View__Group__73015);
             rule__View__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__8_in_rule__View__Group__73053);
+            pushFollow(FOLLOW_rule__View__Group__8_in_rule__View__Group__73018);
             rule__View__Group__8();
 
             state._fsp--;
@@ -4021,20 +3968,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__7__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1555:1: rule__View__Group__7__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1543:1: rule__View__Group__7__Impl : ( ' />' ) ;
     public final void rule__View__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1559:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1560:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1547:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1548:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1560:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1561:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1548:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1549:1: ' />'
             {
              before(grammarAccess.getViewAccess().getSpaceSolidusGreaterThanSignKeyword_7()); 
-            match(input,19,FOLLOW_19_in_rule__View__Group__7__Impl3081); 
+            match(input,16,FOLLOW_16_in_rule__View__Group__7__Impl3046); 
              after(grammarAccess.getViewAccess().getSpaceSolidusGreaterThanSignKeyword_7()); 
 
             }
@@ -4058,21 +4005,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__8"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1574:1: rule__View__Group__8 : rule__View__Group__8__Impl rule__View__Group__9 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1562:1: rule__View__Group__8 : rule__View__Group__8__Impl rule__View__Group__9 ;
     public final void rule__View__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1578:1: ( rule__View__Group__8__Impl rule__View__Group__9 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1579:2: rule__View__Group__8__Impl rule__View__Group__9
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1566:1: ( rule__View__Group__8__Impl rule__View__Group__9 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1567:2: rule__View__Group__8__Impl rule__View__Group__9
             {
-            pushFollow(FOLLOW_rule__View__Group__8__Impl_in_rule__View__Group__83112);
+            pushFollow(FOLLOW_rule__View__Group__8__Impl_in_rule__View__Group__83077);
             rule__View__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group__9_in_rule__View__Group__83115);
+            pushFollow(FOLLOW_rule__View__Group__9_in_rule__View__Group__83080);
             rule__View__Group__9();
 
             state._fsp--;
@@ -4096,20 +4043,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__8__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1586:1: rule__View__Group__8__Impl : ( ( rule__View__Group_8__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1574:1: rule__View__Group__8__Impl : ( ( rule__View__Group_8__0 )? ) ;
     public final void rule__View__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1590:1: ( ( ( rule__View__Group_8__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1591:1: ( ( rule__View__Group_8__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1578:1: ( ( ( rule__View__Group_8__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1579:1: ( ( rule__View__Group_8__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1591:1: ( ( rule__View__Group_8__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1592:1: ( rule__View__Group_8__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1579:1: ( ( rule__View__Group_8__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1580:1: ( rule__View__Group_8__0 )?
             {
              before(grammarAccess.getViewAccess().getGroup_8()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1593:1: ( rule__View__Group_8__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1581:1: ( rule__View__Group_8__0 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -4118,9 +4065,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
             }
             switch (alt9) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1593:2: rule__View__Group_8__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1581:2: rule__View__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__View__Group_8__0_in_rule__View__Group__8__Impl3142);
+                    pushFollow(FOLLOW_rule__View__Group_8__0_in_rule__View__Group__8__Impl3107);
                     rule__View__Group_8__0();
 
                     state._fsp--;
@@ -4154,16 +4101,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__9"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1603:1: rule__View__Group__9 : rule__View__Group__9__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1591:1: rule__View__Group__9 : rule__View__Group__9__Impl ;
     public final void rule__View__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1607:1: ( rule__View__Group__9__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1608:2: rule__View__Group__9__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1595:1: ( rule__View__Group__9__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1596:2: rule__View__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__View__Group__9__Impl_in_rule__View__Group__93173);
+            pushFollow(FOLLOW_rule__View__Group__9__Impl_in_rule__View__Group__93138);
             rule__View__Group__9__Impl();
 
             state._fsp--;
@@ -4187,20 +4134,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group__9__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1614:1: rule__View__Group__9__Impl : ( '</view>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1602:1: rule__View__Group__9__Impl : ( '</view>' ) ;
     public final void rule__View__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1618:1: ( ( '</view>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1619:1: ( '</view>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1606:1: ( ( '</view>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1607:1: ( '</view>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1619:1: ( '</view>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1620:1: '</view>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1607:1: ( '</view>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1608:1: '</view>'
             {
              before(grammarAccess.getViewAccess().getViewKeyword_9()); 
-            match(input,26,FOLLOW_26_in_rule__View__Group__9__Impl3201); 
+            match(input,26,FOLLOW_26_in_rule__View__Group__9__Impl3166); 
              after(grammarAccess.getViewAccess().getViewKeyword_9()); 
 
             }
@@ -4224,21 +4171,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_4__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1653:1: rule__View__Group_4__0 : rule__View__Group_4__0__Impl rule__View__Group_4__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1641:1: rule__View__Group_4__0 : rule__View__Group_4__0__Impl rule__View__Group_4__1 ;
     public final void rule__View__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1657:1: ( rule__View__Group_4__0__Impl rule__View__Group_4__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1658:2: rule__View__Group_4__0__Impl rule__View__Group_4__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1645:1: ( rule__View__Group_4__0__Impl rule__View__Group_4__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1646:2: rule__View__Group_4__0__Impl rule__View__Group_4__1
             {
-            pushFollow(FOLLOW_rule__View__Group_4__0__Impl_in_rule__View__Group_4__03252);
+            pushFollow(FOLLOW_rule__View__Group_4__0__Impl_in_rule__View__Group_4__03217);
             rule__View__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group_4__1_in_rule__View__Group_4__03255);
+            pushFollow(FOLLOW_rule__View__Group_4__1_in_rule__View__Group_4__03220);
             rule__View__Group_4__1();
 
             state._fsp--;
@@ -4262,20 +4209,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_4__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1665:1: rule__View__Group_4__0__Impl : ( '<description>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1653:1: rule__View__Group_4__0__Impl : ( '<description>' ) ;
     public final void rule__View__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1669:1: ( ( '<description>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1670:1: ( '<description>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1657:1: ( ( '<description>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1658:1: ( '<description>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1670:1: ( '<description>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1671:1: '<description>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1658:1: ( '<description>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1659:1: '<description>'
             {
              before(grammarAccess.getViewAccess().getDescriptionKeyword_4_0()); 
-            match(input,27,FOLLOW_27_in_rule__View__Group_4__0__Impl3283); 
+            match(input,27,FOLLOW_27_in_rule__View__Group_4__0__Impl3248); 
              after(grammarAccess.getViewAccess().getDescriptionKeyword_4_0()); 
 
             }
@@ -4299,21 +4246,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_4__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1684:1: rule__View__Group_4__1 : rule__View__Group_4__1__Impl rule__View__Group_4__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1672:1: rule__View__Group_4__1 : rule__View__Group_4__1__Impl rule__View__Group_4__2 ;
     public final void rule__View__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1688:1: ( rule__View__Group_4__1__Impl rule__View__Group_4__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1689:2: rule__View__Group_4__1__Impl rule__View__Group_4__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1676:1: ( rule__View__Group_4__1__Impl rule__View__Group_4__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1677:2: rule__View__Group_4__1__Impl rule__View__Group_4__2
             {
-            pushFollow(FOLLOW_rule__View__Group_4__1__Impl_in_rule__View__Group_4__13314);
+            pushFollow(FOLLOW_rule__View__Group_4__1__Impl_in_rule__View__Group_4__13279);
             rule__View__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group_4__2_in_rule__View__Group_4__13317);
+            pushFollow(FOLLOW_rule__View__Group_4__2_in_rule__View__Group_4__13282);
             rule__View__Group_4__2();
 
             state._fsp--;
@@ -4337,23 +4284,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_4__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1696:1: rule__View__Group_4__1__Impl : ( ( rule__View__DescriptionAssignment_4_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1684:1: rule__View__Group_4__1__Impl : ( ( rule__View__DescriptionAssignment_4_1 ) ) ;
     public final void rule__View__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1700:1: ( ( ( rule__View__DescriptionAssignment_4_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1701:1: ( ( rule__View__DescriptionAssignment_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1688:1: ( ( ( rule__View__DescriptionAssignment_4_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1689:1: ( ( rule__View__DescriptionAssignment_4_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1701:1: ( ( rule__View__DescriptionAssignment_4_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1702:1: ( rule__View__DescriptionAssignment_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1689:1: ( ( rule__View__DescriptionAssignment_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1690:1: ( rule__View__DescriptionAssignment_4_1 )
             {
              before(grammarAccess.getViewAccess().getDescriptionAssignment_4_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1703:1: ( rule__View__DescriptionAssignment_4_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1703:2: rule__View__DescriptionAssignment_4_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1691:1: ( rule__View__DescriptionAssignment_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1691:2: rule__View__DescriptionAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__View__DescriptionAssignment_4_1_in_rule__View__Group_4__1__Impl3344);
+            pushFollow(FOLLOW_rule__View__DescriptionAssignment_4_1_in_rule__View__Group_4__1__Impl3309);
             rule__View__DescriptionAssignment_4_1();
 
             state._fsp--;
@@ -4384,16 +4331,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_4__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1713:1: rule__View__Group_4__2 : rule__View__Group_4__2__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1701:1: rule__View__Group_4__2 : rule__View__Group_4__2__Impl ;
     public final void rule__View__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1717:1: ( rule__View__Group_4__2__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1718:2: rule__View__Group_4__2__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1705:1: ( rule__View__Group_4__2__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1706:2: rule__View__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__View__Group_4__2__Impl_in_rule__View__Group_4__23374);
+            pushFollow(FOLLOW_rule__View__Group_4__2__Impl_in_rule__View__Group_4__23339);
             rule__View__Group_4__2__Impl();
 
             state._fsp--;
@@ -4417,20 +4364,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_4__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1724:1: rule__View__Group_4__2__Impl : ( '</description>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1712:1: rule__View__Group_4__2__Impl : ( '</description>' ) ;
     public final void rule__View__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1728:1: ( ( '</description>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1729:1: ( '</description>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1716:1: ( ( '</description>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1717:1: ( '</description>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1729:1: ( '</description>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1730:1: '</description>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1717:1: ( '</description>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1718:1: '</description>'
             {
              before(grammarAccess.getViewAccess().getDescriptionKeyword_4_2()); 
-            match(input,28,FOLLOW_28_in_rule__View__Group_4__2__Impl3402); 
+            match(input,28,FOLLOW_28_in_rule__View__Group_4__2__Impl3367); 
              after(grammarAccess.getViewAccess().getDescriptionKeyword_4_2()); 
 
             }
@@ -4454,21 +4401,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1749:1: rule__View__Group_8__0 : rule__View__Group_8__0__Impl rule__View__Group_8__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1737:1: rule__View__Group_8__0 : rule__View__Group_8__0__Impl rule__View__Group_8__1 ;
     public final void rule__View__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1753:1: ( rule__View__Group_8__0__Impl rule__View__Group_8__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1754:2: rule__View__Group_8__0__Impl rule__View__Group_8__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1741:1: ( rule__View__Group_8__0__Impl rule__View__Group_8__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1742:2: rule__View__Group_8__0__Impl rule__View__Group_8__1
             {
-            pushFollow(FOLLOW_rule__View__Group_8__0__Impl_in_rule__View__Group_8__03439);
+            pushFollow(FOLLOW_rule__View__Group_8__0__Impl_in_rule__View__Group_8__03404);
             rule__View__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group_8__1_in_rule__View__Group_8__03442);
+            pushFollow(FOLLOW_rule__View__Group_8__1_in_rule__View__Group_8__03407);
             rule__View__Group_8__1();
 
             state._fsp--;
@@ -4492,20 +4439,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1761:1: rule__View__Group_8__0__Impl : ( '<actions>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1749:1: rule__View__Group_8__0__Impl : ( '<actions>' ) ;
     public final void rule__View__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1765:1: ( ( '<actions>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1766:1: ( '<actions>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1753:1: ( ( '<actions>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1754:1: ( '<actions>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1766:1: ( '<actions>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1767:1: '<actions>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1754:1: ( '<actions>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1755:1: '<actions>'
             {
              before(grammarAccess.getViewAccess().getActionsKeyword_8_0()); 
-            match(input,29,FOLLOW_29_in_rule__View__Group_8__0__Impl3470); 
+            match(input,29,FOLLOW_29_in_rule__View__Group_8__0__Impl3435); 
              after(grammarAccess.getViewAccess().getActionsKeyword_8_0()); 
 
             }
@@ -4529,21 +4476,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1780:1: rule__View__Group_8__1 : rule__View__Group_8__1__Impl rule__View__Group_8__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1768:1: rule__View__Group_8__1 : rule__View__Group_8__1__Impl rule__View__Group_8__2 ;
     public final void rule__View__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1784:1: ( rule__View__Group_8__1__Impl rule__View__Group_8__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1785:2: rule__View__Group_8__1__Impl rule__View__Group_8__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1772:1: ( rule__View__Group_8__1__Impl rule__View__Group_8__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1773:2: rule__View__Group_8__1__Impl rule__View__Group_8__2
             {
-            pushFollow(FOLLOW_rule__View__Group_8__1__Impl_in_rule__View__Group_8__13501);
+            pushFollow(FOLLOW_rule__View__Group_8__1__Impl_in_rule__View__Group_8__13466);
             rule__View__Group_8__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group_8__2_in_rule__View__Group_8__13504);
+            pushFollow(FOLLOW_rule__View__Group_8__2_in_rule__View__Group_8__13469);
             rule__View__Group_8__2();
 
             state._fsp--;
@@ -4567,23 +4514,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1792:1: rule__View__Group_8__1__Impl : ( ( rule__View__ActionsAssignment_8_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1780:1: rule__View__Group_8__1__Impl : ( ( rule__View__ActionsAssignment_8_1 ) ) ;
     public final void rule__View__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1796:1: ( ( ( rule__View__ActionsAssignment_8_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1797:1: ( ( rule__View__ActionsAssignment_8_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1784:1: ( ( ( rule__View__ActionsAssignment_8_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1785:1: ( ( rule__View__ActionsAssignment_8_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1797:1: ( ( rule__View__ActionsAssignment_8_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1798:1: ( rule__View__ActionsAssignment_8_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1785:1: ( ( rule__View__ActionsAssignment_8_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1786:1: ( rule__View__ActionsAssignment_8_1 )
             {
              before(grammarAccess.getViewAccess().getActionsAssignment_8_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1799:1: ( rule__View__ActionsAssignment_8_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1799:2: rule__View__ActionsAssignment_8_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1787:1: ( rule__View__ActionsAssignment_8_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1787:2: rule__View__ActionsAssignment_8_1
             {
-            pushFollow(FOLLOW_rule__View__ActionsAssignment_8_1_in_rule__View__Group_8__1__Impl3531);
+            pushFollow(FOLLOW_rule__View__ActionsAssignment_8_1_in_rule__View__Group_8__1__Impl3496);
             rule__View__ActionsAssignment_8_1();
 
             state._fsp--;
@@ -4614,21 +4561,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1809:1: rule__View__Group_8__2 : rule__View__Group_8__2__Impl rule__View__Group_8__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1797:1: rule__View__Group_8__2 : rule__View__Group_8__2__Impl rule__View__Group_8__3 ;
     public final void rule__View__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1813:1: ( rule__View__Group_8__2__Impl rule__View__Group_8__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1814:2: rule__View__Group_8__2__Impl rule__View__Group_8__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1801:1: ( rule__View__Group_8__2__Impl rule__View__Group_8__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1802:2: rule__View__Group_8__2__Impl rule__View__Group_8__3
             {
-            pushFollow(FOLLOW_rule__View__Group_8__2__Impl_in_rule__View__Group_8__23561);
+            pushFollow(FOLLOW_rule__View__Group_8__2__Impl_in_rule__View__Group_8__23526);
             rule__View__Group_8__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__View__Group_8__3_in_rule__View__Group_8__23564);
+            pushFollow(FOLLOW_rule__View__Group_8__3_in_rule__View__Group_8__23529);
             rule__View__Group_8__3();
 
             state._fsp--;
@@ -4652,20 +4599,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1821:1: rule__View__Group_8__2__Impl : ( ( rule__View__ActionsAssignment_8_2 )* ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1809:1: rule__View__Group_8__2__Impl : ( ( rule__View__ActionsAssignment_8_2 )* ) ;
     public final void rule__View__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1825:1: ( ( ( rule__View__ActionsAssignment_8_2 )* ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1826:1: ( ( rule__View__ActionsAssignment_8_2 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1813:1: ( ( ( rule__View__ActionsAssignment_8_2 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1814:1: ( ( rule__View__ActionsAssignment_8_2 )* )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1826:1: ( ( rule__View__ActionsAssignment_8_2 )* )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1827:1: ( rule__View__ActionsAssignment_8_2 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1814:1: ( ( rule__View__ActionsAssignment_8_2 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1815:1: ( rule__View__ActionsAssignment_8_2 )*
             {
              before(grammarAccess.getViewAccess().getActionsAssignment_8_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1828:1: ( rule__View__ActionsAssignment_8_2 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1816:1: ( rule__View__ActionsAssignment_8_2 )*
             loop10:
             do {
                 int alt10=2;
@@ -4678,9 +4625,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
                 switch (alt10) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1828:2: rule__View__ActionsAssignment_8_2
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1816:2: rule__View__ActionsAssignment_8_2
             	    {
-            	    pushFollow(FOLLOW_rule__View__ActionsAssignment_8_2_in_rule__View__Group_8__2__Impl3591);
+            	    pushFollow(FOLLOW_rule__View__ActionsAssignment_8_2_in_rule__View__Group_8__2__Impl3556);
             	    rule__View__ActionsAssignment_8_2();
 
             	    state._fsp--;
@@ -4717,16 +4664,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1838:1: rule__View__Group_8__3 : rule__View__Group_8__3__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1826:1: rule__View__Group_8__3 : rule__View__Group_8__3__Impl ;
     public final void rule__View__Group_8__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1842:1: ( rule__View__Group_8__3__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1843:2: rule__View__Group_8__3__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1830:1: ( rule__View__Group_8__3__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1831:2: rule__View__Group_8__3__Impl
             {
-            pushFollow(FOLLOW_rule__View__Group_8__3__Impl_in_rule__View__Group_8__33622);
+            pushFollow(FOLLOW_rule__View__Group_8__3__Impl_in_rule__View__Group_8__33587);
             rule__View__Group_8__3__Impl();
 
             state._fsp--;
@@ -4750,20 +4697,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__Group_8__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1849:1: rule__View__Group_8__3__Impl : ( '</actions>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1837:1: rule__View__Group_8__3__Impl : ( '</actions>' ) ;
     public final void rule__View__Group_8__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1853:1: ( ( '</actions>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1854:1: ( '</actions>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1841:1: ( ( '</actions>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1842:1: ( '</actions>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1854:1: ( '</actions>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1855:1: '</actions>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1842:1: ( '</actions>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1843:1: '</actions>'
             {
              before(grammarAccess.getViewAccess().getActionsKeyword_8_3()); 
-            match(input,30,FOLLOW_30_in_rule__View__Group_8__3__Impl3650); 
+            match(input,30,FOLLOW_30_in_rule__View__Group_8__3__Impl3615); 
              after(grammarAccess.getViewAccess().getActionsKeyword_8_3()); 
 
             }
@@ -4787,21 +4734,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1876:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1864:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1880:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1881:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1868:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1869:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03689);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03654);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03692);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03657);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -4825,21 +4772,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1888:1: rule__Model__Group__0__Impl : ( () ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1876:1: rule__Model__Group__0__Impl : ( () ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1892:1: ( ( () ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1893:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1880:1: ( ( () ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1881:1: ( () )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1893:1: ( () )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1894:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1881:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1882:1: ()
             {
              before(grammarAccess.getModelAccess().getModelAction_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1895:1: ()
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1897:1: 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1883:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1885:1: 
             {
             }
 
@@ -4862,21 +4809,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1907:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1895:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1911:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1912:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1899:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1900:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13750);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13715);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13753);
+            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13718);
             rule__Model__Group__2();
 
             state._fsp--;
@@ -4900,21 +4847,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1919:1: rule__Model__Group__1__Impl : ( '<model id=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1907:1: rule__Model__Group__1__Impl : ( '<model name=' ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1923:1: ( ( '<model id=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1924:1: ( '<model id=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1911:1: ( ( '<model name=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1912:1: ( '<model name=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1924:1: ( '<model id=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1925:1: '<model id='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1912:1: ( '<model name=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1913:1: '<model name='
             {
-             before(grammarAccess.getModelAccess().getModelIdKeyword_1()); 
-            match(input,31,FOLLOW_31_in_rule__Model__Group__1__Impl3781); 
-             after(grammarAccess.getModelAccess().getModelIdKeyword_1()); 
+             before(grammarAccess.getModelAccess().getModelNameKeyword_1()); 
+            match(input,31,FOLLOW_31_in_rule__Model__Group__1__Impl3746); 
+             after(grammarAccess.getModelAccess().getModelNameKeyword_1()); 
 
             }
 
@@ -4937,21 +4884,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1938:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1926:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1942:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1943:2: rule__Model__Group__2__Impl rule__Model__Group__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1930:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1931:2: rule__Model__Group__2__Impl rule__Model__Group__3
             {
-            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23812);
+            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23777);
             rule__Model__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23815);
+            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23780);
             rule__Model__Group__3();
 
             state._fsp--;
@@ -4975,23 +4922,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1950:1: rule__Model__Group__2__Impl : ( ( rule__Model__NameAssignment_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1938:1: rule__Model__Group__2__Impl : ( ( rule__Model__NameAssignment_2 ) ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1954:1: ( ( ( rule__Model__NameAssignment_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1955:1: ( ( rule__Model__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1942:1: ( ( ( rule__Model__NameAssignment_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1943:1: ( ( rule__Model__NameAssignment_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1955:1: ( ( rule__Model__NameAssignment_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1956:1: ( rule__Model__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1943:1: ( ( rule__Model__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1944:1: ( rule__Model__NameAssignment_2 )
             {
              before(grammarAccess.getModelAccess().getNameAssignment_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1957:1: ( rule__Model__NameAssignment_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1957:2: rule__Model__NameAssignment_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1945:1: ( rule__Model__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1945:2: rule__Model__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Model__NameAssignment_2_in_rule__Model__Group__2__Impl3842);
+            pushFollow(FOLLOW_rule__Model__NameAssignment_2_in_rule__Model__Group__2__Impl3807);
             rule__Model__NameAssignment_2();
 
             state._fsp--;
@@ -5022,21 +4969,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1967:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1955:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
     public final void rule__Model__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1971:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1972:2: rule__Model__Group__3__Impl rule__Model__Group__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1959:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1960:2: rule__Model__Group__3__Impl rule__Model__Group__4
             {
-            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33872);
+            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33837);
             rule__Model__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__4_in_rule__Model__Group__33875);
+            pushFollow(FOLLOW_rule__Model__Group__4_in_rule__Model__Group__33840);
             rule__Model__Group__4();
 
             state._fsp--;
@@ -5060,20 +5007,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1979:1: rule__Model__Group__3__Impl : ( ' >' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1967:1: rule__Model__Group__3__Impl : ( ' >' ) ;
     public final void rule__Model__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1983:1: ( ( ' >' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1984:1: ( ' >' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1971:1: ( ( ' >' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1972:1: ( ' >' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1984:1: ( ' >' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1985:1: ' >'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1972:1: ( ' >' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1973:1: ' >'
             {
              before(grammarAccess.getModelAccess().getSpaceGreaterThanSignKeyword_3()); 
-            match(input,25,FOLLOW_25_in_rule__Model__Group__3__Impl3903); 
+            match(input,25,FOLLOW_25_in_rule__Model__Group__3__Impl3868); 
              after(grammarAccess.getModelAccess().getSpaceGreaterThanSignKeyword_3()); 
 
             }
@@ -5097,21 +5044,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1998:1: rule__Model__Group__4 : rule__Model__Group__4__Impl rule__Model__Group__5 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1986:1: rule__Model__Group__4 : rule__Model__Group__4__Impl rule__Model__Group__5 ;
     public final void rule__Model__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2002:1: ( rule__Model__Group__4__Impl rule__Model__Group__5 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2003:2: rule__Model__Group__4__Impl rule__Model__Group__5
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1990:1: ( rule__Model__Group__4__Impl rule__Model__Group__5 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1991:2: rule__Model__Group__4__Impl rule__Model__Group__5
             {
-            pushFollow(FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__43934);
+            pushFollow(FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__43899);
             rule__Model__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__5_in_rule__Model__Group__43937);
+            pushFollow(FOLLOW_rule__Model__Group__5_in_rule__Model__Group__43902);
             rule__Model__Group__5();
 
             state._fsp--;
@@ -5135,20 +5082,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2010:1: rule__Model__Group__4__Impl : ( ( rule__Model__Group_4__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:1998:1: rule__Model__Group__4__Impl : ( ( rule__Model__Group_4__0 )? ) ;
     public final void rule__Model__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2014:1: ( ( ( rule__Model__Group_4__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2015:1: ( ( rule__Model__Group_4__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2002:1: ( ( ( rule__Model__Group_4__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2003:1: ( ( rule__Model__Group_4__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2015:1: ( ( rule__Model__Group_4__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2016:1: ( rule__Model__Group_4__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2003:1: ( ( rule__Model__Group_4__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2004:1: ( rule__Model__Group_4__0 )?
             {
              before(grammarAccess.getModelAccess().getGroup_4()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2017:1: ( rule__Model__Group_4__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2005:1: ( rule__Model__Group_4__0 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -5157,9 +5104,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
             }
             switch (alt11) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2017:2: rule__Model__Group_4__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2005:2: rule__Model__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Model__Group_4__0_in_rule__Model__Group__4__Impl3964);
+                    pushFollow(FOLLOW_rule__Model__Group_4__0_in_rule__Model__Group__4__Impl3929);
                     rule__Model__Group_4__0();
 
                     state._fsp--;
@@ -5193,21 +5140,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__5"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2027:1: rule__Model__Group__5 : rule__Model__Group__5__Impl rule__Model__Group__6 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2015:1: rule__Model__Group__5 : rule__Model__Group__5__Impl rule__Model__Group__6 ;
     public final void rule__Model__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2031:1: ( rule__Model__Group__5__Impl rule__Model__Group__6 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2032:2: rule__Model__Group__5__Impl rule__Model__Group__6
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2019:1: ( rule__Model__Group__5__Impl rule__Model__Group__6 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2020:2: rule__Model__Group__5__Impl rule__Model__Group__6
             {
-            pushFollow(FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__53995);
+            pushFollow(FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__53960);
             rule__Model__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__6_in_rule__Model__Group__53998);
+            pushFollow(FOLLOW_rule__Model__Group__6_in_rule__Model__Group__53963);
             rule__Model__Group__6();
 
             state._fsp--;
@@ -5231,20 +5178,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__5__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2039:1: rule__Model__Group__5__Impl : ( ( rule__Model__Group_5__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2027:1: rule__Model__Group__5__Impl : ( ( rule__Model__Group_5__0 )? ) ;
     public final void rule__Model__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2043:1: ( ( ( rule__Model__Group_5__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2044:1: ( ( rule__Model__Group_5__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2031:1: ( ( ( rule__Model__Group_5__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2032:1: ( ( rule__Model__Group_5__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2044:1: ( ( rule__Model__Group_5__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2045:1: ( rule__Model__Group_5__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2032:1: ( ( rule__Model__Group_5__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2033:1: ( rule__Model__Group_5__0 )?
             {
              before(grammarAccess.getModelAccess().getGroup_5()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2046:1: ( rule__Model__Group_5__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2034:1: ( rule__Model__Group_5__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -5253,9 +5200,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
             }
             switch (alt12) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2046:2: rule__Model__Group_5__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2034:2: rule__Model__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__Model__Group_5__0_in_rule__Model__Group__5__Impl4025);
+                    pushFollow(FOLLOW_rule__Model__Group_5__0_in_rule__Model__Group__5__Impl3990);
                     rule__Model__Group_5__0();
 
                     state._fsp--;
@@ -5289,16 +5236,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__6"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2056:1: rule__Model__Group__6 : rule__Model__Group__6__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2044:1: rule__Model__Group__6 : rule__Model__Group__6__Impl ;
     public final void rule__Model__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2060:1: ( rule__Model__Group__6__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2061:2: rule__Model__Group__6__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2048:1: ( rule__Model__Group__6__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2049:2: rule__Model__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__64056);
+            pushFollow(FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__64021);
             rule__Model__Group__6__Impl();
 
             state._fsp--;
@@ -5322,20 +5269,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group__6__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2067:1: rule__Model__Group__6__Impl : ( '</model>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2055:1: rule__Model__Group__6__Impl : ( '</model>' ) ;
     public final void rule__Model__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2071:1: ( ( '</model>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2072:1: ( '</model>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2059:1: ( ( '</model>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2060:1: ( '</model>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2072:1: ( '</model>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2073:1: '</model>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2060:1: ( '</model>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2061:1: '</model>'
             {
              before(grammarAccess.getModelAccess().getModelKeyword_6()); 
-            match(input,32,FOLLOW_32_in_rule__Model__Group__6__Impl4084); 
+            match(input,32,FOLLOW_32_in_rule__Model__Group__6__Impl4049); 
              after(grammarAccess.getModelAccess().getModelKeyword_6()); 
 
             }
@@ -5359,21 +5306,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2100:1: rule__Model__Group_4__0 : rule__Model__Group_4__0__Impl rule__Model__Group_4__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2088:1: rule__Model__Group_4__0 : rule__Model__Group_4__0__Impl rule__Model__Group_4__1 ;
     public final void rule__Model__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2104:1: ( rule__Model__Group_4__0__Impl rule__Model__Group_4__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2105:2: rule__Model__Group_4__0__Impl rule__Model__Group_4__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2092:1: ( rule__Model__Group_4__0__Impl rule__Model__Group_4__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2093:2: rule__Model__Group_4__0__Impl rule__Model__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Model__Group_4__0__Impl_in_rule__Model__Group_4__04129);
+            pushFollow(FOLLOW_rule__Model__Group_4__0__Impl_in_rule__Model__Group_4__04094);
             rule__Model__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_4__1_in_rule__Model__Group_4__04132);
+            pushFollow(FOLLOW_rule__Model__Group_4__1_in_rule__Model__Group_4__04097);
             rule__Model__Group_4__1();
 
             state._fsp--;
@@ -5397,20 +5344,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2112:1: rule__Model__Group_4__0__Impl : ( '<properties>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2100:1: rule__Model__Group_4__0__Impl : ( '<properties>' ) ;
     public final void rule__Model__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2116:1: ( ( '<properties>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2117:1: ( '<properties>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2104:1: ( ( '<properties>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2105:1: ( '<properties>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2117:1: ( '<properties>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2118:1: '<properties>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2105:1: ( '<properties>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2106:1: '<properties>'
             {
              before(grammarAccess.getModelAccess().getPropertiesKeyword_4_0()); 
-            match(input,33,FOLLOW_33_in_rule__Model__Group_4__0__Impl4160); 
+            match(input,33,FOLLOW_33_in_rule__Model__Group_4__0__Impl4125); 
              after(grammarAccess.getModelAccess().getPropertiesKeyword_4_0()); 
 
             }
@@ -5434,21 +5381,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2131:1: rule__Model__Group_4__1 : rule__Model__Group_4__1__Impl rule__Model__Group_4__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2119:1: rule__Model__Group_4__1 : rule__Model__Group_4__1__Impl rule__Model__Group_4__2 ;
     public final void rule__Model__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2135:1: ( rule__Model__Group_4__1__Impl rule__Model__Group_4__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2136:2: rule__Model__Group_4__1__Impl rule__Model__Group_4__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2123:1: ( rule__Model__Group_4__1__Impl rule__Model__Group_4__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2124:2: rule__Model__Group_4__1__Impl rule__Model__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Model__Group_4__1__Impl_in_rule__Model__Group_4__14191);
+            pushFollow(FOLLOW_rule__Model__Group_4__1__Impl_in_rule__Model__Group_4__14156);
             rule__Model__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_4__2_in_rule__Model__Group_4__14194);
+            pushFollow(FOLLOW_rule__Model__Group_4__2_in_rule__Model__Group_4__14159);
             rule__Model__Group_4__2();
 
             state._fsp--;
@@ -5472,23 +5419,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2143:1: rule__Model__Group_4__1__Impl : ( ( rule__Model__PropertiesAssignment_4_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2131:1: rule__Model__Group_4__1__Impl : ( ( rule__Model__PropertiesAssignment_4_1 ) ) ;
     public final void rule__Model__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2147:1: ( ( ( rule__Model__PropertiesAssignment_4_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2148:1: ( ( rule__Model__PropertiesAssignment_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2135:1: ( ( ( rule__Model__PropertiesAssignment_4_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2136:1: ( ( rule__Model__PropertiesAssignment_4_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2148:1: ( ( rule__Model__PropertiesAssignment_4_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2149:1: ( rule__Model__PropertiesAssignment_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2136:1: ( ( rule__Model__PropertiesAssignment_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2137:1: ( rule__Model__PropertiesAssignment_4_1 )
             {
              before(grammarAccess.getModelAccess().getPropertiesAssignment_4_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2150:1: ( rule__Model__PropertiesAssignment_4_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2150:2: rule__Model__PropertiesAssignment_4_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2138:1: ( rule__Model__PropertiesAssignment_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2138:2: rule__Model__PropertiesAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Model__PropertiesAssignment_4_1_in_rule__Model__Group_4__1__Impl4221);
+            pushFollow(FOLLOW_rule__Model__PropertiesAssignment_4_1_in_rule__Model__Group_4__1__Impl4186);
             rule__Model__PropertiesAssignment_4_1();
 
             state._fsp--;
@@ -5519,21 +5466,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2160:1: rule__Model__Group_4__2 : rule__Model__Group_4__2__Impl rule__Model__Group_4__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2148:1: rule__Model__Group_4__2 : rule__Model__Group_4__2__Impl rule__Model__Group_4__3 ;
     public final void rule__Model__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2164:1: ( rule__Model__Group_4__2__Impl rule__Model__Group_4__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2165:2: rule__Model__Group_4__2__Impl rule__Model__Group_4__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2152:1: ( rule__Model__Group_4__2__Impl rule__Model__Group_4__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2153:2: rule__Model__Group_4__2__Impl rule__Model__Group_4__3
             {
-            pushFollow(FOLLOW_rule__Model__Group_4__2__Impl_in_rule__Model__Group_4__24251);
+            pushFollow(FOLLOW_rule__Model__Group_4__2__Impl_in_rule__Model__Group_4__24216);
             rule__Model__Group_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_4__3_in_rule__Model__Group_4__24254);
+            pushFollow(FOLLOW_rule__Model__Group_4__3_in_rule__Model__Group_4__24219);
             rule__Model__Group_4__3();
 
             state._fsp--;
@@ -5557,20 +5504,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2172:1: rule__Model__Group_4__2__Impl : ( ( rule__Model__PropertiesAssignment_4_2 )* ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2160:1: rule__Model__Group_4__2__Impl : ( ( rule__Model__PropertiesAssignment_4_2 )* ) ;
     public final void rule__Model__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2176:1: ( ( ( rule__Model__PropertiesAssignment_4_2 )* ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2177:1: ( ( rule__Model__PropertiesAssignment_4_2 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2164:1: ( ( ( rule__Model__PropertiesAssignment_4_2 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2165:1: ( ( rule__Model__PropertiesAssignment_4_2 )* )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2177:1: ( ( rule__Model__PropertiesAssignment_4_2 )* )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2178:1: ( rule__Model__PropertiesAssignment_4_2 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2165:1: ( ( rule__Model__PropertiesAssignment_4_2 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2166:1: ( rule__Model__PropertiesAssignment_4_2 )*
             {
              before(grammarAccess.getModelAccess().getPropertiesAssignment_4_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2179:1: ( rule__Model__PropertiesAssignment_4_2 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2167:1: ( rule__Model__PropertiesAssignment_4_2 )*
             loop13:
             do {
                 int alt13=2;
@@ -5583,9 +5530,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
                 switch (alt13) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2179:2: rule__Model__PropertiesAssignment_4_2
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2167:2: rule__Model__PropertiesAssignment_4_2
             	    {
-            	    pushFollow(FOLLOW_rule__Model__PropertiesAssignment_4_2_in_rule__Model__Group_4__2__Impl4281);
+            	    pushFollow(FOLLOW_rule__Model__PropertiesAssignment_4_2_in_rule__Model__Group_4__2__Impl4246);
             	    rule__Model__PropertiesAssignment_4_2();
 
             	    state._fsp--;
@@ -5622,16 +5569,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2189:1: rule__Model__Group_4__3 : rule__Model__Group_4__3__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2177:1: rule__Model__Group_4__3 : rule__Model__Group_4__3__Impl ;
     public final void rule__Model__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2193:1: ( rule__Model__Group_4__3__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2194:2: rule__Model__Group_4__3__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2181:1: ( rule__Model__Group_4__3__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2182:2: rule__Model__Group_4__3__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group_4__3__Impl_in_rule__Model__Group_4__34312);
+            pushFollow(FOLLOW_rule__Model__Group_4__3__Impl_in_rule__Model__Group_4__34277);
             rule__Model__Group_4__3__Impl();
 
             state._fsp--;
@@ -5655,20 +5602,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_4__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2200:1: rule__Model__Group_4__3__Impl : ( '</properties>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2188:1: rule__Model__Group_4__3__Impl : ( '</properties>' ) ;
     public final void rule__Model__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2204:1: ( ( '</properties>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2205:1: ( '</properties>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2192:1: ( ( '</properties>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2193:1: ( '</properties>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2205:1: ( '</properties>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2206:1: '</properties>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2193:1: ( '</properties>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2194:1: '</properties>'
             {
              before(grammarAccess.getModelAccess().getPropertiesKeyword_4_3()); 
-            match(input,34,FOLLOW_34_in_rule__Model__Group_4__3__Impl4340); 
+            match(input,34,FOLLOW_34_in_rule__Model__Group_4__3__Impl4305); 
              after(grammarAccess.getModelAccess().getPropertiesKeyword_4_3()); 
 
             }
@@ -5692,21 +5639,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2227:1: rule__Model__Group_5__0 : rule__Model__Group_5__0__Impl rule__Model__Group_5__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2215:1: rule__Model__Group_5__0 : rule__Model__Group_5__0__Impl rule__Model__Group_5__1 ;
     public final void rule__Model__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2231:1: ( rule__Model__Group_5__0__Impl rule__Model__Group_5__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2232:2: rule__Model__Group_5__0__Impl rule__Model__Group_5__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2219:1: ( rule__Model__Group_5__0__Impl rule__Model__Group_5__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2220:2: rule__Model__Group_5__0__Impl rule__Model__Group_5__1
             {
-            pushFollow(FOLLOW_rule__Model__Group_5__0__Impl_in_rule__Model__Group_5__04379);
+            pushFollow(FOLLOW_rule__Model__Group_5__0__Impl_in_rule__Model__Group_5__04344);
             rule__Model__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5__1_in_rule__Model__Group_5__04382);
+            pushFollow(FOLLOW_rule__Model__Group_5__1_in_rule__Model__Group_5__04347);
             rule__Model__Group_5__1();
 
             state._fsp--;
@@ -5730,20 +5677,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2239:1: rule__Model__Group_5__0__Impl : ( '<ownedElements>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2227:1: rule__Model__Group_5__0__Impl : ( '<ownedElements>' ) ;
     public final void rule__Model__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2243:1: ( ( '<ownedElements>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2244:1: ( '<ownedElements>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2231:1: ( ( '<ownedElements>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2232:1: ( '<ownedElements>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2244:1: ( '<ownedElements>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2245:1: '<ownedElements>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2232:1: ( '<ownedElements>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2233:1: '<ownedElements>'
             {
              before(grammarAccess.getModelAccess().getOwnedElementsKeyword_5_0()); 
-            match(input,35,FOLLOW_35_in_rule__Model__Group_5__0__Impl4410); 
+            match(input,35,FOLLOW_35_in_rule__Model__Group_5__0__Impl4375); 
              after(grammarAccess.getModelAccess().getOwnedElementsKeyword_5_0()); 
 
             }
@@ -5767,21 +5714,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2258:1: rule__Model__Group_5__1 : rule__Model__Group_5__1__Impl rule__Model__Group_5__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2246:1: rule__Model__Group_5__1 : rule__Model__Group_5__1__Impl rule__Model__Group_5__2 ;
     public final void rule__Model__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2262:1: ( rule__Model__Group_5__1__Impl rule__Model__Group_5__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2263:2: rule__Model__Group_5__1__Impl rule__Model__Group_5__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2250:1: ( rule__Model__Group_5__1__Impl rule__Model__Group_5__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2251:2: rule__Model__Group_5__1__Impl rule__Model__Group_5__2
             {
-            pushFollow(FOLLOW_rule__Model__Group_5__1__Impl_in_rule__Model__Group_5__14441);
+            pushFollow(FOLLOW_rule__Model__Group_5__1__Impl_in_rule__Model__Group_5__14406);
             rule__Model__Group_5__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5__2_in_rule__Model__Group_5__14444);
+            pushFollow(FOLLOW_rule__Model__Group_5__2_in_rule__Model__Group_5__14409);
             rule__Model__Group_5__2();
 
             state._fsp--;
@@ -5805,20 +5752,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2270:1: rule__Model__Group_5__1__Impl : ( '<model ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2258:1: rule__Model__Group_5__1__Impl : ( '<model ref=' ) ;
     public final void rule__Model__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2274:1: ( ( '<model ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2275:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2262:1: ( ( '<model ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2263:1: ( '<model ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2275:1: ( '<model ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2276:1: '<model ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2263:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2264:1: '<model ref='
             {
              before(grammarAccess.getModelAccess().getModelRefKeyword_5_1()); 
-            match(input,18,FOLLOW_18_in_rule__Model__Group_5__1__Impl4472); 
+            match(input,15,FOLLOW_15_in_rule__Model__Group_5__1__Impl4437); 
              after(grammarAccess.getModelAccess().getModelRefKeyword_5_1()); 
 
             }
@@ -5842,21 +5789,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2289:1: rule__Model__Group_5__2 : rule__Model__Group_5__2__Impl rule__Model__Group_5__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2277:1: rule__Model__Group_5__2 : rule__Model__Group_5__2__Impl rule__Model__Group_5__3 ;
     public final void rule__Model__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2293:1: ( rule__Model__Group_5__2__Impl rule__Model__Group_5__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2294:2: rule__Model__Group_5__2__Impl rule__Model__Group_5__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2281:1: ( rule__Model__Group_5__2__Impl rule__Model__Group_5__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2282:2: rule__Model__Group_5__2__Impl rule__Model__Group_5__3
             {
-            pushFollow(FOLLOW_rule__Model__Group_5__2__Impl_in_rule__Model__Group_5__24503);
+            pushFollow(FOLLOW_rule__Model__Group_5__2__Impl_in_rule__Model__Group_5__24468);
             rule__Model__Group_5__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5__3_in_rule__Model__Group_5__24506);
+            pushFollow(FOLLOW_rule__Model__Group_5__3_in_rule__Model__Group_5__24471);
             rule__Model__Group_5__3();
 
             state._fsp--;
@@ -5880,23 +5827,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2301:1: rule__Model__Group_5__2__Impl : ( ( rule__Model__OwnedElementsAssignment_5_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2289:1: rule__Model__Group_5__2__Impl : ( ( rule__Model__OwnedElementsAssignment_5_2 ) ) ;
     public final void rule__Model__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2305:1: ( ( ( rule__Model__OwnedElementsAssignment_5_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2306:1: ( ( rule__Model__OwnedElementsAssignment_5_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2293:1: ( ( ( rule__Model__OwnedElementsAssignment_5_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2294:1: ( ( rule__Model__OwnedElementsAssignment_5_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2306:1: ( ( rule__Model__OwnedElementsAssignment_5_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2307:1: ( rule__Model__OwnedElementsAssignment_5_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2294:1: ( ( rule__Model__OwnedElementsAssignment_5_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2295:1: ( rule__Model__OwnedElementsAssignment_5_2 )
             {
              before(grammarAccess.getModelAccess().getOwnedElementsAssignment_5_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2308:1: ( rule__Model__OwnedElementsAssignment_5_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2308:2: rule__Model__OwnedElementsAssignment_5_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2296:1: ( rule__Model__OwnedElementsAssignment_5_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2296:2: rule__Model__OwnedElementsAssignment_5_2
             {
-            pushFollow(FOLLOW_rule__Model__OwnedElementsAssignment_5_2_in_rule__Model__Group_5__2__Impl4533);
+            pushFollow(FOLLOW_rule__Model__OwnedElementsAssignment_5_2_in_rule__Model__Group_5__2__Impl4498);
             rule__Model__OwnedElementsAssignment_5_2();
 
             state._fsp--;
@@ -5927,21 +5874,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2318:1: rule__Model__Group_5__3 : rule__Model__Group_5__3__Impl rule__Model__Group_5__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2306:1: rule__Model__Group_5__3 : rule__Model__Group_5__3__Impl rule__Model__Group_5__4 ;
     public final void rule__Model__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2322:1: ( rule__Model__Group_5__3__Impl rule__Model__Group_5__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2323:2: rule__Model__Group_5__3__Impl rule__Model__Group_5__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2310:1: ( rule__Model__Group_5__3__Impl rule__Model__Group_5__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2311:2: rule__Model__Group_5__3__Impl rule__Model__Group_5__4
             {
-            pushFollow(FOLLOW_rule__Model__Group_5__3__Impl_in_rule__Model__Group_5__34563);
+            pushFollow(FOLLOW_rule__Model__Group_5__3__Impl_in_rule__Model__Group_5__34528);
             rule__Model__Group_5__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5__4_in_rule__Model__Group_5__34566);
+            pushFollow(FOLLOW_rule__Model__Group_5__4_in_rule__Model__Group_5__34531);
             rule__Model__Group_5__4();
 
             state._fsp--;
@@ -5965,20 +5912,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2330:1: rule__Model__Group_5__3__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2318:1: rule__Model__Group_5__3__Impl : ( ' />' ) ;
     public final void rule__Model__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2334:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2335:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2322:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2323:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2335:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2336:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2323:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2324:1: ' />'
             {
              before(grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_3()); 
-            match(input,19,FOLLOW_19_in_rule__Model__Group_5__3__Impl4594); 
+            match(input,16,FOLLOW_16_in_rule__Model__Group_5__3__Impl4559); 
              after(grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_3()); 
 
             }
@@ -6002,21 +5949,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2349:1: rule__Model__Group_5__4 : rule__Model__Group_5__4__Impl rule__Model__Group_5__5 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2337:1: rule__Model__Group_5__4 : rule__Model__Group_5__4__Impl rule__Model__Group_5__5 ;
     public final void rule__Model__Group_5__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2353:1: ( rule__Model__Group_5__4__Impl rule__Model__Group_5__5 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2354:2: rule__Model__Group_5__4__Impl rule__Model__Group_5__5
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2341:1: ( rule__Model__Group_5__4__Impl rule__Model__Group_5__5 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2342:2: rule__Model__Group_5__4__Impl rule__Model__Group_5__5
             {
-            pushFollow(FOLLOW_rule__Model__Group_5__4__Impl_in_rule__Model__Group_5__44625);
+            pushFollow(FOLLOW_rule__Model__Group_5__4__Impl_in_rule__Model__Group_5__44590);
             rule__Model__Group_5__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5__5_in_rule__Model__Group_5__44628);
+            pushFollow(FOLLOW_rule__Model__Group_5__5_in_rule__Model__Group_5__44593);
             rule__Model__Group_5__5();
 
             state._fsp--;
@@ -6040,35 +5987,35 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2361:1: rule__Model__Group_5__4__Impl : ( ( rule__Model__Group_5_4__0 )* ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2349:1: rule__Model__Group_5__4__Impl : ( ( rule__Model__Group_5_4__0 )* ) ;
     public final void rule__Model__Group_5__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2365:1: ( ( ( rule__Model__Group_5_4__0 )* ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2366:1: ( ( rule__Model__Group_5_4__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2353:1: ( ( ( rule__Model__Group_5_4__0 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2354:1: ( ( rule__Model__Group_5_4__0 )* )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2366:1: ( ( rule__Model__Group_5_4__0 )* )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2367:1: ( rule__Model__Group_5_4__0 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2354:1: ( ( rule__Model__Group_5_4__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2355:1: ( rule__Model__Group_5_4__0 )*
             {
              before(grammarAccess.getModelAccess().getGroup_5_4()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2368:1: ( rule__Model__Group_5_4__0 )*
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2356:1: ( rule__Model__Group_5_4__0 )*
             loop14:
             do {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==18) ) {
+                if ( (LA14_0==15) ) {
                     alt14=1;
                 }
 
 
                 switch (alt14) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2368:2: rule__Model__Group_5_4__0
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2356:2: rule__Model__Group_5_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__Model__Group_5_4__0_in_rule__Model__Group_5__4__Impl4655);
+            	    pushFollow(FOLLOW_rule__Model__Group_5_4__0_in_rule__Model__Group_5__4__Impl4620);
             	    rule__Model__Group_5_4__0();
 
             	    state._fsp--;
@@ -6105,16 +6052,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__5"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2378:1: rule__Model__Group_5__5 : rule__Model__Group_5__5__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2366:1: rule__Model__Group_5__5 : rule__Model__Group_5__5__Impl ;
     public final void rule__Model__Group_5__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2382:1: ( rule__Model__Group_5__5__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2383:2: rule__Model__Group_5__5__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2370:1: ( rule__Model__Group_5__5__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2371:2: rule__Model__Group_5__5__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group_5__5__Impl_in_rule__Model__Group_5__54686);
+            pushFollow(FOLLOW_rule__Model__Group_5__5__Impl_in_rule__Model__Group_5__54651);
             rule__Model__Group_5__5__Impl();
 
             state._fsp--;
@@ -6138,20 +6085,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5__5__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2389:1: rule__Model__Group_5__5__Impl : ( '</ownedElements>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2377:1: rule__Model__Group_5__5__Impl : ( '</ownedElements>' ) ;
     public final void rule__Model__Group_5__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2393:1: ( ( '</ownedElements>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2394:1: ( '</ownedElements>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2381:1: ( ( '</ownedElements>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2382:1: ( '</ownedElements>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2394:1: ( '</ownedElements>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2395:1: '</ownedElements>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2382:1: ( '</ownedElements>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2383:1: '</ownedElements>'
             {
              before(grammarAccess.getModelAccess().getOwnedElementsKeyword_5_5()); 
-            match(input,36,FOLLOW_36_in_rule__Model__Group_5__5__Impl4714); 
+            match(input,36,FOLLOW_36_in_rule__Model__Group_5__5__Impl4679); 
              after(grammarAccess.getModelAccess().getOwnedElementsKeyword_5_5()); 
 
             }
@@ -6175,21 +6122,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5_4__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2420:1: rule__Model__Group_5_4__0 : rule__Model__Group_5_4__0__Impl rule__Model__Group_5_4__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2408:1: rule__Model__Group_5_4__0 : rule__Model__Group_5_4__0__Impl rule__Model__Group_5_4__1 ;
     public final void rule__Model__Group_5_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2424:1: ( rule__Model__Group_5_4__0__Impl rule__Model__Group_5_4__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2425:2: rule__Model__Group_5_4__0__Impl rule__Model__Group_5_4__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2412:1: ( rule__Model__Group_5_4__0__Impl rule__Model__Group_5_4__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2413:2: rule__Model__Group_5_4__0__Impl rule__Model__Group_5_4__1
             {
-            pushFollow(FOLLOW_rule__Model__Group_5_4__0__Impl_in_rule__Model__Group_5_4__04757);
+            pushFollow(FOLLOW_rule__Model__Group_5_4__0__Impl_in_rule__Model__Group_5_4__04722);
             rule__Model__Group_5_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5_4__1_in_rule__Model__Group_5_4__04760);
+            pushFollow(FOLLOW_rule__Model__Group_5_4__1_in_rule__Model__Group_5_4__04725);
             rule__Model__Group_5_4__1();
 
             state._fsp--;
@@ -6213,20 +6160,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5_4__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2432:1: rule__Model__Group_5_4__0__Impl : ( '<model ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2420:1: rule__Model__Group_5_4__0__Impl : ( '<model ref=' ) ;
     public final void rule__Model__Group_5_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2436:1: ( ( '<model ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2437:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2424:1: ( ( '<model ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2425:1: ( '<model ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2437:1: ( '<model ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2438:1: '<model ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2425:1: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2426:1: '<model ref='
             {
              before(grammarAccess.getModelAccess().getModelRefKeyword_5_4_0()); 
-            match(input,18,FOLLOW_18_in_rule__Model__Group_5_4__0__Impl4788); 
+            match(input,15,FOLLOW_15_in_rule__Model__Group_5_4__0__Impl4753); 
              after(grammarAccess.getModelAccess().getModelRefKeyword_5_4_0()); 
 
             }
@@ -6250,21 +6197,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5_4__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2451:1: rule__Model__Group_5_4__1 : rule__Model__Group_5_4__1__Impl rule__Model__Group_5_4__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2439:1: rule__Model__Group_5_4__1 : rule__Model__Group_5_4__1__Impl rule__Model__Group_5_4__2 ;
     public final void rule__Model__Group_5_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2455:1: ( rule__Model__Group_5_4__1__Impl rule__Model__Group_5_4__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2456:2: rule__Model__Group_5_4__1__Impl rule__Model__Group_5_4__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2443:1: ( rule__Model__Group_5_4__1__Impl rule__Model__Group_5_4__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2444:2: rule__Model__Group_5_4__1__Impl rule__Model__Group_5_4__2
             {
-            pushFollow(FOLLOW_rule__Model__Group_5_4__1__Impl_in_rule__Model__Group_5_4__14819);
+            pushFollow(FOLLOW_rule__Model__Group_5_4__1__Impl_in_rule__Model__Group_5_4__14784);
             rule__Model__Group_5_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_5_4__2_in_rule__Model__Group_5_4__14822);
+            pushFollow(FOLLOW_rule__Model__Group_5_4__2_in_rule__Model__Group_5_4__14787);
             rule__Model__Group_5_4__2();
 
             state._fsp--;
@@ -6288,23 +6235,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5_4__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2463:1: rule__Model__Group_5_4__1__Impl : ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2451:1: rule__Model__Group_5_4__1__Impl : ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) ) ;
     public final void rule__Model__Group_5_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2467:1: ( ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2468:1: ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2455:1: ( ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2456:1: ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2468:1: ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2469:1: ( rule__Model__OwnedElementsAssignment_5_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2456:1: ( ( rule__Model__OwnedElementsAssignment_5_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2457:1: ( rule__Model__OwnedElementsAssignment_5_4_1 )
             {
              before(grammarAccess.getModelAccess().getOwnedElementsAssignment_5_4_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2470:1: ( rule__Model__OwnedElementsAssignment_5_4_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2470:2: rule__Model__OwnedElementsAssignment_5_4_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2458:1: ( rule__Model__OwnedElementsAssignment_5_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2458:2: rule__Model__OwnedElementsAssignment_5_4_1
             {
-            pushFollow(FOLLOW_rule__Model__OwnedElementsAssignment_5_4_1_in_rule__Model__Group_5_4__1__Impl4849);
+            pushFollow(FOLLOW_rule__Model__OwnedElementsAssignment_5_4_1_in_rule__Model__Group_5_4__1__Impl4814);
             rule__Model__OwnedElementsAssignment_5_4_1();
 
             state._fsp--;
@@ -6335,16 +6282,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5_4__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2480:1: rule__Model__Group_5_4__2 : rule__Model__Group_5_4__2__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2468:1: rule__Model__Group_5_4__2 : rule__Model__Group_5_4__2__Impl ;
     public final void rule__Model__Group_5_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2484:1: ( rule__Model__Group_5_4__2__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2485:2: rule__Model__Group_5_4__2__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2472:1: ( rule__Model__Group_5_4__2__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2473:2: rule__Model__Group_5_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group_5_4__2__Impl_in_rule__Model__Group_5_4__24879);
+            pushFollow(FOLLOW_rule__Model__Group_5_4__2__Impl_in_rule__Model__Group_5_4__24844);
             rule__Model__Group_5_4__2__Impl();
 
             state._fsp--;
@@ -6368,20 +6315,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__Group_5_4__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2491:1: rule__Model__Group_5_4__2__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2479:1: rule__Model__Group_5_4__2__Impl : ( ' />' ) ;
     public final void rule__Model__Group_5_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2495:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2496:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2483:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2484:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2496:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2497:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2484:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2485:1: ' />'
             {
              before(grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_4_2()); 
-            match(input,19,FOLLOW_19_in_rule__Model__Group_5_4__2__Impl4907); 
+            match(input,16,FOLLOW_16_in_rule__Model__Group_5_4__2__Impl4872); 
              after(grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_4_2()); 
 
             }
@@ -6405,21 +6352,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2516:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2504:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
     public final void rule__Action__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2520:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2521:2: rule__Action__Group__0__Impl rule__Action__Group__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2508:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2509:2: rule__Action__Group__0__Impl rule__Action__Group__1
             {
-            pushFollow(FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04944);
+            pushFollow(FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04909);
             rule__Action__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__1_in_rule__Action__Group__04947);
+            pushFollow(FOLLOW_rule__Action__Group__1_in_rule__Action__Group__04912);
             rule__Action__Group__1();
 
             state._fsp--;
@@ -6443,21 +6390,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2528:1: rule__Action__Group__0__Impl : ( () ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2516:1: rule__Action__Group__0__Impl : ( () ) ;
     public final void rule__Action__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2532:1: ( ( () ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2533:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2520:1: ( ( () ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2521:1: ( () )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2533:1: ( () )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2534:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2521:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2522:1: ()
             {
              before(grammarAccess.getActionAccess().getActionAction_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2535:1: ()
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2537:1: 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2523:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2525:1: 
             {
             }
 
@@ -6480,21 +6427,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2547:1: rule__Action__Group__1 : rule__Action__Group__1__Impl rule__Action__Group__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2535:1: rule__Action__Group__1 : rule__Action__Group__1__Impl rule__Action__Group__2 ;
     public final void rule__Action__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2551:1: ( rule__Action__Group__1__Impl rule__Action__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2552:2: rule__Action__Group__1__Impl rule__Action__Group__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2539:1: ( rule__Action__Group__1__Impl rule__Action__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2540:2: rule__Action__Group__1__Impl rule__Action__Group__2
             {
-            pushFollow(FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__15005);
+            pushFollow(FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__14970);
             rule__Action__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__2_in_rule__Action__Group__15008);
+            pushFollow(FOLLOW_rule__Action__Group__2_in_rule__Action__Group__14973);
             rule__Action__Group__2();
 
             state._fsp--;
@@ -6518,20 +6465,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2559:1: rule__Action__Group__1__Impl : ( '<action name=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2547:1: rule__Action__Group__1__Impl : ( '<action name=' ) ;
     public final void rule__Action__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2563:1: ( ( '<action name=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2564:1: ( '<action name=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2551:1: ( ( '<action name=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2552:1: ( '<action name=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2564:1: ( '<action name=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2565:1: '<action name='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2552:1: ( '<action name=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2553:1: '<action name='
             {
              before(grammarAccess.getActionAccess().getActionNameKeyword_1()); 
-            match(input,37,FOLLOW_37_in_rule__Action__Group__1__Impl5036); 
+            match(input,37,FOLLOW_37_in_rule__Action__Group__1__Impl5001); 
              after(grammarAccess.getActionAccess().getActionNameKeyword_1()); 
 
             }
@@ -6555,21 +6502,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2578:1: rule__Action__Group__2 : rule__Action__Group__2__Impl rule__Action__Group__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2566:1: rule__Action__Group__2 : rule__Action__Group__2__Impl rule__Action__Group__3 ;
     public final void rule__Action__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2582:1: ( rule__Action__Group__2__Impl rule__Action__Group__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2583:2: rule__Action__Group__2__Impl rule__Action__Group__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2570:1: ( rule__Action__Group__2__Impl rule__Action__Group__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2571:2: rule__Action__Group__2__Impl rule__Action__Group__3
             {
-            pushFollow(FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__25067);
+            pushFollow(FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__25032);
             rule__Action__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__3_in_rule__Action__Group__25070);
+            pushFollow(FOLLOW_rule__Action__Group__3_in_rule__Action__Group__25035);
             rule__Action__Group__3();
 
             state._fsp--;
@@ -6593,23 +6540,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2590:1: rule__Action__Group__2__Impl : ( ( rule__Action__NameAssignment_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2578:1: rule__Action__Group__2__Impl : ( ( rule__Action__NameAssignment_2 ) ) ;
     public final void rule__Action__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2594:1: ( ( ( rule__Action__NameAssignment_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2595:1: ( ( rule__Action__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2582:1: ( ( ( rule__Action__NameAssignment_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2583:1: ( ( rule__Action__NameAssignment_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2595:1: ( ( rule__Action__NameAssignment_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2596:1: ( rule__Action__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2583:1: ( ( rule__Action__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2584:1: ( rule__Action__NameAssignment_2 )
             {
              before(grammarAccess.getActionAccess().getNameAssignment_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2597:1: ( rule__Action__NameAssignment_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2597:2: rule__Action__NameAssignment_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2585:1: ( rule__Action__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2585:2: rule__Action__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Action__NameAssignment_2_in_rule__Action__Group__2__Impl5097);
+            pushFollow(FOLLOW_rule__Action__NameAssignment_2_in_rule__Action__Group__2__Impl5062);
             rule__Action__NameAssignment_2();
 
             state._fsp--;
@@ -6640,21 +6587,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2607:1: rule__Action__Group__3 : rule__Action__Group__3__Impl rule__Action__Group__4 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2595:1: rule__Action__Group__3 : rule__Action__Group__3__Impl rule__Action__Group__4 ;
     public final void rule__Action__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2611:1: ( rule__Action__Group__3__Impl rule__Action__Group__4 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2612:2: rule__Action__Group__3__Impl rule__Action__Group__4
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2599:1: ( rule__Action__Group__3__Impl rule__Action__Group__4 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2600:2: rule__Action__Group__3__Impl rule__Action__Group__4
             {
-            pushFollow(FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__35127);
+            pushFollow(FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__35092);
             rule__Action__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__4_in_rule__Action__Group__35130);
+            pushFollow(FOLLOW_rule__Action__Group__4_in_rule__Action__Group__35095);
             rule__Action__Group__4();
 
             state._fsp--;
@@ -6678,20 +6625,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2619:1: rule__Action__Group__3__Impl : ( ' >' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2607:1: rule__Action__Group__3__Impl : ( ' >' ) ;
     public final void rule__Action__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2623:1: ( ( ' >' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2624:1: ( ' >' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2611:1: ( ( ' >' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2612:1: ( ' >' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2624:1: ( ' >' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2625:1: ' >'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2612:1: ( ' >' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2613:1: ' >'
             {
              before(grammarAccess.getActionAccess().getSpaceGreaterThanSignKeyword_3()); 
-            match(input,25,FOLLOW_25_in_rule__Action__Group__3__Impl5158); 
+            match(input,25,FOLLOW_25_in_rule__Action__Group__3__Impl5123); 
              after(grammarAccess.getActionAccess().getSpaceGreaterThanSignKeyword_3()); 
 
             }
@@ -6715,21 +6662,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__4"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2638:1: rule__Action__Group__4 : rule__Action__Group__4__Impl rule__Action__Group__5 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2626:1: rule__Action__Group__4 : rule__Action__Group__4__Impl rule__Action__Group__5 ;
     public final void rule__Action__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2642:1: ( rule__Action__Group__4__Impl rule__Action__Group__5 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2643:2: rule__Action__Group__4__Impl rule__Action__Group__5
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2630:1: ( rule__Action__Group__4__Impl rule__Action__Group__5 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2631:2: rule__Action__Group__4__Impl rule__Action__Group__5
             {
-            pushFollow(FOLLOW_rule__Action__Group__4__Impl_in_rule__Action__Group__45189);
+            pushFollow(FOLLOW_rule__Action__Group__4__Impl_in_rule__Action__Group__45154);
             rule__Action__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group__5_in_rule__Action__Group__45192);
+            pushFollow(FOLLOW_rule__Action__Group__5_in_rule__Action__Group__45157);
             rule__Action__Group__5();
 
             state._fsp--;
@@ -6753,20 +6700,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__4__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2650:1: rule__Action__Group__4__Impl : ( ( rule__Action__Group_4__0 )? ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2638:1: rule__Action__Group__4__Impl : ( ( rule__Action__Group_4__0 )? ) ;
     public final void rule__Action__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2654:1: ( ( ( rule__Action__Group_4__0 )? ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2655:1: ( ( rule__Action__Group_4__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2642:1: ( ( ( rule__Action__Group_4__0 )? ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2643:1: ( ( rule__Action__Group_4__0 )? )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2655:1: ( ( rule__Action__Group_4__0 )? )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2656:1: ( rule__Action__Group_4__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2643:1: ( ( rule__Action__Group_4__0 )? )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2644:1: ( rule__Action__Group_4__0 )?
             {
              before(grammarAccess.getActionAccess().getGroup_4()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2657:1: ( rule__Action__Group_4__0 )?
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2645:1: ( rule__Action__Group_4__0 )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -6775,9 +6722,9 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
             }
             switch (alt15) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2657:2: rule__Action__Group_4__0
+                    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2645:2: rule__Action__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Action__Group_4__0_in_rule__Action__Group__4__Impl5219);
+                    pushFollow(FOLLOW_rule__Action__Group_4__0_in_rule__Action__Group__4__Impl5184);
                     rule__Action__Group_4__0();
 
                     state._fsp--;
@@ -6811,16 +6758,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__5"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2667:1: rule__Action__Group__5 : rule__Action__Group__5__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2655:1: rule__Action__Group__5 : rule__Action__Group__5__Impl ;
     public final void rule__Action__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2671:1: ( rule__Action__Group__5__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2672:2: rule__Action__Group__5__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2659:1: ( rule__Action__Group__5__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2660:2: rule__Action__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Action__Group__5__Impl_in_rule__Action__Group__55250);
+            pushFollow(FOLLOW_rule__Action__Group__5__Impl_in_rule__Action__Group__55215);
             rule__Action__Group__5__Impl();
 
             state._fsp--;
@@ -6844,20 +6791,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group__5__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2678:1: rule__Action__Group__5__Impl : ( '</action>' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2666:1: rule__Action__Group__5__Impl : ( '</action>' ) ;
     public final void rule__Action__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2682:1: ( ( '</action>' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2683:1: ( '</action>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2670:1: ( ( '</action>' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2671:1: ( '</action>' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2683:1: ( '</action>' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2684:1: '</action>'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2671:1: ( '</action>' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2672:1: '</action>'
             {
              before(grammarAccess.getActionAccess().getActionKeyword_5()); 
-            match(input,38,FOLLOW_38_in_rule__Action__Group__5__Impl5278); 
+            match(input,38,FOLLOW_38_in_rule__Action__Group__5__Impl5243); 
              after(grammarAccess.getActionAccess().getActionKeyword_5()); 
 
             }
@@ -6881,21 +6828,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group_4__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2709:1: rule__Action__Group_4__0 : rule__Action__Group_4__0__Impl rule__Action__Group_4__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2697:1: rule__Action__Group_4__0 : rule__Action__Group_4__0__Impl rule__Action__Group_4__1 ;
     public final void rule__Action__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2713:1: ( rule__Action__Group_4__0__Impl rule__Action__Group_4__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2714:2: rule__Action__Group_4__0__Impl rule__Action__Group_4__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2701:1: ( rule__Action__Group_4__0__Impl rule__Action__Group_4__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2702:2: rule__Action__Group_4__0__Impl rule__Action__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Action__Group_4__0__Impl_in_rule__Action__Group_4__05321);
+            pushFollow(FOLLOW_rule__Action__Group_4__0__Impl_in_rule__Action__Group_4__05286);
             rule__Action__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group_4__1_in_rule__Action__Group_4__05324);
+            pushFollow(FOLLOW_rule__Action__Group_4__1_in_rule__Action__Group_4__05289);
             rule__Action__Group_4__1();
 
             state._fsp--;
@@ -6919,20 +6866,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group_4__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2721:1: rule__Action__Group_4__0__Impl : ( '<nextPage ref=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2709:1: rule__Action__Group_4__0__Impl : ( '<nextPage ref=' ) ;
     public final void rule__Action__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2725:1: ( ( '<nextPage ref=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2726:1: ( '<nextPage ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2713:1: ( ( '<nextPage ref=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2714:1: ( '<nextPage ref=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2726:1: ( '<nextPage ref=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2727:1: '<nextPage ref='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2714:1: ( '<nextPage ref=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2715:1: '<nextPage ref='
             {
              before(grammarAccess.getActionAccess().getNextPageRefKeyword_4_0()); 
-            match(input,39,FOLLOW_39_in_rule__Action__Group_4__0__Impl5352); 
+            match(input,39,FOLLOW_39_in_rule__Action__Group_4__0__Impl5317); 
              after(grammarAccess.getActionAccess().getNextPageRefKeyword_4_0()); 
 
             }
@@ -6956,21 +6903,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group_4__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2740:1: rule__Action__Group_4__1 : rule__Action__Group_4__1__Impl rule__Action__Group_4__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2728:1: rule__Action__Group_4__1 : rule__Action__Group_4__1__Impl rule__Action__Group_4__2 ;
     public final void rule__Action__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2744:1: ( rule__Action__Group_4__1__Impl rule__Action__Group_4__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2745:2: rule__Action__Group_4__1__Impl rule__Action__Group_4__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2732:1: ( rule__Action__Group_4__1__Impl rule__Action__Group_4__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2733:2: rule__Action__Group_4__1__Impl rule__Action__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Action__Group_4__1__Impl_in_rule__Action__Group_4__15383);
+            pushFollow(FOLLOW_rule__Action__Group_4__1__Impl_in_rule__Action__Group_4__15348);
             rule__Action__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Action__Group_4__2_in_rule__Action__Group_4__15386);
+            pushFollow(FOLLOW_rule__Action__Group_4__2_in_rule__Action__Group_4__15351);
             rule__Action__Group_4__2();
 
             state._fsp--;
@@ -6994,23 +6941,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group_4__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2752:1: rule__Action__Group_4__1__Impl : ( ( rule__Action__NextPageAssignment_4_1 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2740:1: rule__Action__Group_4__1__Impl : ( ( rule__Action__NextPageAssignment_4_1 ) ) ;
     public final void rule__Action__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2756:1: ( ( ( rule__Action__NextPageAssignment_4_1 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2757:1: ( ( rule__Action__NextPageAssignment_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2744:1: ( ( ( rule__Action__NextPageAssignment_4_1 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2745:1: ( ( rule__Action__NextPageAssignment_4_1 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2757:1: ( ( rule__Action__NextPageAssignment_4_1 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2758:1: ( rule__Action__NextPageAssignment_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2745:1: ( ( rule__Action__NextPageAssignment_4_1 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2746:1: ( rule__Action__NextPageAssignment_4_1 )
             {
              before(grammarAccess.getActionAccess().getNextPageAssignment_4_1()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2759:1: ( rule__Action__NextPageAssignment_4_1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2759:2: rule__Action__NextPageAssignment_4_1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2747:1: ( rule__Action__NextPageAssignment_4_1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2747:2: rule__Action__NextPageAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Action__NextPageAssignment_4_1_in_rule__Action__Group_4__1__Impl5413);
+            pushFollow(FOLLOW_rule__Action__NextPageAssignment_4_1_in_rule__Action__Group_4__1__Impl5378);
             rule__Action__NextPageAssignment_4_1();
 
             state._fsp--;
@@ -7041,16 +6988,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group_4__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2769:1: rule__Action__Group_4__2 : rule__Action__Group_4__2__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2757:1: rule__Action__Group_4__2 : rule__Action__Group_4__2__Impl ;
     public final void rule__Action__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2773:1: ( rule__Action__Group_4__2__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2774:2: rule__Action__Group_4__2__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2761:1: ( rule__Action__Group_4__2__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2762:2: rule__Action__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__Action__Group_4__2__Impl_in_rule__Action__Group_4__25443);
+            pushFollow(FOLLOW_rule__Action__Group_4__2__Impl_in_rule__Action__Group_4__25408);
             rule__Action__Group_4__2__Impl();
 
             state._fsp--;
@@ -7074,20 +7021,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__Group_4__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2780:1: rule__Action__Group_4__2__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2768:1: rule__Action__Group_4__2__Impl : ( ' />' ) ;
     public final void rule__Action__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2784:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2785:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2772:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2773:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2785:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2786:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2773:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2774:1: ' />'
             {
              before(grammarAccess.getActionAccess().getSpaceSolidusGreaterThanSignKeyword_4_2()); 
-            match(input,19,FOLLOW_19_in_rule__Action__Group_4__2__Impl5471); 
+            match(input,16,FOLLOW_16_in_rule__Action__Group_4__2__Impl5436); 
              after(grammarAccess.getActionAccess().getSpaceSolidusGreaterThanSignKeyword_4_2()); 
 
             }
@@ -7111,21 +7058,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2805:1: rule__ModelProperty__Group__0 : rule__ModelProperty__Group__0__Impl rule__ModelProperty__Group__1 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2793:1: rule__ModelProperty__Group__0 : rule__ModelProperty__Group__0__Impl rule__ModelProperty__Group__1 ;
     public final void rule__ModelProperty__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2809:1: ( rule__ModelProperty__Group__0__Impl rule__ModelProperty__Group__1 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2810:2: rule__ModelProperty__Group__0__Impl rule__ModelProperty__Group__1
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2797:1: ( rule__ModelProperty__Group__0__Impl rule__ModelProperty__Group__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2798:2: rule__ModelProperty__Group__0__Impl rule__ModelProperty__Group__1
             {
-            pushFollow(FOLLOW_rule__ModelProperty__Group__0__Impl_in_rule__ModelProperty__Group__05508);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__0__Impl_in_rule__ModelProperty__Group__05473);
             rule__ModelProperty__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ModelProperty__Group__1_in_rule__ModelProperty__Group__05511);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__1_in_rule__ModelProperty__Group__05476);
             rule__ModelProperty__Group__1();
 
             state._fsp--;
@@ -7149,21 +7096,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__0__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2817:1: rule__ModelProperty__Group__0__Impl : ( () ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2805:1: rule__ModelProperty__Group__0__Impl : ( () ) ;
     public final void rule__ModelProperty__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2821:1: ( ( () ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2822:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2809:1: ( ( () ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2810:1: ( () )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2822:1: ( () )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2823:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2810:1: ( () )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2811:1: ()
             {
              before(grammarAccess.getModelPropertyAccess().getModelPropertyAction_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2824:1: ()
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2826:1: 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2812:1: ()
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2814:1: 
             {
             }
 
@@ -7186,21 +7133,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2836:1: rule__ModelProperty__Group__1 : rule__ModelProperty__Group__1__Impl rule__ModelProperty__Group__2 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2824:1: rule__ModelProperty__Group__1 : rule__ModelProperty__Group__1__Impl rule__ModelProperty__Group__2 ;
     public final void rule__ModelProperty__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2840:1: ( rule__ModelProperty__Group__1__Impl rule__ModelProperty__Group__2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2841:2: rule__ModelProperty__Group__1__Impl rule__ModelProperty__Group__2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2828:1: ( rule__ModelProperty__Group__1__Impl rule__ModelProperty__Group__2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2829:2: rule__ModelProperty__Group__1__Impl rule__ModelProperty__Group__2
             {
-            pushFollow(FOLLOW_rule__ModelProperty__Group__1__Impl_in_rule__ModelProperty__Group__15569);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__1__Impl_in_rule__ModelProperty__Group__15534);
             rule__ModelProperty__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ModelProperty__Group__2_in_rule__ModelProperty__Group__15572);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__2_in_rule__ModelProperty__Group__15537);
             rule__ModelProperty__Group__2();
 
             state._fsp--;
@@ -7224,20 +7171,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__1__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2848:1: rule__ModelProperty__Group__1__Impl : ( '<modelProperty name=' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2836:1: rule__ModelProperty__Group__1__Impl : ( '<modelProperty name=' ) ;
     public final void rule__ModelProperty__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2852:1: ( ( '<modelProperty name=' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2853:1: ( '<modelProperty name=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2840:1: ( ( '<modelProperty name=' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2841:1: ( '<modelProperty name=' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2853:1: ( '<modelProperty name=' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2854:1: '<modelProperty name='
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2841:1: ( '<modelProperty name=' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2842:1: '<modelProperty name='
             {
              before(grammarAccess.getModelPropertyAccess().getModelPropertyNameKeyword_1()); 
-            match(input,40,FOLLOW_40_in_rule__ModelProperty__Group__1__Impl5600); 
+            match(input,40,FOLLOW_40_in_rule__ModelProperty__Group__1__Impl5565); 
              after(grammarAccess.getModelPropertyAccess().getModelPropertyNameKeyword_1()); 
 
             }
@@ -7261,21 +7208,21 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2867:1: rule__ModelProperty__Group__2 : rule__ModelProperty__Group__2__Impl rule__ModelProperty__Group__3 ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2855:1: rule__ModelProperty__Group__2 : rule__ModelProperty__Group__2__Impl rule__ModelProperty__Group__3 ;
     public final void rule__ModelProperty__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2871:1: ( rule__ModelProperty__Group__2__Impl rule__ModelProperty__Group__3 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2872:2: rule__ModelProperty__Group__2__Impl rule__ModelProperty__Group__3
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2859:1: ( rule__ModelProperty__Group__2__Impl rule__ModelProperty__Group__3 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2860:2: rule__ModelProperty__Group__2__Impl rule__ModelProperty__Group__3
             {
-            pushFollow(FOLLOW_rule__ModelProperty__Group__2__Impl_in_rule__ModelProperty__Group__25631);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__2__Impl_in_rule__ModelProperty__Group__25596);
             rule__ModelProperty__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ModelProperty__Group__3_in_rule__ModelProperty__Group__25634);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__3_in_rule__ModelProperty__Group__25599);
             rule__ModelProperty__Group__3();
 
             state._fsp--;
@@ -7299,23 +7246,23 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__2__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2879:1: rule__ModelProperty__Group__2__Impl : ( ( rule__ModelProperty__NameAssignment_2 ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2867:1: rule__ModelProperty__Group__2__Impl : ( ( rule__ModelProperty__NameAssignment_2 ) ) ;
     public final void rule__ModelProperty__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2883:1: ( ( ( rule__ModelProperty__NameAssignment_2 ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2884:1: ( ( rule__ModelProperty__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2871:1: ( ( ( rule__ModelProperty__NameAssignment_2 ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2872:1: ( ( rule__ModelProperty__NameAssignment_2 ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2884:1: ( ( rule__ModelProperty__NameAssignment_2 ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2885:1: ( rule__ModelProperty__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2872:1: ( ( rule__ModelProperty__NameAssignment_2 ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2873:1: ( rule__ModelProperty__NameAssignment_2 )
             {
              before(grammarAccess.getModelPropertyAccess().getNameAssignment_2()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2886:1: ( rule__ModelProperty__NameAssignment_2 )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2886:2: rule__ModelProperty__NameAssignment_2
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2874:1: ( rule__ModelProperty__NameAssignment_2 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2874:2: rule__ModelProperty__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__ModelProperty__NameAssignment_2_in_rule__ModelProperty__Group__2__Impl5661);
+            pushFollow(FOLLOW_rule__ModelProperty__NameAssignment_2_in_rule__ModelProperty__Group__2__Impl5626);
             rule__ModelProperty__NameAssignment_2();
 
             state._fsp--;
@@ -7346,16 +7293,16 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2896:1: rule__ModelProperty__Group__3 : rule__ModelProperty__Group__3__Impl ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2884:1: rule__ModelProperty__Group__3 : rule__ModelProperty__Group__3__Impl ;
     public final void rule__ModelProperty__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2900:1: ( rule__ModelProperty__Group__3__Impl )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2901:2: rule__ModelProperty__Group__3__Impl
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2888:1: ( rule__ModelProperty__Group__3__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2889:2: rule__ModelProperty__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ModelProperty__Group__3__Impl_in_rule__ModelProperty__Group__35691);
+            pushFollow(FOLLOW_rule__ModelProperty__Group__3__Impl_in_rule__ModelProperty__Group__35656);
             rule__ModelProperty__Group__3__Impl();
 
             state._fsp--;
@@ -7379,20 +7326,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__Group__3__Impl"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2907:1: rule__ModelProperty__Group__3__Impl : ( ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2895:1: rule__ModelProperty__Group__3__Impl : ( ' />' ) ;
     public final void rule__ModelProperty__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2911:1: ( ( ' />' ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2912:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2899:1: ( ( ' />' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2900:1: ( ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2912:1: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2913:1: ' />'
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2900:1: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2901:1: ' />'
             {
              before(grammarAccess.getModelPropertyAccess().getSpaceSolidusGreaterThanSignKeyword_3()); 
-            match(input,19,FOLLOW_19_in_rule__ModelProperty__Group__3__Impl5719); 
+            match(input,16,FOLLOW_16_in_rule__ModelProperty__Group__3__Impl5684); 
              after(grammarAccess.getModelPropertyAccess().getSpaceSolidusGreaterThanSignKeyword_3()); 
 
             }
@@ -7415,26 +7362,60 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__ModelProperty__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Package__ViewsAssignment_1_0"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2935:1: rule__Package__ViewsAssignment_1_0 : ( ruleView ) ;
-    public final void rule__Package__ViewsAssignment_1_0() throws RecognitionException {
+    // $ANTLR start "rule__EString__Group_1__0"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2922:1: rule__EString__Group_1__0 : rule__EString__Group_1__0__Impl rule__EString__Group_1__1 ;
+    public final void rule__EString__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2939:1: ( ( ruleView ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2940:1: ( ruleView )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2926:1: ( rule__EString__Group_1__0__Impl rule__EString__Group_1__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2927:2: rule__EString__Group_1__0__Impl rule__EString__Group_1__1
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2940:1: ( ruleView )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2941:1: ruleView
-            {
-             before(grammarAccess.getPackageAccess().getViewsViewParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleView_in_rule__Package__ViewsAssignment_1_05763);
-            ruleView();
+            pushFollow(FOLLOW_rule__EString__Group_1__0__Impl_in_rule__EString__Group_1__05723);
+            rule__EString__Group_1__0__Impl();
 
             state._fsp--;
 
-             after(grammarAccess.getPackageAccess().getViewsViewParserRuleCall_1_0_0()); 
+            pushFollow(FOLLOW_rule__EString__Group_1__1_in_rule__EString__Group_1__05726);
+            rule__EString__Group_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1__0"
+
+
+    // $ANTLR start "rule__EString__Group_1__0__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2934:1: rule__EString__Group_1__0__Impl : ( RULE_ID ) ;
+    public final void rule__EString__Group_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2938:1: ( ( RULE_ID ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2939:1: ( RULE_ID )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2939:1: ( RULE_ID )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2940:1: RULE_ID
+            {
+             before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EString__Group_1__0__Impl5753); 
+             after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -7453,29 +7434,272 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__ViewsAssignment_1_0"
+    // $ANTLR end "rule__EString__Group_1__0__Impl"
 
 
-    // $ANTLR start "rule__Package__ModelsAssignment_1_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2950:1: rule__Package__ModelsAssignment_1_1 : ( ruleModel ) ;
-    public final void rule__Package__ModelsAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__EString__Group_1__1"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2951:1: rule__EString__Group_1__1 : rule__EString__Group_1__1__Impl ;
+    public final void rule__EString__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2954:1: ( ( ruleModel ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2955:1: ( ruleModel )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2955:1: ( rule__EString__Group_1__1__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2956:2: rule__EString__Group_1__1__Impl
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2955:1: ( ruleModel )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2956:1: ruleModel
+            pushFollow(FOLLOW_rule__EString__Group_1__1__Impl_in_rule__EString__Group_1__15782);
+            rule__EString__Group_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1__1"
+
+
+    // $ANTLR start "rule__EString__Group_1__1__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2962:1: rule__EString__Group_1__1__Impl : ( ( rule__EString__Group_1_1__0 )* ) ;
+    public final void rule__EString__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2966:1: ( ( ( rule__EString__Group_1_1__0 )* ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2967:1: ( ( rule__EString__Group_1_1__0 )* )
             {
-             before(grammarAccess.getPackageAccess().getModelsModelParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleModel_in_rule__Package__ModelsAssignment_1_15794);
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2967:1: ( ( rule__EString__Group_1_1__0 )* )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2968:1: ( rule__EString__Group_1_1__0 )*
+            {
+             before(grammarAccess.getEStringAccess().getGroup_1_1()); 
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2969:1: ( rule__EString__Group_1_1__0 )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( (LA16_0==41) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2969:2: rule__EString__Group_1_1__0
+            	    {
+            	    pushFollow(FOLLOW_rule__EString__Group_1_1__0_in_rule__EString__Group_1__1__Impl5809);
+            	    rule__EString__Group_1_1__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+             after(grammarAccess.getEStringAccess().getGroup_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1__1__Impl"
+
+
+    // $ANTLR start "rule__EString__Group_1_1__0"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2983:1: rule__EString__Group_1_1__0 : rule__EString__Group_1_1__0__Impl rule__EString__Group_1_1__1 ;
+    public final void rule__EString__Group_1_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2987:1: ( rule__EString__Group_1_1__0__Impl rule__EString__Group_1_1__1 )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2988:2: rule__EString__Group_1_1__0__Impl rule__EString__Group_1_1__1
+            {
+            pushFollow(FOLLOW_rule__EString__Group_1_1__0__Impl_in_rule__EString__Group_1_1__05844);
+            rule__EString__Group_1_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__EString__Group_1_1__1_in_rule__EString__Group_1_1__05847);
+            rule__EString__Group_1_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1_1__0"
+
+
+    // $ANTLR start "rule__EString__Group_1_1__0__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2995:1: rule__EString__Group_1_1__0__Impl : ( '.' ) ;
+    public final void rule__EString__Group_1_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2999:1: ( ( '.' ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3000:1: ( '.' )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3000:1: ( '.' )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3001:1: '.'
+            {
+             before(grammarAccess.getEStringAccess().getFullStopKeyword_1_1_0()); 
+            match(input,41,FOLLOW_41_in_rule__EString__Group_1_1__0__Impl5875); 
+             after(grammarAccess.getEStringAccess().getFullStopKeyword_1_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1_1__0__Impl"
+
+
+    // $ANTLR start "rule__EString__Group_1_1__1"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3014:1: rule__EString__Group_1_1__1 : rule__EString__Group_1_1__1__Impl ;
+    public final void rule__EString__Group_1_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3018:1: ( rule__EString__Group_1_1__1__Impl )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3019:2: rule__EString__Group_1_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__EString__Group_1_1__1__Impl_in_rule__EString__Group_1_1__15906);
+            rule__EString__Group_1_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1_1__1"
+
+
+    // $ANTLR start "rule__EString__Group_1_1__1__Impl"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3025:1: rule__EString__Group_1_1__1__Impl : ( RULE_ID ) ;
+    public final void rule__EString__Group_1_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3029:1: ( ( RULE_ID ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3030:1: ( RULE_ID )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3030:1: ( RULE_ID )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3031:1: RULE_ID
+            {
+             before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1_1_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EString__Group_1_1__1__Impl5933); 
+             after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Group_1_1__1__Impl"
+
+
+    // $ANTLR start "rule__MainPackage__AllModelsAssignment_1_0"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3047:1: rule__MainPackage__AllModelsAssignment_1_0 : ( ruleModel ) ;
+    public final void rule__MainPackage__AllModelsAssignment_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3051:1: ( ( ruleModel ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3052:1: ( ruleModel )
+            {
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3052:1: ( ruleModel )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3053:1: ruleModel
+            {
+             before(grammarAccess.getMainPackageAccess().getAllModelsModelParserRuleCall_1_0_0()); 
+            pushFollow(FOLLOW_ruleModel_in_rule__MainPackage__AllModelsAssignment_1_05971);
             ruleModel();
 
             state._fsp--;
 
-             after(grammarAccess.getPackageAccess().getModelsModelParserRuleCall_1_1_0()); 
+             after(grammarAccess.getMainPackageAccess().getAllModelsModelParserRuleCall_1_0_0()); 
 
             }
 
@@ -7494,29 +7718,29 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__ModelsAssignment_1_1"
+    // $ANTLR end "rule__MainPackage__AllModelsAssignment_1_0"
 
 
-    // $ANTLR start "rule__Package__ActionsAssignment_1_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2965:1: rule__Package__ActionsAssignment_1_2 : ( ruleAction ) ;
-    public final void rule__Package__ActionsAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__AllViewsAssignment_1_1"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3062:1: rule__MainPackage__AllViewsAssignment_1_1 : ( ruleView ) ;
+    public final void rule__MainPackage__AllViewsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2969:1: ( ( ruleAction ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2970:1: ( ruleAction )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3066:1: ( ( ruleView ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3067:1: ( ruleView )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2970:1: ( ruleAction )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2971:1: ruleAction
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3067:1: ( ruleView )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3068:1: ruleView
             {
-             before(grammarAccess.getPackageAccess().getActionsActionParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__Package__ActionsAssignment_1_25825);
-            ruleAction();
+             before(grammarAccess.getMainPackageAccess().getAllViewsViewParserRuleCall_1_1_0()); 
+            pushFollow(FOLLOW_ruleView_in_rule__MainPackage__AllViewsAssignment_1_16002);
+            ruleView();
 
             state._fsp--;
 
-             after(grammarAccess.getPackageAccess().getActionsActionParserRuleCall_1_2_0()); 
+             after(grammarAccess.getMainPackageAccess().getAllViewsViewParserRuleCall_1_1_0()); 
 
             }
 
@@ -7535,70 +7759,29 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__ActionsAssignment_1_2"
+    // $ANTLR end "rule__MainPackage__AllViewsAssignment_1_1"
 
 
-    // $ANTLR start "rule__Package__PropertiesAssignment_1_3"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2980:1: rule__Package__PropertiesAssignment_1_3 : ( ruleModelProperty ) ;
-    public final void rule__Package__PropertiesAssignment_1_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2984:1: ( ( ruleModelProperty ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2985:1: ( ruleModelProperty )
-            {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2985:1: ( ruleModelProperty )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2986:1: ruleModelProperty
-            {
-             before(grammarAccess.getPackageAccess().getPropertiesModelPropertyParserRuleCall_1_3_0()); 
-            pushFollow(FOLLOW_ruleModelProperty_in_rule__Package__PropertiesAssignment_1_35856);
-            ruleModelProperty();
-
-            state._fsp--;
-
-             after(grammarAccess.getPackageAccess().getPropertiesModelPropertyParserRuleCall_1_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Package__PropertiesAssignment_1_3"
-
-
-    // $ANTLR start "rule__Package__MainAppAssignment_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2995:1: rule__Package__MainAppAssignment_2 : ( ruleUIApplication ) ;
-    public final void rule__Package__MainAppAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MainPackage__AppAssignment_2"
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3077:1: rule__MainPackage__AppAssignment_2 : ( ruleUIApplication ) ;
+    public final void rule__MainPackage__AppAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:2999:1: ( ( ruleUIApplication ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3000:1: ( ruleUIApplication )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3081:1: ( ( ruleUIApplication ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3082:1: ( ruleUIApplication )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3000:1: ( ruleUIApplication )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3001:1: ruleUIApplication
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3082:1: ( ruleUIApplication )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3083:1: ruleUIApplication
             {
-             before(grammarAccess.getPackageAccess().getMainAppUIApplicationParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleUIApplication_in_rule__Package__MainAppAssignment_25887);
+             before(grammarAccess.getMainPackageAccess().getAppUIApplicationParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleUIApplication_in_rule__MainPackage__AppAssignment_26033);
             ruleUIApplication();
 
             state._fsp--;
 
-             after(grammarAccess.getPackageAccess().getMainAppUIApplicationParserRuleCall_2_0()); 
+             after(grammarAccess.getMainPackageAccess().getAppUIApplicationParserRuleCall_2_0()); 
 
             }
 
@@ -7617,28 +7800,28 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Package__MainAppAssignment_2"
+    // $ANTLR end "rule__MainPackage__AppAssignment_2"
 
 
     // $ANTLR start "rule__UIApplication__ModelsAssignment_2_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3010:1: rule__UIApplication__ModelsAssignment_2_2 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3092:1: rule__UIApplication__ModelsAssignment_2_2 : ( ( ruleEString ) ) ;
     public final void rule__UIApplication__ModelsAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3014:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3015:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3096:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3097:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3015:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3016:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3097:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3098:1: ( ruleEString )
             {
              before(grammarAccess.getUIApplicationAccess().getModelsModelCrossReference_2_2_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3017:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3018:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3099:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3100:1: ruleEString
             {
              before(grammarAccess.getUIApplicationAccess().getModelsModelEStringParserRuleCall_2_2_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_25922);
+            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_26068);
             ruleEString();
 
             state._fsp--;
@@ -7670,24 +7853,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__ModelsAssignment_2_4_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3029:1: rule__UIApplication__ModelsAssignment_2_4_1 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3111:1: rule__UIApplication__ModelsAssignment_2_4_1 : ( ( ruleEString ) ) ;
     public final void rule__UIApplication__ModelsAssignment_2_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3033:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3034:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3115:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3116:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3034:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3035:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3116:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3117:1: ( ruleEString )
             {
              before(grammarAccess.getUIApplicationAccess().getModelsModelCrossReference_2_4_1_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3036:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3037:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3118:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3119:1: ruleEString
             {
              before(grammarAccess.getUIApplicationAccess().getModelsModelEStringParserRuleCall_2_4_1_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_4_15961);
+            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_4_16107);
             ruleEString();
 
             state._fsp--;
@@ -7719,24 +7902,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__PagesAssignment_3_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3048:1: rule__UIApplication__PagesAssignment_3_2 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3130:1: rule__UIApplication__PagesAssignment_3_2 : ( ( ruleEString ) ) ;
     public final void rule__UIApplication__PagesAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3052:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3053:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3134:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3135:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3053:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3054:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3135:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3136:1: ( ruleEString )
             {
              before(grammarAccess.getUIApplicationAccess().getPagesViewCrossReference_3_2_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3055:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3056:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3137:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3138:1: ruleEString
             {
              before(grammarAccess.getUIApplicationAccess().getPagesViewEStringParserRuleCall_3_2_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_26000);
+            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_26146);
             ruleEString();
 
             state._fsp--;
@@ -7768,24 +7951,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UIApplication__PagesAssignment_3_4_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3067:1: rule__UIApplication__PagesAssignment_3_4_1 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3149:1: rule__UIApplication__PagesAssignment_3_4_1 : ( ( ruleEString ) ) ;
     public final void rule__UIApplication__PagesAssignment_3_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3071:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3072:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3153:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3154:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3072:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3073:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3154:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3155:1: ( ruleEString )
             {
              before(grammarAccess.getUIApplicationAccess().getPagesViewCrossReference_3_4_1_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3074:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3075:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3156:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3157:1: ruleEString
             {
              before(grammarAccess.getUIApplicationAccess().getPagesViewEStringParserRuleCall_3_4_1_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_4_16039);
+            pushFollow(FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_4_16185);
             ruleEString();
 
             state._fsp--;
@@ -7817,20 +8000,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__NameAssignment_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3086:1: rule__View__NameAssignment_2 : ( ruleEString ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3168:1: rule__View__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__View__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3090:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3091:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3172:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3173:1: ( ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3091:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3092:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3173:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3174:1: ruleEString
             {
              before(grammarAccess.getViewAccess().getNameEStringParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__View__NameAssignment_26074);
+            pushFollow(FOLLOW_ruleEString_in_rule__View__NameAssignment_26220);
             ruleEString();
 
             state._fsp--;
@@ -7858,20 +8041,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__DescriptionAssignment_4_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3101:1: rule__View__DescriptionAssignment_4_1 : ( ruleEString ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3183:1: rule__View__DescriptionAssignment_4_1 : ( ruleEString ) ;
     public final void rule__View__DescriptionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3105:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3106:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3187:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3188:1: ( ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3106:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3107:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3188:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3189:1: ruleEString
             {
              before(grammarAccess.getViewAccess().getDescriptionEStringParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__View__DescriptionAssignment_4_16105);
+            pushFollow(FOLLOW_ruleEString_in_rule__View__DescriptionAssignment_4_16251);
             ruleEString();
 
             state._fsp--;
@@ -7899,24 +8082,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__ModelAssignment_6"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3116:1: rule__View__ModelAssignment_6 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3198:1: rule__View__ModelAssignment_6 : ( ( ruleEString ) ) ;
     public final void rule__View__ModelAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3120:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3121:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3202:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3203:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3121:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3122:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3203:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3204:1: ( ruleEString )
             {
              before(grammarAccess.getViewAccess().getModelModelCrossReference_6_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3123:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3124:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3205:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3206:1: ruleEString
             {
              before(grammarAccess.getViewAccess().getModelModelEStringParserRuleCall_6_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__View__ModelAssignment_66140);
+            pushFollow(FOLLOW_ruleEString_in_rule__View__ModelAssignment_66286);
             ruleEString();
 
             state._fsp--;
@@ -7948,20 +8131,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__ActionsAssignment_8_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3135:1: rule__View__ActionsAssignment_8_1 : ( ruleAction ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3217:1: rule__View__ActionsAssignment_8_1 : ( ruleAction ) ;
     public final void rule__View__ActionsAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3139:1: ( ( ruleAction ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3140:1: ( ruleAction )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3221:1: ( ( ruleAction ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3222:1: ( ruleAction )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3140:1: ( ruleAction )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3141:1: ruleAction
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3222:1: ( ruleAction )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3223:1: ruleAction
             {
              before(grammarAccess.getViewAccess().getActionsActionParserRuleCall_8_1_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_16175);
+            pushFollow(FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_16321);
             ruleAction();
 
             state._fsp--;
@@ -7989,20 +8172,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__View__ActionsAssignment_8_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3150:1: rule__View__ActionsAssignment_8_2 : ( ruleAction ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3232:1: rule__View__ActionsAssignment_8_2 : ( ruleAction ) ;
     public final void rule__View__ActionsAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3154:1: ( ( ruleAction ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3155:1: ( ruleAction )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3236:1: ( ( ruleAction ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3237:1: ( ruleAction )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3155:1: ( ruleAction )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3156:1: ruleAction
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3237:1: ( ruleAction )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3238:1: ruleAction
             {
              before(grammarAccess.getViewAccess().getActionsActionParserRuleCall_8_2_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_26206);
+            pushFollow(FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_26352);
             ruleAction();
 
             state._fsp--;
@@ -8030,20 +8213,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__NameAssignment_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3165:1: rule__Model__NameAssignment_2 : ( ruleEString ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3247:1: rule__Model__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Model__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3169:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3170:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3251:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3252:1: ( ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3170:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3171:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3252:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3253:1: ruleEString
             {
              before(grammarAccess.getModelAccess().getNameEStringParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Model__NameAssignment_26237);
+            pushFollow(FOLLOW_ruleEString_in_rule__Model__NameAssignment_26383);
             ruleEString();
 
             state._fsp--;
@@ -8071,20 +8254,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__PropertiesAssignment_4_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3180:1: rule__Model__PropertiesAssignment_4_1 : ( ruleModelProperty ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3262:1: rule__Model__PropertiesAssignment_4_1 : ( ruleModelProperty ) ;
     public final void rule__Model__PropertiesAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3184:1: ( ( ruleModelProperty ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3185:1: ( ruleModelProperty )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3266:1: ( ( ruleModelProperty ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3267:1: ( ruleModelProperty )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3185:1: ( ruleModelProperty )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3186:1: ruleModelProperty
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3267:1: ( ruleModelProperty )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3268:1: ruleModelProperty
             {
              before(grammarAccess.getModelAccess().getPropertiesModelPropertyParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_16268);
+            pushFollow(FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_16414);
             ruleModelProperty();
 
             state._fsp--;
@@ -8112,20 +8295,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__PropertiesAssignment_4_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3195:1: rule__Model__PropertiesAssignment_4_2 : ( ruleModelProperty ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3277:1: rule__Model__PropertiesAssignment_4_2 : ( ruleModelProperty ) ;
     public final void rule__Model__PropertiesAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3199:1: ( ( ruleModelProperty ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3200:1: ( ruleModelProperty )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3281:1: ( ( ruleModelProperty ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3282:1: ( ruleModelProperty )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3200:1: ( ruleModelProperty )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3201:1: ruleModelProperty
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3282:1: ( ruleModelProperty )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3283:1: ruleModelProperty
             {
              before(grammarAccess.getModelAccess().getPropertiesModelPropertyParserRuleCall_4_2_0()); 
-            pushFollow(FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_26299);
+            pushFollow(FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_26445);
             ruleModelProperty();
 
             state._fsp--;
@@ -8153,24 +8336,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__OwnedElementsAssignment_5_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3210:1: rule__Model__OwnedElementsAssignment_5_2 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3292:1: rule__Model__OwnedElementsAssignment_5_2 : ( ( ruleEString ) ) ;
     public final void rule__Model__OwnedElementsAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3214:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3215:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3296:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3297:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3215:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3216:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3297:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3298:1: ( ruleEString )
             {
              before(grammarAccess.getModelAccess().getOwnedElementsModelCrossReference_5_2_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3217:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3218:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3299:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3300:1: ruleEString
             {
              before(grammarAccess.getModelAccess().getOwnedElementsModelEStringParserRuleCall_5_2_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_26334);
+            pushFollow(FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_26480);
             ruleEString();
 
             state._fsp--;
@@ -8202,24 +8385,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Model__OwnedElementsAssignment_5_4_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3229:1: rule__Model__OwnedElementsAssignment_5_4_1 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3311:1: rule__Model__OwnedElementsAssignment_5_4_1 : ( ( ruleEString ) ) ;
     public final void rule__Model__OwnedElementsAssignment_5_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3233:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3234:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3315:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3316:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3234:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3235:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3316:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3317:1: ( ruleEString )
             {
              before(grammarAccess.getModelAccess().getOwnedElementsModelCrossReference_5_4_1_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3236:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3237:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3318:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3319:1: ruleEString
             {
              before(grammarAccess.getModelAccess().getOwnedElementsModelEStringParserRuleCall_5_4_1_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_4_16373);
+            pushFollow(FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_4_16519);
             ruleEString();
 
             state._fsp--;
@@ -8251,20 +8434,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__NameAssignment_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3248:1: rule__Action__NameAssignment_2 : ( ruleEString ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3330:1: rule__Action__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Action__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3252:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3253:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3334:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3335:1: ( ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3253:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3254:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3335:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3336:1: ruleEString
             {
              before(grammarAccess.getActionAccess().getNameEStringParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Action__NameAssignment_26408);
+            pushFollow(FOLLOW_ruleEString_in_rule__Action__NameAssignment_26554);
             ruleEString();
 
             state._fsp--;
@@ -8292,24 +8475,24 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Action__NextPageAssignment_4_1"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3263:1: rule__Action__NextPageAssignment_4_1 : ( ( ruleEString ) ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3345:1: rule__Action__NextPageAssignment_4_1 : ( ( ruleEString ) ) ;
     public final void rule__Action__NextPageAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3267:1: ( ( ( ruleEString ) ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3268:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3349:1: ( ( ( ruleEString ) ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3350:1: ( ( ruleEString ) )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3268:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3269:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3350:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3351:1: ( ruleEString )
             {
              before(grammarAccess.getActionAccess().getNextPageViewCrossReference_4_1_0()); 
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3270:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3271:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3352:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3353:1: ruleEString
             {
              before(grammarAccess.getActionAccess().getNextPageViewEStringParserRuleCall_4_1_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Action__NextPageAssignment_4_16443);
+            pushFollow(FOLLOW_ruleEString_in_rule__Action__NextPageAssignment_4_16589);
             ruleEString();
 
             state._fsp--;
@@ -8341,20 +8524,20 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ModelProperty__NameAssignment_2"
-    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3282:1: rule__ModelProperty__NameAssignment_2 : ( ruleEString ) ;
+    // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3364:1: rule__ModelProperty__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__ModelProperty__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3286:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3287:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3368:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3369:1: ( ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3287:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3288:1: ruleEString
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3369:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc.ui/src-gen/fr/nantes/univ/alma/mvc/ui/contentassist/antlr/internal/InternalLanguage.g:3370:1: ruleEString
             {
              before(grammarAccess.getModelPropertyAccess().getNameEStringParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__ModelProperty__NameAssignment_26478);
+            pushFollow(FOLLOW_ruleEString_in_rule__ModelProperty__NameAssignment_26624);
             ruleEString();
 
             state._fsp--;
@@ -8385,15 +8568,15 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
 
  
 
-    public static final BitSet FOLLOW_rulePackage_in_entryRulePackage61 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePackage68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__Group__0_in_rulePackage94 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration121 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXMLDeclaration128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__0_in_ruleXMLDeclaration154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUIApplication_in_entryRuleUIApplication181 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUIApplication188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__0_in_ruleUIApplication214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMainPackage_in_entryRuleMainPackage61 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMainPackage68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__Group__0_in_ruleMainPackage94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUIApplication_in_entryRuleUIApplication121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUIApplication128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__0_in_ruleUIApplication154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXMLDeclaration188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__0_in_ruleXMLDeclaration214 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleView_in_entryRuleView241 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleView248 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__View__Group__0_in_ruleView274 = new BitSet(new long[]{0x0000000000000002L});
@@ -8409,254 +8592,260 @@ public class InternalLanguageParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_ruleEString_in_entryRuleEString481 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleEString488 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__EString__Alternatives_in_ruleEString514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__ViewsAssignment_1_0_in_rule__Package__Alternatives_1550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__ModelsAssignment_1_1_in_rule__Package__Alternatives_1568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__ActionsAssignment_1_2_in_rule__Package__Alternatives_1586 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__PropertiesAssignment_1_3_in_rule__Package__Alternatives_1604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Alternatives654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__Group__0__Impl_in_rule__Package__Group__0684 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_rule__Package__Group__1_in_rule__Package__Group__0687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXMLDeclaration_in_rule__Package__Group__0__Impl714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__Group__1__Impl_in_rule__Package__Group__1743 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_rule__Package__Group__2_in_rule__Package__Group__1746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__Alternatives_1_in_rule__Package__Group__1__Impl773 = new BitSet(new long[]{0x0000012081000002L});
-    public static final BitSet FOLLOW_rule__Package__Group__2__Impl_in_rule__Package__Group__2804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package__MainAppAssignment_2_in_rule__Package__Group__2__Impl831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__0__Impl_in_rule__XMLDeclaration__Group__0867 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__1_in_rule__XMLDeclaration__Group__0870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__XMLDeclaration__Group__0__Impl898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__1__Impl_in_rule__XMLDeclaration__Group__1929 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__2_in_rule__XMLDeclaration__Group__1932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VERSION_in_rule__XMLDeclaration__Group__1__Impl959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__2__Impl_in_rule__XMLDeclaration__Group__2988 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__3_in_rule__XMLDeclaration__Group__2991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__XMLDeclaration__Group__2__Impl1019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__3__Impl_in_rule__XMLDeclaration__Group__31050 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__4_in_rule__XMLDeclaration__Group__31053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__XMLDeclaration__Group__3__Impl1080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__4__Impl_in_rule__XMLDeclaration__Group__41109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__XMLDeclaration__Group__4__Impl1137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__0__Impl_in_rule__UIApplication__Group__01178 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__1_in_rule__UIApplication__Group__01181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__1__Impl_in_rule__UIApplication__Group__11239 = new BitSet(new long[]{0x0000000000230000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__2_in_rule__UIApplication__Group__11242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__UIApplication__Group__1__Impl1270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__2__Impl_in_rule__UIApplication__Group__21301 = new BitSet(new long[]{0x0000000000230000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__3_in_rule__UIApplication__Group__21304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__0_in_rule__UIApplication__Group__2__Impl1331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__3__Impl_in_rule__UIApplication__Group__31362 = new BitSet(new long[]{0x0000000000230000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__4_in_rule__UIApplication__Group__31365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__0_in_rule__UIApplication__Group__3__Impl1392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group__4__Impl_in_rule__UIApplication__Group__41423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__UIApplication__Group__4__Impl1451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__0__Impl_in_rule__UIApplication__Group_2__01492 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__1_in_rule__UIApplication__Group_2__01495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__UIApplication__Group_2__0__Impl1523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__1__Impl_in_rule__UIApplication__Group_2__11554 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__2_in_rule__UIApplication__Group_2__11557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__UIApplication__Group_2__1__Impl1585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__2__Impl_in_rule__UIApplication__Group_2__21616 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__3_in_rule__UIApplication__Group_2__21619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__ModelsAssignment_2_2_in_rule__UIApplication__Group_2__2__Impl1646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__3__Impl_in_rule__UIApplication__Group_2__31676 = new BitSet(new long[]{0x0000000000140000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__4_in_rule__UIApplication__Group_2__31679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__UIApplication__Group_2__3__Impl1707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__4__Impl_in_rule__UIApplication__Group_2__41738 = new BitSet(new long[]{0x0000000000140000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__5_in_rule__UIApplication__Group_2__41741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__0_in_rule__UIApplication__Group_2__4__Impl1768 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2__5__Impl_in_rule__UIApplication__Group_2__51799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__UIApplication__Group_2__5__Impl1827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__0__Impl_in_rule__UIApplication__Group_2_4__01870 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__1_in_rule__UIApplication__Group_2_4__01873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__UIApplication__Group_2_4__0__Impl1901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__1__Impl_in_rule__UIApplication__Group_2_4__11932 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__2_in_rule__UIApplication__Group_2_4__11935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__ModelsAssignment_2_4_1_in_rule__UIApplication__Group_2_4__1__Impl1962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__2__Impl_in_rule__UIApplication__Group_2_4__21992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__UIApplication__Group_2_4__2__Impl2020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__0__Impl_in_rule__UIApplication__Group_3__02057 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__1_in_rule__UIApplication__Group_3__02060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__UIApplication__Group_3__0__Impl2088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__1__Impl_in_rule__UIApplication__Group_3__12119 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__2_in_rule__UIApplication__Group_3__12122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__UIApplication__Group_3__1__Impl2150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__2__Impl_in_rule__UIApplication__Group_3__22181 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__3_in_rule__UIApplication__Group_3__22184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__PagesAssignment_3_2_in_rule__UIApplication__Group_3__2__Impl2211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__3__Impl_in_rule__UIApplication__Group_3__32241 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__4_in_rule__UIApplication__Group_3__32244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__UIApplication__Group_3__3__Impl2272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__4__Impl_in_rule__UIApplication__Group_3__42303 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__5_in_rule__UIApplication__Group_3__42306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__0_in_rule__UIApplication__Group_3__4__Impl2333 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3__5__Impl_in_rule__UIApplication__Group_3__52364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__UIApplication__Group_3__5__Impl2392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__0__Impl_in_rule__UIApplication__Group_3_4__02435 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__1_in_rule__UIApplication__Group_3_4__02438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__UIApplication__Group_3_4__0__Impl2466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__1__Impl_in_rule__UIApplication__Group_3_4__12497 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__2_in_rule__UIApplication__Group_3_4__12500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__PagesAssignment_3_4_1_in_rule__UIApplication__Group_3_4__1__Impl2527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__2__Impl_in_rule__UIApplication__Group_3_4__22557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__UIApplication__Group_3_4__2__Impl2585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__0__Impl_in_rule__View__Group__02622 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__View__Group__1_in_rule__View__Group__02625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__1__Impl_in_rule__View__Group__12683 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__View__Group__2_in_rule__View__Group__12686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__View__Group__1__Impl2714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__2__Impl_in_rule__View__Group__22745 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__View__Group__3_in_rule__View__Group__22748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__NameAssignment_2_in_rule__View__Group__2__Impl2775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__3__Impl_in_rule__View__Group__32805 = new BitSet(new long[]{0x0000000008040000L});
-    public static final BitSet FOLLOW_rule__View__Group__4_in_rule__View__Group__32808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__View__Group__3__Impl2836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__4__Impl_in_rule__View__Group__42867 = new BitSet(new long[]{0x0000000008040000L});
-    public static final BitSet FOLLOW_rule__View__Group__5_in_rule__View__Group__42870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_4__0_in_rule__View__Group__4__Impl2897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__5__Impl_in_rule__View__Group__52928 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__View__Group__6_in_rule__View__Group__52931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__View__Group__5__Impl2959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__6__Impl_in_rule__View__Group__62990 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__View__Group__7_in_rule__View__Group__62993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__ModelAssignment_6_in_rule__View__Group__6__Impl3020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__7__Impl_in_rule__View__Group__73050 = new BitSet(new long[]{0x0000000024000000L});
-    public static final BitSet FOLLOW_rule__View__Group__8_in_rule__View__Group__73053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__View__Group__7__Impl3081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__8__Impl_in_rule__View__Group__83112 = new BitSet(new long[]{0x0000000024000000L});
-    public static final BitSet FOLLOW_rule__View__Group__9_in_rule__View__Group__83115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_8__0_in_rule__View__Group__8__Impl3142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group__9__Impl_in_rule__View__Group__93173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__View__Group__9__Impl3201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_4__0__Impl_in_rule__View__Group_4__03252 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__View__Group_4__1_in_rule__View__Group_4__03255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__View__Group_4__0__Impl3283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_4__1__Impl_in_rule__View__Group_4__13314 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__View__Group_4__2_in_rule__View__Group_4__13317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__DescriptionAssignment_4_1_in_rule__View__Group_4__1__Impl3344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_4__2__Impl_in_rule__View__Group_4__23374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__View__Group_4__2__Impl3402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_8__0__Impl_in_rule__View__Group_8__03439 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__View__Group_8__1_in_rule__View__Group_8__03442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__View__Group_8__0__Impl3470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_8__1__Impl_in_rule__View__Group_8__13501 = new BitSet(new long[]{0x0000002040000000L});
-    public static final BitSet FOLLOW_rule__View__Group_8__2_in_rule__View__Group_8__13504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__ActionsAssignment_8_1_in_rule__View__Group_8__1__Impl3531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_8__2__Impl_in_rule__View__Group_8__23561 = new BitSet(new long[]{0x0000002040000000L});
-    public static final BitSet FOLLOW_rule__View__Group_8__3_in_rule__View__Group_8__23564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__View__ActionsAssignment_8_2_in_rule__View__Group_8__2__Impl3591 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_rule__View__Group_8__3__Impl_in_rule__View__Group_8__33622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__View__Group_8__3__Impl3650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03689 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13750 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Model__Group__1__Impl3781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23812 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__NameAssignment_2_in_rule__Model__Group__2__Impl3842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33872 = new BitSet(new long[]{0x0000000B00000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__33875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Model__Group__3__Impl3903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__43934 = new BitSet(new long[]{0x0000000B00000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__43937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__0_in_rule__Model__Group__4__Impl3964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__53995 = new BitSet(new long[]{0x0000000B00000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__6_in_rule__Model__Group__53998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__0_in_rule__Model__Group__5__Impl4025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__64056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Model__Group__6__Impl4084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__0__Impl_in_rule__Model__Group_4__04129 = new BitSet(new long[]{0x0000012081000000L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__1_in_rule__Model__Group_4__04132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Model__Group_4__0__Impl4160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__1__Impl_in_rule__Model__Group_4__14191 = new BitSet(new long[]{0x0000012481000000L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__2_in_rule__Model__Group_4__14194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__PropertiesAssignment_4_1_in_rule__Model__Group_4__1__Impl4221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__2__Impl_in_rule__Model__Group_4__24251 = new BitSet(new long[]{0x0000012481000000L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__3_in_rule__Model__Group_4__24254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__PropertiesAssignment_4_2_in_rule__Model__Group_4__2__Impl4281 = new BitSet(new long[]{0x0000012081000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_4__3__Impl_in_rule__Model__Group_4__34312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Model__Group_4__3__Impl4340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__0__Impl_in_rule__Model__Group_5__04379 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__1_in_rule__Model__Group_5__04382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Model__Group_5__0__Impl4410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__1__Impl_in_rule__Model__Group_5__14441 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__2_in_rule__Model__Group_5__14444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Model__Group_5__1__Impl4472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__2__Impl_in_rule__Model__Group_5__24503 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__3_in_rule__Model__Group_5__24506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__OwnedElementsAssignment_5_2_in_rule__Model__Group_5__2__Impl4533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__3__Impl_in_rule__Model__Group_5__34563 = new BitSet(new long[]{0x0000001000040000L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__4_in_rule__Model__Group_5__34566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Model__Group_5__3__Impl4594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__4__Impl_in_rule__Model__Group_5__44625 = new BitSet(new long[]{0x0000001000040000L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__5_in_rule__Model__Group_5__44628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5_4__0_in_rule__Model__Group_5__4__Impl4655 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5__5__Impl_in_rule__Model__Group_5__54686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Model__Group_5__5__Impl4714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5_4__0__Impl_in_rule__Model__Group_5_4__04757 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Model__Group_5_4__1_in_rule__Model__Group_5_4__04760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Model__Group_5_4__0__Impl4788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5_4__1__Impl_in_rule__Model__Group_5_4__14819 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Model__Group_5_4__2_in_rule__Model__Group_5_4__14822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__OwnedElementsAssignment_5_4_1_in_rule__Model__Group_5_4__1__Impl4849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_5_4__2__Impl_in_rule__Model__Group_5_4__24879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Model__Group_5_4__2__Impl4907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04944 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__Action__Group__1_in_rule__Action__Group__04947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__15005 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Action__Group__2_in_rule__Action__Group__15008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Action__Group__1__Impl5036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__25067 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Action__Group__3_in_rule__Action__Group__25070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__NameAssignment_2_in_rule__Action__Group__2__Impl5097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__35127 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_rule__Action__Group__4_in_rule__Action__Group__35130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Action__Group__3__Impl5158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__4__Impl_in_rule__Action__Group__45189 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_rule__Action__Group__5_in_rule__Action__Group__45192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group_4__0_in_rule__Action__Group__4__Impl5219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group__5__Impl_in_rule__Action__Group__55250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Action__Group__5__Impl5278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group_4__0__Impl_in_rule__Action__Group_4__05321 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Action__Group_4__1_in_rule__Action__Group_4__05324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__Action__Group_4__0__Impl5352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group_4__1__Impl_in_rule__Action__Group_4__15383 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Action__Group_4__2_in_rule__Action__Group_4__15386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__NextPageAssignment_4_1_in_rule__Action__Group_4__1__Impl5413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action__Group_4__2__Impl_in_rule__Action__Group_4__25443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Action__Group_4__2__Impl5471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__0__Impl_in_rule__ModelProperty__Group__05508 = new BitSet(new long[]{0x0000012081000000L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__1_in_rule__ModelProperty__Group__05511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__1__Impl_in_rule__ModelProperty__Group__15569 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__2_in_rule__ModelProperty__Group__15572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__ModelProperty__Group__1__Impl5600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__2__Impl_in_rule__ModelProperty__Group__25631 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__3_in_rule__ModelProperty__Group__25634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ModelProperty__NameAssignment_2_in_rule__ModelProperty__Group__2__Impl5661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ModelProperty__Group__3__Impl_in_rule__ModelProperty__Group__35691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__ModelProperty__Group__3__Impl5719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleView_in_rule__Package__ViewsAssignment_1_05763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModel_in_rule__Package__ModelsAssignment_1_15794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__Package__ActionsAssignment_1_25825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_rule__Package__PropertiesAssignment_1_35856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUIApplication_in_rule__Package__MainAppAssignment_25887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_25922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_4_15961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_26000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_4_16039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__View__NameAssignment_26074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__View__DescriptionAssignment_4_16105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__View__ModelAssignment_66140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_16175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_26206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Model__NameAssignment_26237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_16268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_26299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_26334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_4_16373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Action__NameAssignment_26408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Action__NextPageAssignment_4_16443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__ModelProperty__NameAssignment_26478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__AllModelsAssignment_1_0_in_rule__MainPackage__Alternatives_1550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__AllViewsAssignment_1_1_in_rule__MainPackage__Alternatives_1568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EString__Group_1__0_in_rule__EString__Alternatives618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__Group__0__Impl_in_rule__MainPackage__Group__0649 = new BitSet(new long[]{0x0000000081001000L});
+    public static final BitSet FOLLOW_rule__MainPackage__Group__1_in_rule__MainPackage__Group__0652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXMLDeclaration_in_rule__MainPackage__Group__0__Impl679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__Group__1__Impl_in_rule__MainPackage__Group__1708 = new BitSet(new long[]{0x0000000081001000L});
+    public static final BitSet FOLLOW_rule__MainPackage__Group__2_in_rule__MainPackage__Group__1711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__Alternatives_1_in_rule__MainPackage__Group__1__Impl738 = new BitSet(new long[]{0x0000000081000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__Group__2__Impl_in_rule__MainPackage__Group__2769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MainPackage__AppAssignment_2_in_rule__MainPackage__Group__2__Impl796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__0__Impl_in_rule__UIApplication__Group__0832 = new BitSet(new long[]{0x0000000081001000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__1_in_rule__UIApplication__Group__0835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__1__Impl_in_rule__UIApplication__Group__1893 = new BitSet(new long[]{0x0000000000046000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__2_in_rule__UIApplication__Group__1896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__UIApplication__Group__1__Impl924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__2__Impl_in_rule__UIApplication__Group__2955 = new BitSet(new long[]{0x0000000000046000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__3_in_rule__UIApplication__Group__2958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__0_in_rule__UIApplication__Group__2__Impl985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__3__Impl_in_rule__UIApplication__Group__31016 = new BitSet(new long[]{0x0000000000046000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__4_in_rule__UIApplication__Group__31019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__0_in_rule__UIApplication__Group__3__Impl1046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group__4__Impl_in_rule__UIApplication__Group__41077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__UIApplication__Group__4__Impl1105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__0__Impl_in_rule__UIApplication__Group_2__01146 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__1_in_rule__UIApplication__Group_2__01149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__UIApplication__Group_2__0__Impl1177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__1__Impl_in_rule__UIApplication__Group_2__11208 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__2_in_rule__UIApplication__Group_2__11211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__UIApplication__Group_2__1__Impl1239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__2__Impl_in_rule__UIApplication__Group_2__21270 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__3_in_rule__UIApplication__Group_2__21273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__ModelsAssignment_2_2_in_rule__UIApplication__Group_2__2__Impl1300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__3__Impl_in_rule__UIApplication__Group_2__31330 = new BitSet(new long[]{0x0000000000028000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__4_in_rule__UIApplication__Group_2__31333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__UIApplication__Group_2__3__Impl1361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__4__Impl_in_rule__UIApplication__Group_2__41392 = new BitSet(new long[]{0x0000000000028000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__5_in_rule__UIApplication__Group_2__41395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__0_in_rule__UIApplication__Group_2__4__Impl1422 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2__5__Impl_in_rule__UIApplication__Group_2__51453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__UIApplication__Group_2__5__Impl1481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__0__Impl_in_rule__UIApplication__Group_2_4__01524 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__1_in_rule__UIApplication__Group_2_4__01527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__UIApplication__Group_2_4__0__Impl1555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__1__Impl_in_rule__UIApplication__Group_2_4__11586 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__2_in_rule__UIApplication__Group_2_4__11589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__ModelsAssignment_2_4_1_in_rule__UIApplication__Group_2_4__1__Impl1616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_2_4__2__Impl_in_rule__UIApplication__Group_2_4__21646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__UIApplication__Group_2_4__2__Impl1674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__0__Impl_in_rule__UIApplication__Group_3__01711 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__1_in_rule__UIApplication__Group_3__01714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__UIApplication__Group_3__0__Impl1742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__1__Impl_in_rule__UIApplication__Group_3__11773 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__2_in_rule__UIApplication__Group_3__11776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__UIApplication__Group_3__1__Impl1804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__2__Impl_in_rule__UIApplication__Group_3__21835 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__3_in_rule__UIApplication__Group_3__21838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__PagesAssignment_3_2_in_rule__UIApplication__Group_3__2__Impl1865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__3__Impl_in_rule__UIApplication__Group_3__31895 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__4_in_rule__UIApplication__Group_3__31898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__UIApplication__Group_3__3__Impl1926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__4__Impl_in_rule__UIApplication__Group_3__41957 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__5_in_rule__UIApplication__Group_3__41960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__0_in_rule__UIApplication__Group_3__4__Impl1987 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3__5__Impl_in_rule__UIApplication__Group_3__52018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__UIApplication__Group_3__5__Impl2046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__0__Impl_in_rule__UIApplication__Group_3_4__02089 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__1_in_rule__UIApplication__Group_3_4__02092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__UIApplication__Group_3_4__0__Impl2120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__1__Impl_in_rule__UIApplication__Group_3_4__12151 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__2_in_rule__UIApplication__Group_3_4__12154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__PagesAssignment_3_4_1_in_rule__UIApplication__Group_3_4__1__Impl2181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIApplication__Group_3_4__2__Impl_in_rule__UIApplication__Group_3_4__22211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__UIApplication__Group_3_4__2__Impl2239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__0__Impl_in_rule__XMLDeclaration__Group__02276 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__1_in_rule__XMLDeclaration__Group__02279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__XMLDeclaration__Group__0__Impl2307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__1__Impl_in_rule__XMLDeclaration__Group__12338 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__2_in_rule__XMLDeclaration__Group__12341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VERSION_in_rule__XMLDeclaration__Group__1__Impl2368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__2__Impl_in_rule__XMLDeclaration__Group__22397 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__3_in_rule__XMLDeclaration__Group__22400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__XMLDeclaration__Group__2__Impl2428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__3__Impl_in_rule__XMLDeclaration__Group__32459 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__4_in_rule__XMLDeclaration__Group__32462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__XMLDeclaration__Group__3__Impl2489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__XMLDeclaration__Group__4__Impl_in_rule__XMLDeclaration__Group__42518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__XMLDeclaration__Group__4__Impl2546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__0__Impl_in_rule__View__Group__02587 = new BitSet(new long[]{0x0000000081000000L});
+    public static final BitSet FOLLOW_rule__View__Group__1_in_rule__View__Group__02590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__1__Impl_in_rule__View__Group__12648 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__View__Group__2_in_rule__View__Group__12651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__View__Group__1__Impl2679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__2__Impl_in_rule__View__Group__22710 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__View__Group__3_in_rule__View__Group__22713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__NameAssignment_2_in_rule__View__Group__2__Impl2740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__3__Impl_in_rule__View__Group__32770 = new BitSet(new long[]{0x0000000008008000L});
+    public static final BitSet FOLLOW_rule__View__Group__4_in_rule__View__Group__32773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__View__Group__3__Impl2801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__4__Impl_in_rule__View__Group__42832 = new BitSet(new long[]{0x0000000008008000L});
+    public static final BitSet FOLLOW_rule__View__Group__5_in_rule__View__Group__42835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_4__0_in_rule__View__Group__4__Impl2862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__5__Impl_in_rule__View__Group__52893 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__View__Group__6_in_rule__View__Group__52896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__View__Group__5__Impl2924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__6__Impl_in_rule__View__Group__62955 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__View__Group__7_in_rule__View__Group__62958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__ModelAssignment_6_in_rule__View__Group__6__Impl2985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__7__Impl_in_rule__View__Group__73015 = new BitSet(new long[]{0x0000000024000000L});
+    public static final BitSet FOLLOW_rule__View__Group__8_in_rule__View__Group__73018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__View__Group__7__Impl3046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__8__Impl_in_rule__View__Group__83077 = new BitSet(new long[]{0x0000000024000000L});
+    public static final BitSet FOLLOW_rule__View__Group__9_in_rule__View__Group__83080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_8__0_in_rule__View__Group__8__Impl3107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group__9__Impl_in_rule__View__Group__93138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__View__Group__9__Impl3166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_4__0__Impl_in_rule__View__Group_4__03217 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__View__Group_4__1_in_rule__View__Group_4__03220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__View__Group_4__0__Impl3248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_4__1__Impl_in_rule__View__Group_4__13279 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__View__Group_4__2_in_rule__View__Group_4__13282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__DescriptionAssignment_4_1_in_rule__View__Group_4__1__Impl3309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_4__2__Impl_in_rule__View__Group_4__23339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__View__Group_4__2__Impl3367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_8__0__Impl_in_rule__View__Group_8__03404 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__View__Group_8__1_in_rule__View__Group_8__03407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__View__Group_8__0__Impl3435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_8__1__Impl_in_rule__View__Group_8__13466 = new BitSet(new long[]{0x0000002040000000L});
+    public static final BitSet FOLLOW_rule__View__Group_8__2_in_rule__View__Group_8__13469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__ActionsAssignment_8_1_in_rule__View__Group_8__1__Impl3496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_8__2__Impl_in_rule__View__Group_8__23526 = new BitSet(new long[]{0x0000002040000000L});
+    public static final BitSet FOLLOW_rule__View__Group_8__3_in_rule__View__Group_8__23529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__View__ActionsAssignment_8_2_in_rule__View__Group_8__2__Impl3556 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_rule__View__Group_8__3__Impl_in_rule__View__Group_8__33587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__View__Group_8__3__Impl3615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03654 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13715 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Model__Group__1__Impl3746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23777 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__NameAssignment_2_in_rule__Model__Group__2__Impl3807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33837 = new BitSet(new long[]{0x0000000B00000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__33840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Model__Group__3__Impl3868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__43899 = new BitSet(new long[]{0x0000000B00000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__43902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__0_in_rule__Model__Group__4__Impl3929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__53960 = new BitSet(new long[]{0x0000000B00000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__6_in_rule__Model__Group__53963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__0_in_rule__Model__Group__5__Impl3990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__64021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Model__Group__6__Impl4049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__0__Impl_in_rule__Model__Group_4__04094 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__1_in_rule__Model__Group_4__04097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Model__Group_4__0__Impl4125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__1__Impl_in_rule__Model__Group_4__14156 = new BitSet(new long[]{0x0000010400000000L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__2_in_rule__Model__Group_4__14159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__PropertiesAssignment_4_1_in_rule__Model__Group_4__1__Impl4186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__2__Impl_in_rule__Model__Group_4__24216 = new BitSet(new long[]{0x0000010400000000L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__3_in_rule__Model__Group_4__24219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__PropertiesAssignment_4_2_in_rule__Model__Group_4__2__Impl4246 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_4__3__Impl_in_rule__Model__Group_4__34277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Model__Group_4__3__Impl4305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__0__Impl_in_rule__Model__Group_5__04344 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__1_in_rule__Model__Group_5__04347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Model__Group_5__0__Impl4375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__1__Impl_in_rule__Model__Group_5__14406 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__2_in_rule__Model__Group_5__14409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Model__Group_5__1__Impl4437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__2__Impl_in_rule__Model__Group_5__24468 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__3_in_rule__Model__Group_5__24471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__OwnedElementsAssignment_5_2_in_rule__Model__Group_5__2__Impl4498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__3__Impl_in_rule__Model__Group_5__34528 = new BitSet(new long[]{0x0000001000008000L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__4_in_rule__Model__Group_5__34531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Model__Group_5__3__Impl4559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__4__Impl_in_rule__Model__Group_5__44590 = new BitSet(new long[]{0x0000001000008000L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__5_in_rule__Model__Group_5__44593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5_4__0_in_rule__Model__Group_5__4__Impl4620 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5__5__Impl_in_rule__Model__Group_5__54651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Model__Group_5__5__Impl4679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5_4__0__Impl_in_rule__Model__Group_5_4__04722 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Model__Group_5_4__1_in_rule__Model__Group_5_4__04725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Model__Group_5_4__0__Impl4753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5_4__1__Impl_in_rule__Model__Group_5_4__14784 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Model__Group_5_4__2_in_rule__Model__Group_5_4__14787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__OwnedElementsAssignment_5_4_1_in_rule__Model__Group_5_4__1__Impl4814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_5_4__2__Impl_in_rule__Model__Group_5_4__24844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Model__Group_5_4__2__Impl4872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04909 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__Action__Group__1_in_rule__Action__Group__04912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__1__Impl_in_rule__Action__Group__14970 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Action__Group__2_in_rule__Action__Group__14973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Action__Group__1__Impl5001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__2__Impl_in_rule__Action__Group__25032 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Action__Group__3_in_rule__Action__Group__25035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__NameAssignment_2_in_rule__Action__Group__2__Impl5062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__3__Impl_in_rule__Action__Group__35092 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_rule__Action__Group__4_in_rule__Action__Group__35095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Action__Group__3__Impl5123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__4__Impl_in_rule__Action__Group__45154 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_rule__Action__Group__5_in_rule__Action__Group__45157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group_4__0_in_rule__Action__Group__4__Impl5184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group__5__Impl_in_rule__Action__Group__55215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Action__Group__5__Impl5243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group_4__0__Impl_in_rule__Action__Group_4__05286 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Action__Group_4__1_in_rule__Action__Group_4__05289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Action__Group_4__0__Impl5317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group_4__1__Impl_in_rule__Action__Group_4__15348 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Action__Group_4__2_in_rule__Action__Group_4__15351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__NextPageAssignment_4_1_in_rule__Action__Group_4__1__Impl5378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action__Group_4__2__Impl_in_rule__Action__Group_4__25408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Action__Group_4__2__Impl5436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__0__Impl_in_rule__ModelProperty__Group__05473 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__1_in_rule__ModelProperty__Group__05476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__1__Impl_in_rule__ModelProperty__Group__15534 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__2_in_rule__ModelProperty__Group__15537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__ModelProperty__Group__1__Impl5565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__2__Impl_in_rule__ModelProperty__Group__25596 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__3_in_rule__ModelProperty__Group__25599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ModelProperty__NameAssignment_2_in_rule__ModelProperty__Group__2__Impl5626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ModelProperty__Group__3__Impl_in_rule__ModelProperty__Group__35656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__ModelProperty__Group__3__Impl5684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EString__Group_1__0__Impl_in_rule__EString__Group_1__05723 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__EString__Group_1__1_in_rule__EString__Group_1__05726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Group_1__0__Impl5753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EString__Group_1__1__Impl_in_rule__EString__Group_1__15782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EString__Group_1_1__0_in_rule__EString__Group_1__1__Impl5809 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_rule__EString__Group_1_1__0__Impl_in_rule__EString__Group_1_1__05844 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__EString__Group_1_1__1_in_rule__EString__Group_1_1__05847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__EString__Group_1_1__0__Impl5875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EString__Group_1_1__1__Impl_in_rule__EString__Group_1_1__15906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Group_1_1__1__Impl5933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModel_in_rule__MainPackage__AllModelsAssignment_1_05971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleView_in_rule__MainPackage__AllViewsAssignment_1_16002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUIApplication_in_rule__MainPackage__AppAssignment_26033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_26068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__ModelsAssignment_2_4_16107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_26146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__UIApplication__PagesAssignment_3_4_16185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__View__NameAssignment_26220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__View__DescriptionAssignment_4_16251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__View__ModelAssignment_66286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_16321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__View__ActionsAssignment_8_26352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Model__NameAssignment_26383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_16414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModelProperty_in_rule__Model__PropertiesAssignment_4_26445 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_26480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Model__OwnedElementsAssignment_5_4_16519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Action__NameAssignment_26554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Action__NextPageAssignment_4_16589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__ModelProperty__NameAssignment_26624 = new BitSet(new long[]{0x0000000000000002L});
 
 }

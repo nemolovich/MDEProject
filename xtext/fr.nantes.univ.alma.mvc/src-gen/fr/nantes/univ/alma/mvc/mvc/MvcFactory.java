@@ -23,13 +23,13 @@ public interface MvcFactory extends EFactory
   MvcFactory eINSTANCE = fr.nantes.univ.alma.mvc.mvc.impl.MvcFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Package</em>'.
+   * Returns a new object of class '<em>Main Package</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Package</em>'.
+   * @return a new object of class '<em>Main Package</em>'.
    * @generated
    */
-  Package createPackage();
+  MainPackage createMainPackage();
 
   /**
    * Returns a new object of class '<em>UI Application</em>'.

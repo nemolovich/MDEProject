@@ -17,15 +17,15 @@ import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
+
 @SuppressWarnings("all")
 public class InternalLanguageParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_VERSION", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<?xml version='", "' encoding='", "' ?>'", "'<UIApplication>'", "'<models>'", "'<model ref='", "' />'", "'</models>'", "'<pages>'", "'<page ref='", "'</pages>'", "'</UIApplication>'", "'<view id='", "' >'", "'<description>'", "'</description>'", "'<actions>'", "'</actions>'", "'</view>'", "'<model id='", "'<properties>'", "'</properties>'", "'<ownedElements>'", "'</ownedElements>'", "'</model>'", "'<action name='", "'<nextPage ref='", "'</action>'", "'<modelProperty name='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_VERSION", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<UIApplication>'", "'<models>'", "'<model ref='", "' />'", "'</models>'", "'<pages>'", "'<page ref='", "'</pages>'", "'</UIApplication>'", "'<?xml version='", "' encoding='", "' ?>'", "'<view name='", "' >'", "'<description>'", "'</description>'", "'<actions>'", "'</actions>'", "'</view>'", "'<model name='", "'<properties>'", "'</properties>'", "'<ownedElements>'", "'</ownedElements>'", "'</model>'", "'<action name='", "'<nextPage ref='", "'</action>'", "'<modelProperty name='", "'.'"
     };
     public static final int RULE_ID=6;
     public static final int T__40=40;
+    public static final int T__41=41;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -81,11 +81,6 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
 
-    /*
-      This grammar contains a lot of empty actions to work around a bug in ANTLR.
-      Otherwise the ANTLR tool will create synpreds that cannot be compiled in some rare cases.
-    */
-     
      	private LanguageGrammarAccess grammarAccess;
      	
         public InternalLanguageParser(TokenStream input, LanguageGrammarAccess grammarAccess) {
@@ -96,7 +91,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
         
         @Override
         protected String getFirstRuleName() {
-        	return "Package";	
+        	return "MainPackage";	
        	}
        	
        	@Override
@@ -106,30 +101,26 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start "entryRulePackage"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:73:1: entryRulePackage returns [EObject current=null] : iv_rulePackage= rulePackage EOF ;
-    public final EObject entryRulePackage() throws RecognitionException {
+    // $ANTLR start "entryRuleMainPackage"
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:67:1: entryRuleMainPackage returns [EObject current=null] : iv_ruleMainPackage= ruleMainPackage EOF ;
+    public final EObject entryRuleMainPackage() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulePackage = null;
+        EObject iv_ruleMainPackage = null;
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:74:2: (iv_rulePackage= rulePackage EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:75:2: iv_rulePackage= rulePackage EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:68:2: (iv_ruleMainPackage= ruleMainPackage EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:69:2: iv_ruleMainPackage= ruleMainPackage EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getPackageRule()); 
-            }
-            pushFollow(FOLLOW_rulePackage_in_entryRulePackage81);
-            iv_rulePackage=rulePackage();
+             newCompositeNode(grammarAccess.getMainPackageRule()); 
+            pushFollow(FOLLOW_ruleMainPackage_in_entryRuleMainPackage75);
+            iv_ruleMainPackage=ruleMainPackage();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_rulePackage; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePackage91); if (state.failed) return current;
+
+             current =iv_ruleMainPackage; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMainPackage85); 
 
             }
 
@@ -143,115 +134,84 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRulePackage"
+    // $ANTLR end "entryRuleMainPackage"
 
 
-    // $ANTLR start "rulePackage"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:82:1: rulePackage returns [EObject current=null] : ( ruleXMLDeclaration ( ( (lv_views_1_0= ruleView ) ) | ( (lv_models_2_0= ruleModel ) ) | ( (lv_actions_3_0= ruleAction ) ) | ( (lv_properties_4_0= ruleModelProperty ) ) )* ( (lv_mainApp_5_0= ruleUIApplication ) ) ) ;
-    public final EObject rulePackage() throws RecognitionException {
+    // $ANTLR start "ruleMainPackage"
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:76:1: ruleMainPackage returns [EObject current=null] : ( ruleXMLDeclaration ( ( (lv_allModels_1_0= ruleModel ) ) | ( (lv_allViews_2_0= ruleView ) ) )* ( (lv_app_3_0= ruleUIApplication ) ) ) ;
+    public final EObject ruleMainPackage() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_views_1_0 = null;
+        EObject lv_allModels_1_0 = null;
 
-        EObject lv_models_2_0 = null;
+        EObject lv_allViews_2_0 = null;
 
-        EObject lv_actions_3_0 = null;
-
-        EObject lv_properties_4_0 = null;
-
-        EObject lv_mainApp_5_0 = null;
+        EObject lv_app_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:85:28: ( ( ruleXMLDeclaration ( ( (lv_views_1_0= ruleView ) ) | ( (lv_models_2_0= ruleModel ) ) | ( (lv_actions_3_0= ruleAction ) ) | ( (lv_properties_4_0= ruleModelProperty ) ) )* ( (lv_mainApp_5_0= ruleUIApplication ) ) ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:86:1: ( ruleXMLDeclaration ( ( (lv_views_1_0= ruleView ) ) | ( (lv_models_2_0= ruleModel ) ) | ( (lv_actions_3_0= ruleAction ) ) | ( (lv_properties_4_0= ruleModelProperty ) ) )* ( (lv_mainApp_5_0= ruleUIApplication ) ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:79:28: ( ( ruleXMLDeclaration ( ( (lv_allModels_1_0= ruleModel ) ) | ( (lv_allViews_2_0= ruleView ) ) )* ( (lv_app_3_0= ruleUIApplication ) ) ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:80:1: ( ruleXMLDeclaration ( ( (lv_allModels_1_0= ruleModel ) ) | ( (lv_allViews_2_0= ruleView ) ) )* ( (lv_app_3_0= ruleUIApplication ) ) )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:86:1: ( ruleXMLDeclaration ( ( (lv_views_1_0= ruleView ) ) | ( (lv_models_2_0= ruleModel ) ) | ( (lv_actions_3_0= ruleAction ) ) | ( (lv_properties_4_0= ruleModelProperty ) ) )* ( (lv_mainApp_5_0= ruleUIApplication ) ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:87:2: ruleXMLDeclaration ( ( (lv_views_1_0= ruleView ) ) | ( (lv_models_2_0= ruleModel ) ) | ( (lv_actions_3_0= ruleAction ) ) | ( (lv_properties_4_0= ruleModelProperty ) ) )* ( (lv_mainApp_5_0= ruleUIApplication ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:80:1: ( ruleXMLDeclaration ( ( (lv_allModels_1_0= ruleModel ) ) | ( (lv_allViews_2_0= ruleView ) ) )* ( (lv_app_3_0= ruleUIApplication ) ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:81:5: ruleXMLDeclaration ( ( (lv_allModels_1_0= ruleModel ) ) | ( (lv_allViews_2_0= ruleView ) ) )* ( (lv_app_3_0= ruleUIApplication ) )
             {
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getPackageAccess().getXMLDeclarationParserRuleCall_0()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleXMLDeclaration_in_rulePackage135);
+             
+                    newCompositeNode(grammarAccess.getMainPackageAccess().getXMLDeclarationParserRuleCall_0()); 
+                
+            pushFollow(FOLLOW_ruleXMLDeclaration_in_ruleMainPackage126);
             ruleXMLDeclaration();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:97:1: ( ( (lv_views_1_0= ruleView ) ) | ( (lv_models_2_0= ruleModel ) ) | ( (lv_actions_3_0= ruleAction ) ) | ( (lv_properties_4_0= ruleModelProperty ) ) )*
+
+             
+                    afterParserOrEnumRuleCall();
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:88:1: ( ( (lv_allModels_1_0= ruleModel ) ) | ( (lv_allViews_2_0= ruleView ) ) )*
             loop1:
             do {
-                int alt1=5;
-                switch ( input.LA(1) ) {
-                case 24:
-                    {
-                    alt1=1;
-                    }
-                    break;
-                case 31:
-                    {
-                    alt1=2;
-                    }
-                    break;
-                case 37:
-                    {
-                    alt1=3;
-                    }
-                    break;
-                case 40:
-                    {
-                    alt1=4;
-                    }
-                    break;
+                int alt1=3;
+                int LA1_0 = input.LA(1);
 
+                if ( (LA1_0==31) ) {
+                    alt1=1;
                 }
+                else if ( (LA1_0==24) ) {
+                    alt1=2;
+                }
+
 
                 switch (alt1) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:97:2: ( (lv_views_1_0= ruleView ) )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:88:2: ( (lv_allModels_1_0= ruleModel ) )
             	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:97:2: ( (lv_views_1_0= ruleView ) )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:98:1: (lv_views_1_0= ruleView )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:88:2: ( (lv_allModels_1_0= ruleModel ) )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:89:1: (lv_allModels_1_0= ruleModel )
             	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:98:1: (lv_views_1_0= ruleView )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:99:3: lv_views_1_0= ruleView
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:89:1: (lv_allModels_1_0= ruleModel )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:90:3: lv_allModels_1_0= ruleModel
             	    {
-            	    if ( state.backtracking==0 ) {
-            	       
-            	      	        newCompositeNode(grammarAccess.getPackageAccess().getViewsViewParserRuleCall_1_0_0()); 
-            	      	    
-            	    }
-            	    pushFollow(FOLLOW_ruleView_in_rulePackage156);
-            	    lv_views_1_0=ruleView();
+            	     
+            	    	        newCompositeNode(grammarAccess.getMainPackageAccess().getAllModelsModelParserRuleCall_1_0_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleModel_in_ruleMainPackage147);
+            	    lv_allModels_1_0=ruleModel();
 
             	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
 
-            	      	        if (current==null) {
-            	      	            current = createModelElementForParent(grammarAccess.getPackageRule());
-            	      	        }
-            	             		add(
-            	             			current, 
-            	             			"views",
-            	              		lv_views_1_0, 
-            	              		"View");
-            	      	        afterParserOrEnumRuleCall();
-            	      	    
-            	    }
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getMainPackageRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"allModels",
+            	            		lv_allModels_1_0, 
+            	            		"Model");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
 
             	    }
 
@@ -262,119 +222,33 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:116:6: ( (lv_models_2_0= ruleModel ) )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:107:6: ( (lv_allViews_2_0= ruleView ) )
             	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:116:6: ( (lv_models_2_0= ruleModel ) )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:117:1: (lv_models_2_0= ruleModel )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:107:6: ( (lv_allViews_2_0= ruleView ) )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:108:1: (lv_allViews_2_0= ruleView )
             	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:117:1: (lv_models_2_0= ruleModel )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:118:3: lv_models_2_0= ruleModel
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:108:1: (lv_allViews_2_0= ruleView )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:109:3: lv_allViews_2_0= ruleView
             	    {
-            	    if ( state.backtracking==0 ) {
-            	       
-            	      	        newCompositeNode(grammarAccess.getPackageAccess().getModelsModelParserRuleCall_1_1_0()); 
-            	      	    
-            	    }
-            	    pushFollow(FOLLOW_ruleModel_in_rulePackage183);
-            	    lv_models_2_0=ruleModel();
+            	     
+            	    	        newCompositeNode(grammarAccess.getMainPackageAccess().getAllViewsViewParserRuleCall_1_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleView_in_ruleMainPackage174);
+            	    lv_allViews_2_0=ruleView();
 
             	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      	        if (current==null) {
-            	      	            current = createModelElementForParent(grammarAccess.getPackageRule());
-            	      	        }
-            	             		add(
-            	             			current, 
-            	             			"models",
-            	              		lv_models_2_0, 
-            	              		"Model");
-            	      	        afterParserOrEnumRuleCall();
-            	      	    
-            	    }
-
-            	    }
 
 
-            	    }
-
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:135:6: ( (lv_actions_3_0= ruleAction ) )
-            	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:135:6: ( (lv_actions_3_0= ruleAction ) )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:136:1: (lv_actions_3_0= ruleAction )
-            	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:136:1: (lv_actions_3_0= ruleAction )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:137:3: lv_actions_3_0= ruleAction
-            	    {
-            	    if ( state.backtracking==0 ) {
-            	       
-            	      	        newCompositeNode(grammarAccess.getPackageAccess().getActionsActionParserRuleCall_1_2_0()); 
-            	      	    
-            	    }
-            	    pushFollow(FOLLOW_ruleAction_in_rulePackage210);
-            	    lv_actions_3_0=ruleAction();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      	        if (current==null) {
-            	      	            current = createModelElementForParent(grammarAccess.getPackageRule());
-            	      	        }
-            	             		add(
-            	             			current, 
-            	             			"actions",
-            	              		lv_actions_3_0, 
-            	              		"Action");
-            	      	        afterParserOrEnumRuleCall();
-            	      	    
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:154:6: ( (lv_properties_4_0= ruleModelProperty ) )
-            	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:154:6: ( (lv_properties_4_0= ruleModelProperty ) )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:155:1: (lv_properties_4_0= ruleModelProperty )
-            	    {
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:155:1: (lv_properties_4_0= ruleModelProperty )
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:156:3: lv_properties_4_0= ruleModelProperty
-            	    {
-            	    if ( state.backtracking==0 ) {
-            	       
-            	      	        newCompositeNode(grammarAccess.getPackageAccess().getPropertiesModelPropertyParserRuleCall_1_3_0()); 
-            	      	    
-            	    }
-            	    pushFollow(FOLLOW_ruleModelProperty_in_rulePackage237);
-            	    lv_properties_4_0=ruleModelProperty();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      	        if (current==null) {
-            	      	            current = createModelElementForParent(grammarAccess.getPackageRule());
-            	      	        }
-            	             		add(
-            	             			current, 
-            	             			"properties",
-            	              		lv_properties_4_0, 
-            	              		"ModelProperty");
-            	      	        afterParserOrEnumRuleCall();
-            	      	    
-            	    }
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getMainPackageRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"allViews",
+            	            		lv_allViews_2_0, 
+            	            		"View");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
 
             	    }
 
@@ -390,35 +264,31 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:172:4: ( (lv_mainApp_5_0= ruleUIApplication ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:173:1: (lv_mainApp_5_0= ruleUIApplication )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:125:4: ( (lv_app_3_0= ruleUIApplication ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:126:1: (lv_app_3_0= ruleUIApplication )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:173:1: (lv_mainApp_5_0= ruleUIApplication )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:174:3: lv_mainApp_5_0= ruleUIApplication
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:126:1: (lv_app_3_0= ruleUIApplication )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:127:3: lv_app_3_0= ruleUIApplication
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getPackageAccess().getMainAppUIApplicationParserRuleCall_2_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleUIApplication_in_rulePackage260);
-            lv_mainApp_5_0=ruleUIApplication();
+             
+            	        newCompositeNode(grammarAccess.getMainPackageAccess().getAppUIApplicationParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleUIApplication_in_ruleMainPackage197);
+            lv_app_3_0=ruleUIApplication();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getPackageRule());
-              	        }
-                     		add(
-                     			current, 
-                     			"mainApp",
-                      		lv_mainApp_5_0, 
-                      		"UIApplication");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getMainPackageRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"app",
+                    		lv_app_3_0, 
+                    		"UIApplication");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
@@ -431,9 +301,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -444,144 +312,11 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "rulePackage"
-
-
-    // $ANTLR start "entryRuleXMLDeclaration"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:198:1: entryRuleXMLDeclaration returns [String current=null] : iv_ruleXMLDeclaration= ruleXMLDeclaration EOF ;
-    public final String entryRuleXMLDeclaration() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleXMLDeclaration = null;
-
-
-        try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:199:2: (iv_ruleXMLDeclaration= ruleXMLDeclaration EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:200:2: iv_ruleXMLDeclaration= ruleXMLDeclaration EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getXMLDeclarationRule()); 
-            }
-            pushFollow(FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration297);
-            iv_ruleXMLDeclaration=ruleXMLDeclaration();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleXMLDeclaration.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXMLDeclaration308); if (state.failed) return current;
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleXMLDeclaration"
-
-
-    // $ANTLR start "ruleXMLDeclaration"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:207:1: ruleXMLDeclaration returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' ) ;
-    public final AntlrDatatypeRuleToken ruleXMLDeclaration() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token kw=null;
-        Token this_VERSION_1=null;
-        AntlrDatatypeRuleToken this_EString_3 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:210:28: ( (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:211:1: (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' )
-            {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:211:1: (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:212:2: kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>'
-            {
-            kw=(Token)match(input,12,FOLLOW_12_in_ruleXMLDeclaration346); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                      current.merge(kw);
-                      newLeafNode(kw, grammarAccess.getXMLDeclarationAccess().getXmlVersionKeyword_0()); 
-                  
-            }
-            this_VERSION_1=(Token)match(input,RULE_VERSION,FOLLOW_RULE_VERSION_in_ruleXMLDeclaration361); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		current.merge(this_VERSION_1);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                  newLeafNode(this_VERSION_1, grammarAccess.getXMLDeclarationAccess().getVERSIONTerminalRuleCall_1()); 
-                  
-            }
-            kw=(Token)match(input,13,FOLLOW_13_in_ruleXMLDeclaration379); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                      current.merge(kw);
-                      newLeafNode(kw, grammarAccess.getXMLDeclarationAccess().getEncodingKeyword_2()); 
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getXMLDeclarationAccess().getEStringParserRuleCall_3()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleEString_in_ruleXMLDeclaration401);
-            this_EString_3=ruleEString();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		current.merge(this_EString_3);
-                  
-            }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            kw=(Token)match(input,14,FOLLOW_14_in_ruleXMLDeclaration419); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                      current.merge(kw);
-                      newLeafNode(kw, grammarAccess.getXMLDeclarationAccess().getSpaceQuestionMarkGreaterThanSignKeyword_4()); 
-                  
-            }
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleXMLDeclaration"
+    // $ANTLR end "ruleMainPackage"
 
 
     // $ANTLR start "entryRuleUIApplication"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:255:1: entryRuleUIApplication returns [EObject current=null] : iv_ruleUIApplication= ruleUIApplication EOF ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:151:1: entryRuleUIApplication returns [EObject current=null] : iv_ruleUIApplication= ruleUIApplication EOF ;
     public final EObject entryRuleUIApplication() throws RecognitionException {
         EObject current = null;
 
@@ -589,21 +324,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:256:2: (iv_ruleUIApplication= ruleUIApplication EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:257:2: iv_ruleUIApplication= ruleUIApplication EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:152:2: (iv_ruleUIApplication= ruleUIApplication EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:153:2: iv_ruleUIApplication= ruleUIApplication EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getUIApplicationRule()); 
-            }
-            pushFollow(FOLLOW_ruleUIApplication_in_entryRuleUIApplication459);
+             newCompositeNode(grammarAccess.getUIApplicationRule()); 
+            pushFollow(FOLLOW_ruleUIApplication_in_entryRuleUIApplication233);
             iv_ruleUIApplication=ruleUIApplication();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleUIApplication; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUIApplication469); if (state.failed) return current;
+
+             current =iv_ruleUIApplication; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUIApplication243); 
 
             }
 
@@ -621,7 +352,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUIApplication"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:264:1: ruleUIApplication returns [EObject current=null] : ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' ) ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:160:1: ruleUIApplication returns [EObject current=null] : ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' ) ;
     public final EObject ruleUIApplication() throws RecognitionException {
         EObject current = null;
 
@@ -643,170 +374,129 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:267:28: ( ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:268:1: ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:163:28: ( ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:164:1: ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:268:1: ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:268:2: () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:164:1: ( () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:164:2: () otherlv_1= '<UIApplication>' (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )? (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )? otherlv_18= '</UIApplication>'
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:268:2: ()
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:269:2: 
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:164:2: ()
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:165:5: 
             {
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
 
-                      current = forceCreateModelElement(
-                          grammarAccess.getUIApplicationAccess().getUIApplicationAction_0(),
-                          current);
-                  
-            }
+                    current = forceCreateModelElement(
+                        grammarAccess.getUIApplicationAccess().getUIApplicationAction_0(),
+                        current);
+                
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleUIApplication518); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_1=(Token)match(input,12,FOLLOW_12_in_ruleUIApplication289); 
 
-                  	newLeafNode(otherlv_1, grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_1());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:281:1: (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )?
+                	newLeafNode(otherlv_1, grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_1());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:174:1: (otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==16) ) {
+            if ( (LA3_0==13) ) {
                 alt3=1;
             }
             switch (alt3) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:281:3: otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:174:3: otherlv_2= '<models>' otherlv_3= '<model ref=' ( ( ruleEString ) ) otherlv_5= ' />' (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )* otherlv_9= '</models>'
                     {
-                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleUIApplication531); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleUIApplication302); 
 
-                          	newLeafNode(otherlv_2, grammarAccess.getUIApplicationAccess().getModelsKeyword_2_0());
-                          
-                    }
-                    otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleUIApplication543); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                        	newLeafNode(otherlv_2, grammarAccess.getUIApplicationAccess().getModelsKeyword_2_0());
+                        
+                    otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleUIApplication314); 
 
-                          	newLeafNode(otherlv_3, grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_1());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:289:1: ( ( ruleEString ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:290:1: ( ruleEString )
+                        	newLeafNode(otherlv_3, grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_1());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:182:1: ( ( ruleEString ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:183:1: ( ruleEString )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:290:1: ( ruleEString )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:291:3: ruleEString
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:183:1: ( ruleEString )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:184:3: ruleEString
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      		  /* */ 
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
 
-                      			if (current==null) {
-                      	            current = createModelElement(grammarAccess.getUIApplicationRule());
-                      	        }
-                              
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getUIApplicationAccess().getModelsModelCrossReference_2_2_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication570);
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getUIApplicationRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getUIApplicationAccess().getModelsModelCrossReference_2_2_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication337);
                     ruleEString();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    otherlv_5=(Token)match(input,18,FOLLOW_18_in_ruleUIApplication582); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleUIApplication349); 
 
-                          	newLeafNode(otherlv_5, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_3());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:311:1: (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )*
+                        	newLeafNode(otherlv_5, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_3());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:201:1: (otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />' )*
                     loop2:
                     do {
                         int alt2=2;
                         int LA2_0 = input.LA(1);
 
-                        if ( (LA2_0==17) ) {
+                        if ( (LA2_0==14) ) {
                             alt2=1;
                         }
 
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:311:3: otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />'
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:201:3: otherlv_6= '<model ref=' ( ( ruleEString ) ) otherlv_8= ' />'
                     	    {
-                    	    otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleUIApplication595); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleUIApplication362); 
 
-                    	          	newLeafNode(otherlv_6, grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_4_0());
-                    	          
-                    	    }
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:315:1: ( ( ruleEString ) )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:316:1: ( ruleEString )
+                    	        	newLeafNode(otherlv_6, grammarAccess.getUIApplicationAccess().getModelRefKeyword_2_4_0());
+                    	        
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:205:1: ( ( ruleEString ) )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:206:1: ( ruleEString )
                     	    {
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:316:1: ( ruleEString )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:317:3: ruleEString
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:206:1: ( ruleEString )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:207:3: ruleEString
                     	    {
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      		  /* */ 
-                    	      		
-                    	    }
-                    	    if ( state.backtracking==0 ) {
 
-                    	      			if (current==null) {
-                    	      	            current = createModelElement(grammarAccess.getUIApplicationRule());
-                    	      	        }
-                    	              
-                    	    }
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        newCompositeNode(grammarAccess.getUIApplicationAccess().getModelsModelCrossReference_2_4_1_0()); 
-                    	      	    
-                    	    }
-                    	    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication622);
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getUIApplicationRule());
+                    	    	        }
+                    	            
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getUIApplicationAccess().getModelsModelCrossReference_2_4_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication385);
                     	    ruleEString();
 
                     	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        afterParserOrEnumRuleCall();
-                    	      	    
-                    	    }
+
+                    	     
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
                     	    }
 
 
                     	    }
 
-                    	    otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleUIApplication634); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_8=(Token)match(input,15,FOLLOW_15_in_ruleUIApplication397); 
 
-                    	          	newLeafNode(otherlv_8, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_4_2());
-                    	          
-                    	    }
+                    	        	newLeafNode(otherlv_8, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_2_4_2());
+                    	        
 
                     	    }
                     	    break;
@@ -816,152 +506,118 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_9=(Token)match(input,19,FOLLOW_19_in_ruleUIApplication648); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_9=(Token)match(input,16,FOLLOW_16_in_ruleUIApplication411); 
 
-                          	newLeafNode(otherlv_9, grammarAccess.getUIApplicationAccess().getModelsKeyword_2_5());
-                          
-                    }
+                        	newLeafNode(otherlv_9, grammarAccess.getUIApplicationAccess().getModelsKeyword_2_5());
+                        
 
                     }
                     break;
 
             }
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:341:3: (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )?
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:228:3: (otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>' )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==20) ) {
+            if ( (LA5_0==17) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:341:5: otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:228:5: otherlv_10= '<pages>' otherlv_11= '<page ref=' ( ( ruleEString ) ) otherlv_13= ' />' (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )* otherlv_17= '</pages>'
                     {
-                    otherlv_10=(Token)match(input,20,FOLLOW_20_in_ruleUIApplication663); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_10=(Token)match(input,17,FOLLOW_17_in_ruleUIApplication426); 
 
-                          	newLeafNode(otherlv_10, grammarAccess.getUIApplicationAccess().getPagesKeyword_3_0());
-                          
-                    }
-                    otherlv_11=(Token)match(input,21,FOLLOW_21_in_ruleUIApplication675); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                        	newLeafNode(otherlv_10, grammarAccess.getUIApplicationAccess().getPagesKeyword_3_0());
+                        
+                    otherlv_11=(Token)match(input,18,FOLLOW_18_in_ruleUIApplication438); 
 
-                          	newLeafNode(otherlv_11, grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_1());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:349:1: ( ( ruleEString ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:350:1: ( ruleEString )
+                        	newLeafNode(otherlv_11, grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_1());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:236:1: ( ( ruleEString ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:237:1: ( ruleEString )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:350:1: ( ruleEString )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:351:3: ruleEString
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:237:1: ( ruleEString )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:238:3: ruleEString
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      		  /* */ 
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
 
-                      			if (current==null) {
-                      	            current = createModelElement(grammarAccess.getUIApplicationRule());
-                      	        }
-                              
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getUIApplicationAccess().getPagesViewCrossReference_3_2_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication702);
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getUIApplicationRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getUIApplicationAccess().getPagesViewCrossReference_3_2_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication461);
                     ruleEString();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    otherlv_13=(Token)match(input,18,FOLLOW_18_in_ruleUIApplication714); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_13=(Token)match(input,15,FOLLOW_15_in_ruleUIApplication473); 
 
-                          	newLeafNode(otherlv_13, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_3());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:371:1: (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )*
+                        	newLeafNode(otherlv_13, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_3());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:255:1: (otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />' )*
                     loop4:
                     do {
                         int alt4=2;
                         int LA4_0 = input.LA(1);
 
-                        if ( (LA4_0==21) ) {
+                        if ( (LA4_0==18) ) {
                             alt4=1;
                         }
 
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:371:3: otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />'
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:255:3: otherlv_14= '<page ref=' ( ( ruleEString ) ) otherlv_16= ' />'
                     	    {
-                    	    otherlv_14=(Token)match(input,21,FOLLOW_21_in_ruleUIApplication727); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_14=(Token)match(input,18,FOLLOW_18_in_ruleUIApplication486); 
 
-                    	          	newLeafNode(otherlv_14, grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_4_0());
-                    	          
-                    	    }
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:375:1: ( ( ruleEString ) )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:376:1: ( ruleEString )
+                    	        	newLeafNode(otherlv_14, grammarAccess.getUIApplicationAccess().getPageRefKeyword_3_4_0());
+                    	        
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:259:1: ( ( ruleEString ) )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:260:1: ( ruleEString )
                     	    {
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:376:1: ( ruleEString )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:377:3: ruleEString
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:260:1: ( ruleEString )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:261:3: ruleEString
                     	    {
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      		  /* */ 
-                    	      		
-                    	    }
-                    	    if ( state.backtracking==0 ) {
 
-                    	      			if (current==null) {
-                    	      	            current = createModelElement(grammarAccess.getUIApplicationRule());
-                    	      	        }
-                    	              
-                    	    }
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        newCompositeNode(grammarAccess.getUIApplicationAccess().getPagesViewCrossReference_3_4_1_0()); 
-                    	      	    
-                    	    }
-                    	    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication754);
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getUIApplicationRule());
+                    	    	        }
+                    	            
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getUIApplicationAccess().getPagesViewCrossReference_3_4_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleEString_in_ruleUIApplication509);
                     	    ruleEString();
 
                     	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        afterParserOrEnumRuleCall();
-                    	      	    
-                    	    }
+
+                    	     
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
                     	    }
 
 
                     	    }
 
-                    	    otherlv_16=(Token)match(input,18,FOLLOW_18_in_ruleUIApplication766); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_16=(Token)match(input,15,FOLLOW_15_in_ruleUIApplication521); 
 
-                    	          	newLeafNode(otherlv_16, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_4_2());
-                    	          
-                    	    }
+                    	        	newLeafNode(otherlv_16, grammarAccess.getUIApplicationAccess().getSpaceSolidusGreaterThanSignKeyword_3_4_2());
+                    	        
 
                     	    }
                     	    break;
@@ -971,33 +627,27 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,22,FOLLOW_22_in_ruleUIApplication780); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_17=(Token)match(input,19,FOLLOW_19_in_ruleUIApplication535); 
 
-                          	newLeafNode(otherlv_17, grammarAccess.getUIApplicationAccess().getPagesKeyword_3_5());
-                          
-                    }
+                        	newLeafNode(otherlv_17, grammarAccess.getUIApplicationAccess().getPagesKeyword_3_5());
+                        
 
                     }
                     break;
 
             }
 
-            otherlv_18=(Token)match(input,23,FOLLOW_23_in_ruleUIApplication794); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_18=(Token)match(input,20,FOLLOW_20_in_ruleUIApplication549); 
 
-                  	newLeafNode(otherlv_18, grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_4());
-                  
-            }
+                	newLeafNode(otherlv_18, grammarAccess.getUIApplicationAccess().getUIApplicationKeyword_4());
+                
 
             }
 
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1011,8 +661,119 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleUIApplication"
 
 
+    // $ANTLR start "entryRuleXMLDeclaration"
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:294:1: entryRuleXMLDeclaration returns [String current=null] : iv_ruleXMLDeclaration= ruleXMLDeclaration EOF ;
+    public final String entryRuleXMLDeclaration() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleXMLDeclaration = null;
+
+
+        try {
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:295:2: (iv_ruleXMLDeclaration= ruleXMLDeclaration EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:296:2: iv_ruleXMLDeclaration= ruleXMLDeclaration EOF
+            {
+             newCompositeNode(grammarAccess.getXMLDeclarationRule()); 
+            pushFollow(FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration586);
+            iv_ruleXMLDeclaration=ruleXMLDeclaration();
+
+            state._fsp--;
+
+             current =iv_ruleXMLDeclaration.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXMLDeclaration597); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleXMLDeclaration"
+
+
+    // $ANTLR start "ruleXMLDeclaration"
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:303:1: ruleXMLDeclaration returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' ) ;
+    public final AntlrDatatypeRuleToken ruleXMLDeclaration() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token kw=null;
+        Token this_VERSION_1=null;
+        AntlrDatatypeRuleToken this_EString_3 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:306:28: ( (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:307:1: (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' )
+            {
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:307:1: (kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:308:2: kw= '<?xml version=' this_VERSION_1= RULE_VERSION kw= ' encoding=' this_EString_3= ruleEString kw= ' ?>'
+            {
+            kw=(Token)match(input,21,FOLLOW_21_in_ruleXMLDeclaration635); 
+
+                    current.merge(kw);
+                    newLeafNode(kw, grammarAccess.getXMLDeclarationAccess().getXmlVersionKeyword_0()); 
+                
+            this_VERSION_1=(Token)match(input,RULE_VERSION,FOLLOW_RULE_VERSION_in_ruleXMLDeclaration650); 
+
+            		current.merge(this_VERSION_1);
+                
+             
+                newLeafNode(this_VERSION_1, grammarAccess.getXMLDeclarationAccess().getVERSIONTerminalRuleCall_1()); 
+                
+            kw=(Token)match(input,22,FOLLOW_22_in_ruleXMLDeclaration668); 
+
+                    current.merge(kw);
+                    newLeafNode(kw, grammarAccess.getXMLDeclarationAccess().getEncodingKeyword_2()); 
+                
+             
+                    newCompositeNode(grammarAccess.getXMLDeclarationAccess().getEStringParserRuleCall_3()); 
+                
+            pushFollow(FOLLOW_ruleEString_in_ruleXMLDeclaration690);
+            this_EString_3=ruleEString();
+
+            state._fsp--;
+
+
+            		current.merge(this_EString_3);
+                
+             
+                    afterParserOrEnumRuleCall();
+                
+            kw=(Token)match(input,23,FOLLOW_23_in_ruleXMLDeclaration708); 
+
+                    current.merge(kw);
+                    newLeafNode(kw, grammarAccess.getXMLDeclarationAccess().getSpaceQuestionMarkGreaterThanSignKeyword_4()); 
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleXMLDeclaration"
+
+
     // $ANTLR start "entryRuleView"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:413:1: entryRuleView returns [EObject current=null] : iv_ruleView= ruleView EOF ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:351:1: entryRuleView returns [EObject current=null] : iv_ruleView= ruleView EOF ;
     public final EObject entryRuleView() throws RecognitionException {
         EObject current = null;
 
@@ -1020,21 +781,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:414:2: (iv_ruleView= ruleView EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:415:2: iv_ruleView= ruleView EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:352:2: (iv_ruleView= ruleView EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:353:2: iv_ruleView= ruleView EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getViewRule()); 
-            }
-            pushFollow(FOLLOW_ruleView_in_entryRuleView830);
+             newCompositeNode(grammarAccess.getViewRule()); 
+            pushFollow(FOLLOW_ruleView_in_entryRuleView748);
             iv_ruleView=ruleView();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleView; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleView840); if (state.failed) return current;
+
+             current =iv_ruleView; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleView758); 
 
             }
 
@@ -1052,7 +809,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleView"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:422:1: ruleView returns [EObject current=null] : ( () otherlv_1= '<view id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' ) ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:360:1: ruleView returns [EObject current=null] : ( () otherlv_1= '<view name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' ) ;
     public final EObject ruleView() throws RecognitionException {
         EObject current = null;
 
@@ -1077,78 +834,63 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:425:28: ( ( () otherlv_1= '<view id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:426:1: ( () otherlv_1= '<view id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:363:28: ( ( () otherlv_1= '<view name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:364:1: ( () otherlv_1= '<view name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:426:1: ( () otherlv_1= '<view id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:426:2: () otherlv_1= '<view id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:364:1: ( () otherlv_1= '<view name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:364:2: () otherlv_1= '<view name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )? otherlv_7= '<model ref=' ( ( ruleEString ) ) otherlv_9= ' />' (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )? otherlv_14= '</view>'
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:426:2: ()
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:427:2: 
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:364:2: ()
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:365:5: 
             {
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
 
-                      current = forceCreateModelElement(
-                          grammarAccess.getViewAccess().getViewAction_0(),
-                          current);
-                  
-            }
+                    current = forceCreateModelElement(
+                        grammarAccess.getViewAccess().getViewAction_0(),
+                        current);
+                
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleView889); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleView804); 
 
-                  	newLeafNode(otherlv_1, grammarAccess.getViewAccess().getViewIdKeyword_1());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:439:1: ( (lv_name_2_0= ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:440:1: (lv_name_2_0= ruleEString )
+                	newLeafNode(otherlv_1, grammarAccess.getViewAccess().getViewNameKeyword_1());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:374:1: ( (lv_name_2_0= ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:375:1: (lv_name_2_0= ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:440:1: (lv_name_2_0= ruleEString )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:441:3: lv_name_2_0= ruleEString
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:375:1: (lv_name_2_0= ruleEString )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:376:3: lv_name_2_0= ruleEString
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getViewAccess().getNameEStringParserRuleCall_2_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleEString_in_ruleView910);
+             
+            	        newCompositeNode(grammarAccess.getViewAccess().getNameEStringParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleEString_in_ruleView825);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getViewRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_2_0, 
-                      		"EString");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getViewRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_2_0, 
+                    		"EString");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleView922); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleView837); 
 
-                  	newLeafNode(otherlv_3, grammarAccess.getViewAccess().getSpaceGreaterThanSignKeyword_3());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:461:1: (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )?
+                	newLeafNode(otherlv_3, grammarAccess.getViewAccess().getSpaceGreaterThanSignKeyword_3());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:396:1: (otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1157,113 +899,90 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:461:3: otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:396:3: otherlv_4= '<description>' ( (lv_description_5_0= ruleEString ) ) otherlv_6= '</description>'
                     {
-                    otherlv_4=(Token)match(input,26,FOLLOW_26_in_ruleView935); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_4=(Token)match(input,26,FOLLOW_26_in_ruleView850); 
 
-                          	newLeafNode(otherlv_4, grammarAccess.getViewAccess().getDescriptionKeyword_4_0());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:465:1: ( (lv_description_5_0= ruleEString ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:466:1: (lv_description_5_0= ruleEString )
+                        	newLeafNode(otherlv_4, grammarAccess.getViewAccess().getDescriptionKeyword_4_0());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:400:1: ( (lv_description_5_0= ruleEString ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:401:1: (lv_description_5_0= ruleEString )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:466:1: (lv_description_5_0= ruleEString )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:467:3: lv_description_5_0= ruleEString
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:401:1: (lv_description_5_0= ruleEString )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:402:3: lv_description_5_0= ruleEString
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getViewAccess().getDescriptionEStringParserRuleCall_4_1_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleEString_in_ruleView956);
+                     
+                    	        newCompositeNode(grammarAccess.getViewAccess().getDescriptionEStringParserRuleCall_4_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleEString_in_ruleView871);
                     lv_description_5_0=ruleEString();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getViewRule());
-                      	        }
-                             		set(
-                             			current, 
-                             			"description",
-                              		lv_description_5_0, 
-                              		"EString");
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getViewRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"description",
+                            		lv_description_5_0, 
+                            		"EString");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleView968); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleView883); 
 
-                          	newLeafNode(otherlv_6, grammarAccess.getViewAccess().getDescriptionKeyword_4_2());
-                          
-                    }
+                        	newLeafNode(otherlv_6, grammarAccess.getViewAccess().getDescriptionKeyword_4_2());
+                        
 
                     }
                     break;
 
             }
 
-            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleView982); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleView897); 
 
-                  	newLeafNode(otherlv_7, grammarAccess.getViewAccess().getModelRefKeyword_5());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:491:1: ( ( ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:492:1: ( ruleEString )
+                	newLeafNode(otherlv_7, grammarAccess.getViewAccess().getModelRefKeyword_5());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:426:1: ( ( ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:427:1: ( ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:492:1: ( ruleEString )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:493:3: ruleEString
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:427:1: ( ruleEString )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:428:3: ruleEString
             {
-            if ( state.backtracking==0 ) {
-               
-              		  /* */ 
-              		
-            }
-            if ( state.backtracking==0 ) {
 
-              			if (current==null) {
-              	            current = createModelElement(grammarAccess.getViewRule());
-              	        }
-                      
-            }
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getViewAccess().getModelModelCrossReference_6_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleEString_in_ruleView1009);
+            			if (current==null) {
+            	            current = createModelElement(grammarAccess.getViewRule());
+            	        }
+                    
+             
+            	        newCompositeNode(grammarAccess.getViewAccess().getModelModelCrossReference_6_0()); 
+            	    
+            pushFollow(FOLLOW_ruleEString_in_ruleView920);
             ruleEString();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+             
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            otherlv_9=(Token)match(input,18,FOLLOW_18_in_ruleView1021); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_9=(Token)match(input,15,FOLLOW_15_in_ruleView932); 
 
-                  	newLeafNode(otherlv_9, grammarAccess.getViewAccess().getSpaceSolidusGreaterThanSignKeyword_7());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:513:1: (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )?
+                	newLeafNode(otherlv_9, grammarAccess.getViewAccess().getSpaceSolidusGreaterThanSignKeyword_7());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:445:1: (otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1272,50 +991,44 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:513:3: otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:445:3: otherlv_10= '<actions>' ( (lv_actions_11_0= ruleAction ) ) ( (lv_actions_12_0= ruleAction ) )* otherlv_13= '</actions>'
                     {
-                    otherlv_10=(Token)match(input,28,FOLLOW_28_in_ruleView1034); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_10=(Token)match(input,28,FOLLOW_28_in_ruleView945); 
 
-                          	newLeafNode(otherlv_10, grammarAccess.getViewAccess().getActionsKeyword_8_0());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:517:1: ( (lv_actions_11_0= ruleAction ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:518:1: (lv_actions_11_0= ruleAction )
+                        	newLeafNode(otherlv_10, grammarAccess.getViewAccess().getActionsKeyword_8_0());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:449:1: ( (lv_actions_11_0= ruleAction ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:450:1: (lv_actions_11_0= ruleAction )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:518:1: (lv_actions_11_0= ruleAction )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:519:3: lv_actions_11_0= ruleAction
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:450:1: (lv_actions_11_0= ruleAction )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:451:3: lv_actions_11_0= ruleAction
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getViewAccess().getActionsActionParserRuleCall_8_1_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleAction_in_ruleView1055);
+                     
+                    	        newCompositeNode(grammarAccess.getViewAccess().getActionsActionParserRuleCall_8_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleAction_in_ruleView966);
                     lv_actions_11_0=ruleAction();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getViewRule());
-                      	        }
-                             		add(
-                             			current, 
-                             			"actions",
-                              		lv_actions_11_0, 
-                              		"Action");
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getViewRule());
+                    	        }
+                           		add(
+                           			current, 
+                           			"actions",
+                            		lv_actions_11_0, 
+                            		"Action");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:535:2: ( (lv_actions_12_0= ruleAction ) )*
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:467:2: ( (lv_actions_12_0= ruleAction ) )*
                     loop7:
                     do {
                         int alt7=2;
@@ -1328,34 +1041,30 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:536:1: (lv_actions_12_0= ruleAction )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:468:1: (lv_actions_12_0= ruleAction )
                     	    {
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:536:1: (lv_actions_12_0= ruleAction )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:537:3: lv_actions_12_0= ruleAction
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:468:1: (lv_actions_12_0= ruleAction )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:469:3: lv_actions_12_0= ruleAction
                     	    {
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        newCompositeNode(grammarAccess.getViewAccess().getActionsActionParserRuleCall_8_2_0()); 
-                    	      	    
-                    	    }
-                    	    pushFollow(FOLLOW_ruleAction_in_ruleView1076);
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getViewAccess().getActionsActionParserRuleCall_8_2_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleAction_in_ruleView987);
                     	    lv_actions_12_0=ruleAction();
 
                     	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
 
-                    	      	        if (current==null) {
-                    	      	            current = createModelElementForParent(grammarAccess.getViewRule());
-                    	      	        }
-                    	             		add(
-                    	             			current, 
-                    	             			"actions",
-                    	              		lv_actions_12_0, 
-                    	              		"Action");
-                    	      	        afterParserOrEnumRuleCall();
-                    	      	    
-                    	    }
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getViewRule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"actions",
+                    	            		lv_actions_12_0, 
+                    	            		"Action");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
                     	    }
 
@@ -1368,33 +1077,27 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_13=(Token)match(input,29,FOLLOW_29_in_ruleView1089); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_13=(Token)match(input,29,FOLLOW_29_in_ruleView1000); 
 
-                          	newLeafNode(otherlv_13, grammarAccess.getViewAccess().getActionsKeyword_8_3());
-                          
-                    }
+                        	newLeafNode(otherlv_13, grammarAccess.getViewAccess().getActionsKeyword_8_3());
+                        
 
                     }
                     break;
 
             }
 
-            otherlv_14=(Token)match(input,30,FOLLOW_30_in_ruleView1103); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_14=(Token)match(input,30,FOLLOW_30_in_ruleView1014); 
 
-                  	newLeafNode(otherlv_14, grammarAccess.getViewAccess().getViewKeyword_9());
-                  
-            }
+                	newLeafNode(otherlv_14, grammarAccess.getViewAccess().getViewKeyword_9());
+                
 
             }
 
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1409,7 +1112,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModel"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:569:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:501:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
     public final EObject entryRuleModel() throws RecognitionException {
         EObject current = null;
 
@@ -1417,21 +1120,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:570:2: (iv_ruleModel= ruleModel EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:571:2: iv_ruleModel= ruleModel EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:502:2: (iv_ruleModel= ruleModel EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:503:2: iv_ruleModel= ruleModel EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getModelRule()); 
-            }
-            pushFollow(FOLLOW_ruleModel_in_entryRuleModel1139);
+             newCompositeNode(grammarAccess.getModelRule()); 
+            pushFollow(FOLLOW_ruleModel_in_entryRuleModel1050);
             iv_ruleModel=ruleModel();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleModel; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModel1149); if (state.failed) return current;
+
+             current =iv_ruleModel; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleModel1060); 
 
             }
 
@@ -1449,7 +1148,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:578:1: ruleModel returns [EObject current=null] : ( () otherlv_1= '<model id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' ) ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:510:1: ruleModel returns [EObject current=null] : ( () otherlv_1= '<model name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -1474,78 +1173,63 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:581:28: ( ( () otherlv_1= '<model id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:582:1: ( () otherlv_1= '<model id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:513:28: ( ( () otherlv_1= '<model name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:514:1: ( () otherlv_1= '<model name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:582:1: ( () otherlv_1= '<model id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:582:2: () otherlv_1= '<model id=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:514:1: ( () otherlv_1= '<model name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:514:2: () otherlv_1= '<model name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )? (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )? otherlv_16= '</model>'
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:582:2: ()
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:583:2: 
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:514:2: ()
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:515:5: 
             {
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
 
-                      current = forceCreateModelElement(
-                          grammarAccess.getModelAccess().getModelAction_0(),
-                          current);
-                  
-            }
+                    current = forceCreateModelElement(
+                        grammarAccess.getModelAccess().getModelAction_0(),
+                        current);
+                
 
             }
 
-            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleModel1198); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleModel1106); 
 
-                  	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getModelIdKeyword_1());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:595:1: ( (lv_name_2_0= ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:596:1: (lv_name_2_0= ruleEString )
+                	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getModelNameKeyword_1());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:524:1: ( (lv_name_2_0= ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:525:1: (lv_name_2_0= ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:596:1: (lv_name_2_0= ruleEString )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:597:3: lv_name_2_0= ruleEString
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:525:1: (lv_name_2_0= ruleEString )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:526:3: lv_name_2_0= ruleEString
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_2_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleEString_in_ruleModel1219);
+             
+            	        newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleEString_in_ruleModel1127);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getModelRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_2_0, 
-                      		"EString");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getModelRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_2_0, 
+                    		"EString");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleModel1231); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleModel1139); 
 
-                  	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getSpaceGreaterThanSignKeyword_3());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:617:1: (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )?
+                	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getSpaceGreaterThanSignKeyword_3());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:546:1: (otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1554,50 +1238,44 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:617:3: otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:546:3: otherlv_4= '<properties>' ( (lv_properties_5_0= ruleModelProperty ) ) ( (lv_properties_6_0= ruleModelProperty ) )* otherlv_7= '</properties>'
                     {
-                    otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleModel1244); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleModel1152); 
 
-                          	newLeafNode(otherlv_4, grammarAccess.getModelAccess().getPropertiesKeyword_4_0());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:621:1: ( (lv_properties_5_0= ruleModelProperty ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:622:1: (lv_properties_5_0= ruleModelProperty )
+                        	newLeafNode(otherlv_4, grammarAccess.getModelAccess().getPropertiesKeyword_4_0());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:550:1: ( (lv_properties_5_0= ruleModelProperty ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:551:1: (lv_properties_5_0= ruleModelProperty )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:622:1: (lv_properties_5_0= ruleModelProperty )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:623:3: lv_properties_5_0= ruleModelProperty
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:551:1: (lv_properties_5_0= ruleModelProperty )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:552:3: lv_properties_5_0= ruleModelProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getModelAccess().getPropertiesModelPropertyParserRuleCall_4_1_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleModelProperty_in_ruleModel1265);
+                     
+                    	        newCompositeNode(grammarAccess.getModelAccess().getPropertiesModelPropertyParserRuleCall_4_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleModelProperty_in_ruleModel1173);
                     lv_properties_5_0=ruleModelProperty();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
 
-                      	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getModelRule());
-                      	        }
-                             		add(
-                             			current, 
-                             			"properties",
-                              		lv_properties_5_0, 
-                              		"ModelProperty");
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getModelRule());
+                    	        }
+                           		add(
+                           			current, 
+                           			"properties",
+                            		lv_properties_5_0, 
+                            		"ModelProperty");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:639:2: ( (lv_properties_6_0= ruleModelProperty ) )*
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:568:2: ( (lv_properties_6_0= ruleModelProperty ) )*
                     loop9:
                     do {
                         int alt9=2;
@@ -1610,34 +1288,30 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:640:1: (lv_properties_6_0= ruleModelProperty )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:569:1: (lv_properties_6_0= ruleModelProperty )
                     	    {
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:640:1: (lv_properties_6_0= ruleModelProperty )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:641:3: lv_properties_6_0= ruleModelProperty
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:569:1: (lv_properties_6_0= ruleModelProperty )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:570:3: lv_properties_6_0= ruleModelProperty
                     	    {
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        newCompositeNode(grammarAccess.getModelAccess().getPropertiesModelPropertyParserRuleCall_4_2_0()); 
-                    	      	    
-                    	    }
-                    	    pushFollow(FOLLOW_ruleModelProperty_in_ruleModel1286);
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getModelAccess().getPropertiesModelPropertyParserRuleCall_4_2_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleModelProperty_in_ruleModel1194);
                     	    lv_properties_6_0=ruleModelProperty();
 
                     	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
 
-                    	      	        if (current==null) {
-                    	      	            current = createModelElementForParent(grammarAccess.getModelRule());
-                    	      	        }
-                    	             		add(
-                    	             			current, 
-                    	             			"properties",
-                    	              		lv_properties_6_0, 
-                    	              		"ModelProperty");
-                    	      	        afterParserOrEnumRuleCall();
-                    	      	    
-                    	    }
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getModelRule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"properties",
+                    	            		lv_properties_6_0, 
+                    	            		"ModelProperty");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
                     	    }
 
@@ -1650,19 +1324,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,33,FOLLOW_33_in_ruleModel1299); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_7=(Token)match(input,33,FOLLOW_33_in_ruleModel1207); 
 
-                          	newLeafNode(otherlv_7, grammarAccess.getModelAccess().getPropertiesKeyword_4_3());
-                          
-                    }
+                        	newLeafNode(otherlv_7, grammarAccess.getModelAccess().getPropertiesKeyword_4_3());
+                        
 
                     }
                     break;
 
             }
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:661:3: (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )?
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:590:3: (otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1671,131 +1343,99 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:661:5: otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:590:5: otherlv_8= '<ownedElements>' otherlv_9= '<model ref=' ( ( ruleEString ) ) otherlv_11= ' />' (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )* otherlv_15= '</ownedElements>'
                     {
-                    otherlv_8=(Token)match(input,34,FOLLOW_34_in_ruleModel1314); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_8=(Token)match(input,34,FOLLOW_34_in_ruleModel1222); 
 
-                          	newLeafNode(otherlv_8, grammarAccess.getModelAccess().getOwnedElementsKeyword_5_0());
-                          
-                    }
-                    otherlv_9=(Token)match(input,17,FOLLOW_17_in_ruleModel1326); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                        	newLeafNode(otherlv_8, grammarAccess.getModelAccess().getOwnedElementsKeyword_5_0());
+                        
+                    otherlv_9=(Token)match(input,14,FOLLOW_14_in_ruleModel1234); 
 
-                          	newLeafNode(otherlv_9, grammarAccess.getModelAccess().getModelRefKeyword_5_1());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:669:1: ( ( ruleEString ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:670:1: ( ruleEString )
+                        	newLeafNode(otherlv_9, grammarAccess.getModelAccess().getModelRefKeyword_5_1());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:598:1: ( ( ruleEString ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:599:1: ( ruleEString )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:670:1: ( ruleEString )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:671:3: ruleEString
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:599:1: ( ruleEString )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:600:3: ruleEString
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      		  /* */ 
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
 
-                      			if (current==null) {
-                      	            current = createModelElement(grammarAccess.getModelRule());
-                      	        }
-                              
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getModelAccess().getOwnedElementsModelCrossReference_5_2_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleEString_in_ruleModel1353);
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getModelRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getModelAccess().getOwnedElementsModelCrossReference_5_2_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleEString_in_ruleModel1257);
                     ruleEString();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    otherlv_11=(Token)match(input,18,FOLLOW_18_in_ruleModel1365); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_11=(Token)match(input,15,FOLLOW_15_in_ruleModel1269); 
 
-                          	newLeafNode(otherlv_11, grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_3());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:691:1: (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )*
+                        	newLeafNode(otherlv_11, grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_3());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:617:1: (otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />' )*
                     loop11:
                     do {
                         int alt11=2;
                         int LA11_0 = input.LA(1);
 
-                        if ( (LA11_0==17) ) {
+                        if ( (LA11_0==14) ) {
                             alt11=1;
                         }
 
 
                         switch (alt11) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:691:3: otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />'
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:617:3: otherlv_12= '<model ref=' ( ( ruleEString ) ) otherlv_14= ' />'
                     	    {
-                    	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleModel1378); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_12=(Token)match(input,14,FOLLOW_14_in_ruleModel1282); 
 
-                    	          	newLeafNode(otherlv_12, grammarAccess.getModelAccess().getModelRefKeyword_5_4_0());
-                    	          
-                    	    }
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:695:1: ( ( ruleEString ) )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:696:1: ( ruleEString )
+                    	        	newLeafNode(otherlv_12, grammarAccess.getModelAccess().getModelRefKeyword_5_4_0());
+                    	        
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:621:1: ( ( ruleEString ) )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:622:1: ( ruleEString )
                     	    {
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:696:1: ( ruleEString )
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:697:3: ruleEString
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:622:1: ( ruleEString )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:623:3: ruleEString
                     	    {
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      		  /* */ 
-                    	      		
-                    	    }
-                    	    if ( state.backtracking==0 ) {
 
-                    	      			if (current==null) {
-                    	      	            current = createModelElement(grammarAccess.getModelRule());
-                    	      	        }
-                    	              
-                    	    }
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        newCompositeNode(grammarAccess.getModelAccess().getOwnedElementsModelCrossReference_5_4_1_0()); 
-                    	      	    
-                    	    }
-                    	    pushFollow(FOLLOW_ruleEString_in_ruleModel1405);
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getModelRule());
+                    	    	        }
+                    	            
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getModelAccess().getOwnedElementsModelCrossReference_5_4_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleEString_in_ruleModel1305);
                     	    ruleEString();
 
                     	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
-                    	       
-                    	      	        afterParserOrEnumRuleCall();
-                    	      	    
-                    	    }
+
+                    	     
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
                     	    }
 
 
                     	    }
 
-                    	    otherlv_14=(Token)match(input,18,FOLLOW_18_in_ruleModel1417); if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
+                    	    otherlv_14=(Token)match(input,15,FOLLOW_15_in_ruleModel1317); 
 
-                    	          	newLeafNode(otherlv_14, grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_4_2());
-                    	          
-                    	    }
+                    	        	newLeafNode(otherlv_14, grammarAccess.getModelAccess().getSpaceSolidusGreaterThanSignKeyword_5_4_2());
+                    	        
 
                     	    }
                     	    break;
@@ -1805,33 +1445,27 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_15=(Token)match(input,35,FOLLOW_35_in_ruleModel1431); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_15=(Token)match(input,35,FOLLOW_35_in_ruleModel1331); 
 
-                          	newLeafNode(otherlv_15, grammarAccess.getModelAccess().getOwnedElementsKeyword_5_5());
-                          
-                    }
+                        	newLeafNode(otherlv_15, grammarAccess.getModelAccess().getOwnedElementsKeyword_5_5());
+                        
 
                     }
                     break;
 
             }
 
-            otherlv_16=(Token)match(input,36,FOLLOW_36_in_ruleModel1445); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_16=(Token)match(input,36,FOLLOW_36_in_ruleModel1345); 
 
-                  	newLeafNode(otherlv_16, grammarAccess.getModelAccess().getModelKeyword_6());
-                  
-            }
+                	newLeafNode(otherlv_16, grammarAccess.getModelAccess().getModelKeyword_6());
+                
 
             }
 
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -1846,7 +1480,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAction"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:733:1: entryRuleAction returns [EObject current=null] : iv_ruleAction= ruleAction EOF ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:656:1: entryRuleAction returns [EObject current=null] : iv_ruleAction= ruleAction EOF ;
     public final EObject entryRuleAction() throws RecognitionException {
         EObject current = null;
 
@@ -1854,21 +1488,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:734:2: (iv_ruleAction= ruleAction EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:735:2: iv_ruleAction= ruleAction EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:657:2: (iv_ruleAction= ruleAction EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:658:2: iv_ruleAction= ruleAction EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getActionRule()); 
-            }
-            pushFollow(FOLLOW_ruleAction_in_entryRuleAction1481);
+             newCompositeNode(grammarAccess.getActionRule()); 
+            pushFollow(FOLLOW_ruleAction_in_entryRuleAction1381);
             iv_ruleAction=ruleAction();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleAction; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAction1491); if (state.failed) return current;
+
+             current =iv_ruleAction; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAction1391); 
 
             }
 
@@ -1886,7 +1516,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAction"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:742:1: ruleAction returns [EObject current=null] : ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' ) ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:665:1: ruleAction returns [EObject current=null] : ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' ) ;
     public final EObject ruleAction() throws RecognitionException {
         EObject current = null;
 
@@ -1901,78 +1531,63 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:745:28: ( ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:746:1: ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:668:28: ( ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:669:1: ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:746:1: ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:746:2: () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:669:1: ( () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:669:2: () otherlv_1= '<action name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' >' (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )? otherlv_7= '</action>'
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:746:2: ()
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:747:2: 
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:669:2: ()
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:670:5: 
             {
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
 
-                      current = forceCreateModelElement(
-                          grammarAccess.getActionAccess().getActionAction_0(),
-                          current);
-                  
-            }
+                    current = forceCreateModelElement(
+                        grammarAccess.getActionAccess().getActionAction_0(),
+                        current);
+                
 
             }
 
-            otherlv_1=(Token)match(input,37,FOLLOW_37_in_ruleAction1540); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_1=(Token)match(input,37,FOLLOW_37_in_ruleAction1437); 
 
-                  	newLeafNode(otherlv_1, grammarAccess.getActionAccess().getActionNameKeyword_1());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:759:1: ( (lv_name_2_0= ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:760:1: (lv_name_2_0= ruleEString )
+                	newLeafNode(otherlv_1, grammarAccess.getActionAccess().getActionNameKeyword_1());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:679:1: ( (lv_name_2_0= ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:680:1: (lv_name_2_0= ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:760:1: (lv_name_2_0= ruleEString )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:761:3: lv_name_2_0= ruleEString
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:680:1: (lv_name_2_0= ruleEString )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:681:3: lv_name_2_0= ruleEString
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getActionAccess().getNameEStringParserRuleCall_2_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleEString_in_ruleAction1561);
+             
+            	        newCompositeNode(grammarAccess.getActionAccess().getNameEStringParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleEString_in_ruleAction1458);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getActionRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_2_0, 
-                      		"EString");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getActionRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_2_0, 
+                    		"EString");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleAction1573); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleAction1470); 
 
-                  	newLeafNode(otherlv_3, grammarAccess.getActionAccess().getSpaceGreaterThanSignKeyword_3());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:781:1: (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )?
+                	newLeafNode(otherlv_3, grammarAccess.getActionAccess().getSpaceGreaterThanSignKeyword_3());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:701:1: (otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1981,80 +1596,61 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:781:3: otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:701:3: otherlv_4= '<nextPage ref=' ( ( ruleEString ) ) otherlv_6= ' />'
                     {
-                    otherlv_4=(Token)match(input,38,FOLLOW_38_in_ruleAction1586); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_4=(Token)match(input,38,FOLLOW_38_in_ruleAction1483); 
 
-                          	newLeafNode(otherlv_4, grammarAccess.getActionAccess().getNextPageRefKeyword_4_0());
-                          
-                    }
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:785:1: ( ( ruleEString ) )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:786:1: ( ruleEString )
+                        	newLeafNode(otherlv_4, grammarAccess.getActionAccess().getNextPageRefKeyword_4_0());
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:705:1: ( ( ruleEString ) )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:706:1: ( ruleEString )
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:786:1: ( ruleEString )
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:787:3: ruleEString
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:706:1: ( ruleEString )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:707:3: ruleEString
                     {
-                    if ( state.backtracking==0 ) {
-                       
-                      		  /* */ 
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
 
-                      			if (current==null) {
-                      	            current = createModelElement(grammarAccess.getActionRule());
-                      	        }
-                              
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getActionAccess().getNextPageViewCrossReference_4_1_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleEString_in_ruleAction1613);
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActionRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getActionAccess().getNextPageViewCrossReference_4_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleEString_in_ruleAction1506);
                     ruleEString();
 
                     state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
+
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
 
 
                     }
 
-                    otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleAction1625); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    otherlv_6=(Token)match(input,15,FOLLOW_15_in_ruleAction1518); 
 
-                          	newLeafNode(otherlv_6, grammarAccess.getActionAccess().getSpaceSolidusGreaterThanSignKeyword_4_2());
-                          
-                    }
+                        	newLeafNode(otherlv_6, grammarAccess.getActionAccess().getSpaceSolidusGreaterThanSignKeyword_4_2());
+                        
 
                     }
                     break;
 
             }
 
-            otherlv_7=(Token)match(input,39,FOLLOW_39_in_ruleAction1639); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_7=(Token)match(input,39,FOLLOW_39_in_ruleAction1532); 
 
-                  	newLeafNode(otherlv_7, grammarAccess.getActionAccess().getActionKeyword_5());
-                  
-            }
+                	newLeafNode(otherlv_7, grammarAccess.getActionAccess().getActionKeyword_5());
+                
 
             }
 
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2069,7 +1665,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModelProperty"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:819:1: entryRuleModelProperty returns [EObject current=null] : iv_ruleModelProperty= ruleModelProperty EOF ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:736:1: entryRuleModelProperty returns [EObject current=null] : iv_ruleModelProperty= ruleModelProperty EOF ;
     public final EObject entryRuleModelProperty() throws RecognitionException {
         EObject current = null;
 
@@ -2077,21 +1673,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:820:2: (iv_ruleModelProperty= ruleModelProperty EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:821:2: iv_ruleModelProperty= ruleModelProperty EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:737:2: (iv_ruleModelProperty= ruleModelProperty EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:738:2: iv_ruleModelProperty= ruleModelProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getModelPropertyRule()); 
-            }
-            pushFollow(FOLLOW_ruleModelProperty_in_entryRuleModelProperty1675);
+             newCompositeNode(grammarAccess.getModelPropertyRule()); 
+            pushFollow(FOLLOW_ruleModelProperty_in_entryRuleModelProperty1568);
             iv_ruleModelProperty=ruleModelProperty();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleModelProperty; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModelProperty1685); if (state.failed) return current;
+
+             current =iv_ruleModelProperty; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleModelProperty1578); 
 
             }
 
@@ -2109,7 +1701,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModelProperty"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:828:1: ruleModelProperty returns [EObject current=null] : ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' ) ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:745:1: ruleModelProperty returns [EObject current=null] : ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' ) ;
     public final EObject ruleModelProperty() throws RecognitionException {
         EObject current = null;
 
@@ -2121,86 +1713,69 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:831:28: ( ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:832:1: ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:748:28: ( ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:749:1: ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:832:1: ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:832:2: () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:749:1: ( () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:749:2: () otherlv_1= '<modelProperty name=' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ' />'
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:832:2: ()
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:833:2: 
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:749:2: ()
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:750:5: 
             {
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
 
-                      current = forceCreateModelElement(
-                          grammarAccess.getModelPropertyAccess().getModelPropertyAction_0(),
-                          current);
-                  
-            }
+                    current = forceCreateModelElement(
+                        grammarAccess.getModelPropertyAccess().getModelPropertyAction_0(),
+                        current);
+                
 
             }
 
-            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleModelProperty1734); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleModelProperty1624); 
 
-                  	newLeafNode(otherlv_1, grammarAccess.getModelPropertyAccess().getModelPropertyNameKeyword_1());
-                  
-            }
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:845:1: ( (lv_name_2_0= ruleEString ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:846:1: (lv_name_2_0= ruleEString )
+                	newLeafNode(otherlv_1, grammarAccess.getModelPropertyAccess().getModelPropertyNameKeyword_1());
+                
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:759:1: ( (lv_name_2_0= ruleEString ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:760:1: (lv_name_2_0= ruleEString )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:846:1: (lv_name_2_0= ruleEString )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:3: lv_name_2_0= ruleEString
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:760:1: (lv_name_2_0= ruleEString )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:761:3: lv_name_2_0= ruleEString
             {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getModelPropertyAccess().getNameEStringParserRuleCall_2_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleEString_in_ruleModelProperty1755);
+             
+            	        newCompositeNode(grammarAccess.getModelPropertyAccess().getNameEStringParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleEString_in_ruleModelProperty1645);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getModelPropertyRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_2_0, 
-                      		"EString");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getModelPropertyRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_2_0, 
+                    		"EString");
+            	        afterParserOrEnumRuleCall();
+            	    
 
             }
 
 
             }
 
-            otherlv_3=(Token)match(input,18,FOLLOW_18_in_ruleModelProperty1767); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleModelProperty1657); 
 
-                  	newLeafNode(otherlv_3, grammarAccess.getModelPropertyAccess().getSpaceSolidusGreaterThanSignKeyword_3());
-                  
-            }
+                	newLeafNode(otherlv_3, grammarAccess.getModelPropertyAccess().getSpaceSolidusGreaterThanSignKeyword_3());
+                
 
             }
 
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2215,7 +1790,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:875:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:789:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -2223,21 +1798,17 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:876:2: (iv_ruleEString= ruleEString EOF )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:877:2: iv_ruleEString= ruleEString EOF
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:790:2: (iv_ruleEString= ruleEString EOF )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:791:2: iv_ruleEString= ruleEString EOF
             {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getEStringRule()); 
-            }
-            pushFollow(FOLLOW_ruleEString_in_entryRuleEString1804);
+             newCompositeNode(grammarAccess.getEStringRule()); 
+            pushFollow(FOLLOW_ruleEString_in_entryRuleEString1694);
             iv_ruleEString=ruleEString();
 
             state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleEString.getText(); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEString1815); if (state.failed) return current;
+
+             current =iv_ruleEString.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEString1705); 
 
             }
 
@@ -2255,68 +1826,103 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:884:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:798:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | (this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )* ) ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_STRING_0=null;
         Token this_ID_1=null;
+        Token kw=null;
+        Token this_ID_3=null;
 
          enterRule(); 
             
         try {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:887:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:888:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:801:28: ( (this_STRING_0= RULE_STRING | (this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )* ) ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:802:1: (this_STRING_0= RULE_STRING | (this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )* ) )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:888:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:802:1: (this_STRING_0= RULE_STRING | (this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )* ) )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==RULE_STRING) ) {
-                alt14=1;
+            if ( (LA15_0==RULE_STRING) ) {
+                alt15=1;
             }
-            else if ( (LA14_0==RULE_ID) ) {
-                alt14=2;
+            else if ( (LA15_0==RULE_ID) ) {
+                alt15=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:888:6: this_STRING_0= RULE_STRING
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:802:6: this_STRING_0= RULE_STRING
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEString1855); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEString1745); 
 
-                      		current.merge(this_STRING_0);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
-                          
-                    }
+                    		current.merge(this_STRING_0);
+                        
+                     
+                        newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
+                        
 
                     }
                     break;
                 case 2 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:896:10: this_ID_1= RULE_ID
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:810:6: (this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )* )
                     {
-                    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEString1881); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:810:6: (this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )* )
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:810:11: this_ID_1= RULE_ID (kw= '.' this_ID_3= RULE_ID )*
+                    {
+                    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEString1772); 
 
-                      		current.merge(this_ID_1);
-                          
+                    		current.merge(this_ID_1);
+                        
+                     
+                        newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1_0()); 
+                        
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:817:1: (kw= '.' this_ID_3= RULE_ID )*
+                    loop14:
+                    do {
+                        int alt14=2;
+                        int LA14_0 = input.LA(1);
+
+                        if ( (LA14_0==41) ) {
+                            alt14=1;
+                        }
+
+
+                        switch (alt14) {
+                    	case 1 :
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:818:2: kw= '.' this_ID_3= RULE_ID
+                    	    {
+                    	    kw=(Token)match(input,41,FOLLOW_41_in_ruleEString1791); 
+
+                    	            current.merge(kw);
+                    	            newLeafNode(kw, grammarAccess.getEStringAccess().getFullStopKeyword_1_1_0()); 
+                    	        
+                    	    this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEString1806); 
+
+                    	    		current.merge(this_ID_3);
+                    	        
+                    	     
+                    	        newLeafNode(this_ID_3, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1_1_1()); 
+                    	        
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop14;
+                        }
+                    } while (true);
+
+
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
-                          
-                    }
+
 
                     }
                     break;
@@ -2326,9 +1932,7 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
+             leaveRule(); 
         }
          
             catch (RecognitionException re) { 
@@ -2346,92 +1950,92 @@ public class InternalLanguageParser extends AbstractInternalAntlrParser {
 
  
 
-    public static final BitSet FOLLOW_rulePackage_in_entryRulePackage81 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePackage91 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXMLDeclaration_in_rulePackage135 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_ruleView_in_rulePackage156 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_ruleModel_in_rulePackage183 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_ruleAction_in_rulePackage210 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_rulePackage237 = new BitSet(new long[]{0x0000012081008000L});
-    public static final BitSet FOLLOW_ruleUIApplication_in_rulePackage260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration297 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXMLDeclaration308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleXMLDeclaration346 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_VERSION_in_ruleXMLDeclaration361 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleXMLDeclaration379 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleXMLDeclaration401 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleXMLDeclaration419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUIApplication_in_entryRuleUIApplication459 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUIApplication469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleUIApplication518 = new BitSet(new long[]{0x0000000000910000L});
-    public static final BitSet FOLLOW_16_in_ruleUIApplication531 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleUIApplication543 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication570 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleUIApplication582 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_17_in_ruleUIApplication595 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication622 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleUIApplication634 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_19_in_ruleUIApplication648 = new BitSet(new long[]{0x0000000000900000L});
-    public static final BitSet FOLLOW_20_in_ruleUIApplication663 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleUIApplication675 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication702 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleUIApplication714 = new BitSet(new long[]{0x0000000000600000L});
-    public static final BitSet FOLLOW_21_in_ruleUIApplication727 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication754 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleUIApplication766 = new BitSet(new long[]{0x0000000000600000L});
-    public static final BitSet FOLLOW_22_in_ruleUIApplication780 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleUIApplication794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleView_in_entryRuleView830 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleView840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleView889 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleView910 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleView922 = new BitSet(new long[]{0x0000000004020000L});
-    public static final BitSet FOLLOW_26_in_ruleView935 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleView956 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleView968 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleView982 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleView1009 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleView1021 = new BitSet(new long[]{0x0000000050000000L});
-    public static final BitSet FOLLOW_28_in_ruleView1034 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleView1055 = new BitSet(new long[]{0x0000002020000000L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleView1076 = new BitSet(new long[]{0x0000002020000000L});
-    public static final BitSet FOLLOW_29_in_ruleView1089 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleView1103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModel_in_entryRuleModel1139 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModel1149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleModel1198 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleModel1219 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleModel1231 = new BitSet(new long[]{0x0000001500000000L});
-    public static final BitSet FOLLOW_32_in_ruleModel1244 = new BitSet(new long[]{0x0000012081000000L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_ruleModel1265 = new BitSet(new long[]{0x0000012281000000L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_ruleModel1286 = new BitSet(new long[]{0x0000012281000000L});
-    public static final BitSet FOLLOW_33_in_ruleModel1299 = new BitSet(new long[]{0x0000001400000000L});
-    public static final BitSet FOLLOW_34_in_ruleModel1314 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleModel1326 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleModel1353 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleModel1365 = new BitSet(new long[]{0x0000000800020000L});
-    public static final BitSet FOLLOW_17_in_ruleModel1378 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleModel1405 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleModel1417 = new BitSet(new long[]{0x0000000800020000L});
-    public static final BitSet FOLLOW_35_in_ruleModel1431 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleModel1445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_entryRuleAction1481 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAction1491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleAction1540 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleAction1561 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleAction1573 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_38_in_ruleAction1586 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleAction1613 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleAction1625 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_ruleAction1639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModelProperty_in_entryRuleModelProperty1675 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModelProperty1685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleModelProperty1734 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleModelProperty1755 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleModelProperty1767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_entryRuleEString1804 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEString1815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEString1855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEString1881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMainPackage_in_entryRuleMainPackage75 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMainPackage85 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXMLDeclaration_in_ruleMainPackage126 = new BitSet(new long[]{0x0000000081001000L});
+    public static final BitSet FOLLOW_ruleModel_in_ruleMainPackage147 = new BitSet(new long[]{0x0000000081001000L});
+    public static final BitSet FOLLOW_ruleView_in_ruleMainPackage174 = new BitSet(new long[]{0x0000000081001000L});
+    public static final BitSet FOLLOW_ruleUIApplication_in_ruleMainPackage197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUIApplication_in_entryRuleUIApplication233 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUIApplication243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_ruleUIApplication289 = new BitSet(new long[]{0x0000000000122000L});
+    public static final BitSet FOLLOW_13_in_ruleUIApplication302 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleUIApplication314 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication337 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleUIApplication349 = new BitSet(new long[]{0x0000000000014000L});
+    public static final BitSet FOLLOW_14_in_ruleUIApplication362 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication385 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleUIApplication397 = new BitSet(new long[]{0x0000000000014000L});
+    public static final BitSet FOLLOW_16_in_ruleUIApplication411 = new BitSet(new long[]{0x0000000000120000L});
+    public static final BitSet FOLLOW_17_in_ruleUIApplication426 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleUIApplication438 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication461 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleUIApplication473 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_18_in_ruleUIApplication486 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleUIApplication509 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleUIApplication521 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_19_in_ruleUIApplication535 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleUIApplication549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXMLDeclaration_in_entryRuleXMLDeclaration586 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXMLDeclaration597 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleXMLDeclaration635 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_VERSION_in_ruleXMLDeclaration650 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleXMLDeclaration668 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleXMLDeclaration690 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXMLDeclaration708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleView_in_entryRuleView748 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleView758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleView804 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleView825 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleView837 = new BitSet(new long[]{0x0000000004004000L});
+    public static final BitSet FOLLOW_26_in_ruleView850 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleView871 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleView883 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleView897 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleView920 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleView932 = new BitSet(new long[]{0x0000000050000000L});
+    public static final BitSet FOLLOW_28_in_ruleView945 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleView966 = new BitSet(new long[]{0x0000002020000000L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleView987 = new BitSet(new long[]{0x0000002020000000L});
+    public static final BitSet FOLLOW_29_in_ruleView1000 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleView1014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModel_in_entryRuleModel1050 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleModel1060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleModel1106 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleModel1127 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleModel1139 = new BitSet(new long[]{0x0000001500000000L});
+    public static final BitSet FOLLOW_32_in_ruleModel1152 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_ruleModelProperty_in_ruleModel1173 = new BitSet(new long[]{0x0000010200000000L});
+    public static final BitSet FOLLOW_ruleModelProperty_in_ruleModel1194 = new BitSet(new long[]{0x0000010200000000L});
+    public static final BitSet FOLLOW_33_in_ruleModel1207 = new BitSet(new long[]{0x0000001400000000L});
+    public static final BitSet FOLLOW_34_in_ruleModel1222 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleModel1234 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleModel1257 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleModel1269 = new BitSet(new long[]{0x0000000800004000L});
+    public static final BitSet FOLLOW_14_in_ruleModel1282 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleModel1305 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleModel1317 = new BitSet(new long[]{0x0000000800004000L});
+    public static final BitSet FOLLOW_35_in_ruleModel1331 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleModel1345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_entryRuleAction1381 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAction1391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleAction1437 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleAction1458 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleAction1470 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_38_in_ruleAction1483 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleAction1506 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleAction1518 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleAction1532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModelProperty_in_entryRuleModelProperty1568 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleModelProperty1578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleModelProperty1624 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleModelProperty1645 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleModelProperty1657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_entryRuleEString1694 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEString1705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEString1745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEString1772 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_41_in_ruleEString1791 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEString1806 = new BitSet(new long[]{0x0000020000000002L});
 
 }

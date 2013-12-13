@@ -57,68 +57,50 @@ public interface MvcPackage extends EPackage
   MvcPackage eINSTANCE = fr.nantes.univ.alma.mvc.mvc.impl.MvcPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link fr.nantes.univ.alma.mvc.mvc.impl.PackageImpl <em>Package</em>}' class.
+   * The meta object id for the '{@link fr.nantes.univ.alma.mvc.mvc.impl.MainPackageImpl <em>Main Package</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.nantes.univ.alma.mvc.mvc.impl.PackageImpl
-   * @see fr.nantes.univ.alma.mvc.mvc.impl.MvcPackageImpl#getPackage()
+   * @see fr.nantes.univ.alma.mvc.mvc.impl.MainPackageImpl
+   * @see fr.nantes.univ.alma.mvc.mvc.impl.MvcPackageImpl#getMainPackage()
    * @generated
    */
-  int PACKAGE = 0;
+  int MAIN_PACKAGE = 0;
 
   /**
-   * The feature id for the '<em><b>Views</b></em>' containment reference list.
+   * The feature id for the '<em><b>All Models</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PACKAGE__VIEWS = 0;
+  int MAIN_PACKAGE__ALL_MODELS = 0;
 
   /**
-   * The feature id for the '<em><b>Models</b></em>' containment reference list.
+   * The feature id for the '<em><b>All Views</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PACKAGE__MODELS = 1;
+  int MAIN_PACKAGE__ALL_VIEWS = 1;
 
   /**
-   * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+   * The feature id for the '<em><b>App</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PACKAGE__ACTIONS = 2;
+  int MAIN_PACKAGE__APP = 2;
 
   /**
-   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * The number of structural features of the '<em>Main Package</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PACKAGE__PROPERTIES = 3;
-
-  /**
-   * The feature id for the '<em><b>Main App</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE__MAIN_APP = 4;
-
-  /**
-   * The number of structural features of the '<em>Package</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE_FEATURE_COUNT = 5;
+  int MAIN_PACKAGE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link fr.nantes.univ.alma.mvc.mvc.impl.UIApplicationImpl <em>UI Application</em>}' class.
@@ -325,69 +307,47 @@ public interface MvcPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link fr.nantes.univ.alma.mvc.mvc.Package <em>Package</em>}'.
+   * Returns the meta object for class '{@link fr.nantes.univ.alma.mvc.mvc.MainPackage <em>Main Package</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Package</em>'.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package
+   * @return the meta object for class '<em>Main Package</em>'.
+   * @see fr.nantes.univ.alma.mvc.mvc.MainPackage
    * @generated
    */
-  EClass getPackage();
+  EClass getMainPackage();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.Package#getViews <em>Views</em>}'.
+   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.MainPackage#getAllModels <em>All Models</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Views</em>'.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package#getViews()
-   * @see #getPackage()
+   * @return the meta object for the containment reference list '<em>All Models</em>'.
+   * @see fr.nantes.univ.alma.mvc.mvc.MainPackage#getAllModels()
+   * @see #getMainPackage()
    * @generated
    */
-  EReference getPackage_Views();
+  EReference getMainPackage_AllModels();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.Package#getModels <em>Models</em>}'.
+   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.MainPackage#getAllViews <em>All Views</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Models</em>'.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package#getModels()
-   * @see #getPackage()
+   * @return the meta object for the containment reference list '<em>All Views</em>'.
+   * @see fr.nantes.univ.alma.mvc.mvc.MainPackage#getAllViews()
+   * @see #getMainPackage()
    * @generated
    */
-  EReference getPackage_Models();
+  EReference getMainPackage_AllViews();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.Package#getActions <em>Actions</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.nantes.univ.alma.mvc.mvc.MainPackage#getApp <em>App</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Actions</em>'.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package#getActions()
-   * @see #getPackage()
+   * @return the meta object for the containment reference '<em>App</em>'.
+   * @see fr.nantes.univ.alma.mvc.mvc.MainPackage#getApp()
+   * @see #getMainPackage()
    * @generated
    */
-  EReference getPackage_Actions();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.Package#getProperties <em>Properties</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Properties</em>'.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package#getProperties()
-   * @see #getPackage()
-   * @generated
-   */
-  EReference getPackage_Properties();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link fr.nantes.univ.alma.mvc.mvc.Package#getMainApp <em>Main App</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Main App</em>'.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package#getMainApp()
-   * @see #getPackage()
-   * @generated
-   */
-  EReference getPackage_MainApp();
+  EReference getMainPackage_App();
 
   /**
    * Returns the meta object for class '{@link fr.nantes.univ.alma.mvc.mvc.UIApplication <em>UI Application</em>}'.
@@ -595,54 +555,38 @@ public interface MvcPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link fr.nantes.univ.alma.mvc.mvc.impl.PackageImpl <em>Package</em>}' class.
+     * The meta object literal for the '{@link fr.nantes.univ.alma.mvc.mvc.impl.MainPackageImpl <em>Main Package</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see fr.nantes.univ.alma.mvc.mvc.impl.PackageImpl
-     * @see fr.nantes.univ.alma.mvc.mvc.impl.MvcPackageImpl#getPackage()
+     * @see fr.nantes.univ.alma.mvc.mvc.impl.MainPackageImpl
+     * @see fr.nantes.univ.alma.mvc.mvc.impl.MvcPackageImpl#getMainPackage()
      * @generated
      */
-    EClass PACKAGE = eINSTANCE.getPackage();
+    EClass MAIN_PACKAGE = eINSTANCE.getMainPackage();
 
     /**
-     * The meta object literal for the '<em><b>Views</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>All Models</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PACKAGE__VIEWS = eINSTANCE.getPackage_Views();
+    EReference MAIN_PACKAGE__ALL_MODELS = eINSTANCE.getMainPackage_AllModels();
 
     /**
-     * The meta object literal for the '<em><b>Models</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>All Views</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PACKAGE__MODELS = eINSTANCE.getPackage_Models();
+    EReference MAIN_PACKAGE__ALL_VIEWS = eINSTANCE.getMainPackage_AllViews();
 
     /**
-     * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>App</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PACKAGE__ACTIONS = eINSTANCE.getPackage_Actions();
-
-    /**
-     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PACKAGE__PROPERTIES = eINSTANCE.getPackage_Properties();
-
-    /**
-     * The meta object literal for the '<em><b>Main App</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PACKAGE__MAIN_APP = eINSTANCE.getPackage_MainApp();
+    EReference MAIN_PACKAGE__APP = eINSTANCE.getMainPackage_App();
 
     /**
      * The meta object literal for the '{@link fr.nantes.univ.alma.mvc.mvc.impl.UIApplicationImpl <em>UI Application</em>}' class.

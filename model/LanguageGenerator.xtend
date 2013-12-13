@@ -3,40 +3,59 @@
  */
 package fr.nantes.univ.alma.mvc.generator
 
+import java.io.File
 import java.io.IOException
 import java.util.Collections
+import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.emf.common.util.URI
 
 /**
  * Generates code from your model files on save.
  */
 class LanguageGenerator implements IGenerator {
-	
+
+	public static final String LANGUAGE_EXTENSION = "mvc";
+	public static final String GEN_PATH = "git/MDEProject/mvc/fr.nantes.univ.alma.mvc.project/gen";
+	public static final String FILE_NAME = "model-gen.xmi";
+
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		 Renvoi l'instance ResourceFactoryRegistryImpl en tant que singleton
+
+		System.out.println("Starting XMI generation...");
+
+		// Renvoi l'instance ResourceFactoryRegistryImpl en tant que singleton
 		val registery = Resource.Factory.Registry.INSTANCE;
+
 		// La map Key, Ressource du model
 		val map = registery.getExtensionToFactoryMap();
-		// Ajout du model mvc en tant que ressource XMI 
-		map.put("mvc", new XMIResourceFactoryImpl()); 
 
-		// Recuperation d'un nouveau tableau de resource
+		// Ajout du modele mvc en tant que ressource XMI
+		val xmiRes = new XMIResourceFactoryImpl();
+		map.put(LANGUAGE_EXTENSION, xmiRes);
+//		IResourceServiceProvider.Registry.INSTANCE.getExtensionToFactoryMap().put(
+//			LANGUAGE_EXTENSION, xmiRes);
+
+		// Creation d'un nouveau tableau de ressource
 		val resSet = new ResourceSetImpl();
-		
+
 		// Creation d'une nouvelle ressource
-		val res = resSet.createResource(URI.createURI("model/model.mvc"));
+		val URI uri = URI.createURI(GEN_PATH + File.separator + FILE_NAME);
+		val res = resSet.createResource(uri);
+		System.out.println("Resource created at \"" + GEN_PATH + File.separator + FILE_NAME+"\"");
+
 		// Ajout du contenu
 		res.getContents().addAll(resource.contents)
+
 		// Enregistrement du contenu
 		try {
-		  res.save(Collections.EMPTY_MAP);
+			res.save(Collections.EMPTY_MAP);
 		} catch (IOException e) {
-		      e.printStackTrace();
+			e.printStackTrace();
 		}
+
+		System.out.println("Generation completed");
 	}
 }

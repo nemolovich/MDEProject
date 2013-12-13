@@ -2,13 +2,7 @@
  */
 package fr.nantes.univ.alma.mvc.mvc.impl;
 
-import fr.nantes.univ.alma.mvc.mvc.Action;
-import fr.nantes.univ.alma.mvc.mvc.Model;
-import fr.nantes.univ.alma.mvc.mvc.ModelProperty;
-import fr.nantes.univ.alma.mvc.mvc.MvcFactory;
-import fr.nantes.univ.alma.mvc.mvc.MvcPackage;
-import fr.nantes.univ.alma.mvc.mvc.UIApplication;
-import fr.nantes.univ.alma.mvc.mvc.View;
+import fr.nantes.univ.alma.mvc.mvc.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -70,7 +64,7 @@ public class MvcFactoryImpl extends EFactoryImpl implements MvcFactory
   {
     switch (eClass.getClassifierID())
     {
-      case MvcPackage.PACKAGE: return createPackage();
+      case MvcPackage.MAIN_PACKAGE: return createMainPackage();
       case MvcPackage.UI_APPLICATION: return createUIApplication();
       case MvcPackage.VIEW: return createView();
       case MvcPackage.MODEL: return createModel();
@@ -86,10 +80,10 @@ public class MvcFactoryImpl extends EFactoryImpl implements MvcFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fr.nantes.univ.alma.mvc.mvc.Package createPackage()
+  public MainPackage createMainPackage()
   {
-    PackageImpl package_ = new PackageImpl();
-    return package_;
+    MainPackageImpl mainPackage = new MainPackageImpl();
+    return mainPackage;
   }
 
   /**

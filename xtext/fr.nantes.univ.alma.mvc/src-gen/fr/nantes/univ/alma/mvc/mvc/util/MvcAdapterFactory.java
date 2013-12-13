@@ -2,12 +2,7 @@
  */
 package fr.nantes.univ.alma.mvc.mvc.util;
 
-import fr.nantes.univ.alma.mvc.mvc.Action;
-import fr.nantes.univ.alma.mvc.mvc.Model;
-import fr.nantes.univ.alma.mvc.mvc.ModelProperty;
-import fr.nantes.univ.alma.mvc.mvc.MvcPackage;
-import fr.nantes.univ.alma.mvc.mvc.UIApplication;
-import fr.nantes.univ.alma.mvc.mvc.View;
+import fr.nantes.univ.alma.mvc.mvc.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -80,9 +75,9 @@ public class MvcAdapterFactory extends AdapterFactoryImpl
     new MvcSwitch<Adapter>()
     {
       @Override
-      public Adapter casePackage(fr.nantes.univ.alma.mvc.mvc.Package object)
+      public Adapter caseMainPackage(MainPackage object)
       {
-        return createPackageAdapter();
+        return createMainPackageAdapter();
       }
       @Override
       public Adapter caseUIApplication(UIApplication object)
@@ -132,16 +127,16 @@ public class MvcAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.nantes.univ.alma.mvc.mvc.Package <em>Package</em>}'.
+   * Creates a new adapter for an object of class '{@link fr.nantes.univ.alma.mvc.mvc.MainPackage <em>Main Package</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see fr.nantes.univ.alma.mvc.mvc.Package
+   * @see fr.nantes.univ.alma.mvc.mvc.MainPackage
    * @generated
    */
-  public Adapter createPackageAdapter()
+  public Adapter createMainPackageAdapter()
   {
     return null;
   }

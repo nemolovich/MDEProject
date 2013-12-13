@@ -1,0 +1,58 @@
+--@path MODEL_IN=/fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/Language.ecore
+--@path MODEL_OUT=/fr.nantes.univ.alma.mvc.model/model/model.ecore
+
+
+module modelATL;
+create OUT: MODEL_OUT from IN: MODEL_IN;
+
+rule ModelPropertyTransform {
+	from
+		mp_in: MODEL_IN!ModelProperty
+	to
+		mp_out: MODEL_OUT!ModelProperty (
+			name <- mp_in.name
+		)
+}
+
+rule ModelTransform {
+	from
+		m_in: MODEL_IN!Model
+	to
+		m_out: MODEL_OUT!Model (
+			name <- m_in.name,
+			ownedElements <- m_in.ownedElements,
+			properties <- m_in.properties
+		)
+}
+
+rule ActionTransform {
+	from
+		a_in: MODEL_IN!Action
+	to
+		a_out: MODEL_OUT!Action (
+			name <- a_in.name,
+			nextPage <- a_in.nextPage
+		)
+}
+
+rule ViewTransform {
+	from
+		v_in: MODEL_IN!View
+	to
+		v_out: MODEL_OUT!View (
+			name <- v_in.name,
+			description <- v_in.description,
+			actions <- v_in.actions,
+			model <- v_in.model
+		)
+}
+
+rule UIApplicationTransform {
+	from
+		uia_in: MODEL_IN!UIApplication
+	to
+		uia_out: MODEL_OUT!UIApplication (
+			pages <- uia_in.pages,
+			models <- uia_in.models
+		)
+}

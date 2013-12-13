@@ -1,5 +1,6 @@
 RULE_ID=6
 T__40=40
+T__41=41
 T__29=29
 T__28=28
 T__27=27
@@ -35,31 +36,32 @@ T__14=14
 T__13=13
 RULE_INT=7
 RULE_WS=10
-'<model id='=31
-' encoding='=13
-'</pages>'=22
+'<model name='=31
+' encoding='=22
+'</pages>'=19
 '<ownedElements>'=34
-'<model ref='=17
-' ?>'=14
+'<model ref='=14
+' ?>'=23
 '</actions>'=29
-'<UIApplication>'=15
+'<UIApplication>'=12
 '<actions>'=28
 '<properties>'=32
-'</models>'=19
+'.'=41
+'</models>'=16
 ' >'=25
-'<?xml version='=12
+'<?xml version='=21
 '<description>'=26
+'<view name='=24
 '</properties>'=33
 '</action>'=39
-'</UIApplication>'=23
-'<view id='=24
-'<pages>'=20
+'</UIApplication>'=20
+'<pages>'=17
 '<nextPage ref='=38
-'<page ref='=21
+'<page ref='=18
 '</ownedElements>'=35
 '<modelProperty name='=40
-'<models>'=16
-' />'=18
+'<models>'=13
+' />'=15
 '</description>'=27
 '</view>'=30
 '<action name='=37

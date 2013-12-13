@@ -2,12 +2,7 @@
  */
 package fr.nantes.univ.alma.mvc.mvc.util;
 
-import fr.nantes.univ.alma.mvc.mvc.Action;
-import fr.nantes.univ.alma.mvc.mvc.Model;
-import fr.nantes.univ.alma.mvc.mvc.ModelProperty;
-import fr.nantes.univ.alma.mvc.mvc.MvcPackage;
-import fr.nantes.univ.alma.mvc.mvc.UIApplication;
-import fr.nantes.univ.alma.mvc.mvc.View;
+import fr.nantes.univ.alma.mvc.mvc.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -77,10 +72,10 @@ public class MvcSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case MvcPackage.PACKAGE:
+      case MvcPackage.MAIN_PACKAGE:
       {
-        fr.nantes.univ.alma.mvc.mvc.Package package_ = (fr.nantes.univ.alma.mvc.mvc.Package)theEObject;
-        T result = casePackage(package_);
+        MainPackage mainPackage = (MainPackage)theEObject;
+        T result = caseMainPackage(mainPackage);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -124,17 +119,17 @@ public class MvcSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Main Package</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Package</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Main Package</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePackage(fr.nantes.univ.alma.mvc.mvc.Package object)
+  public T caseMainPackage(MainPackage object)
   {
     return null;
   }

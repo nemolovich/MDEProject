@@ -3,6 +3,7 @@
 package fr.nantes.univ.alma.mvc.mvc.impl;
 
 import fr.nantes.univ.alma.mvc.mvc.Action;
+import fr.nantes.univ.alma.mvc.mvc.MainPackage;
 import fr.nantes.univ.alma.mvc.mvc.Model;
 import fr.nantes.univ.alma.mvc.mvc.ModelProperty;
 import fr.nantes.univ.alma.mvc.mvc.MvcFactory;
@@ -30,7 +31,7 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass packageEClass = null;
+  private EClass mainPackageEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,9 +136,9 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPackage()
+  public EClass getMainPackage()
   {
-    return packageEClass;
+    return mainPackageEClass;
   }
 
   /**
@@ -145,9 +146,9 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPackage_Views()
+  public EReference getMainPackage_AllModels()
   {
-    return (EReference)packageEClass.getEStructuralFeatures().get(0);
+    return (EReference)mainPackageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -155,9 +156,9 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPackage_Models()
+  public EReference getMainPackage_AllViews()
   {
-    return (EReference)packageEClass.getEStructuralFeatures().get(1);
+    return (EReference)mainPackageEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -165,29 +166,9 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPackage_Actions()
+  public EReference getMainPackage_App()
   {
-    return (EReference)packageEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPackage_Properties()
-  {
-    return (EReference)packageEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPackage_MainApp()
-  {
-    return (EReference)packageEClass.getEStructuralFeatures().get(4);
+    return (EReference)mainPackageEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -390,12 +371,10 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
     isCreated = true;
 
     // Create classes and their features
-    packageEClass = createEClass(PACKAGE);
-    createEReference(packageEClass, PACKAGE__VIEWS);
-    createEReference(packageEClass, PACKAGE__MODELS);
-    createEReference(packageEClass, PACKAGE__ACTIONS);
-    createEReference(packageEClass, PACKAGE__PROPERTIES);
-    createEReference(packageEClass, PACKAGE__MAIN_APP);
+    mainPackageEClass = createEClass(MAIN_PACKAGE);
+    createEReference(mainPackageEClass, MAIN_PACKAGE__ALL_MODELS);
+    createEReference(mainPackageEClass, MAIN_PACKAGE__ALL_VIEWS);
+    createEReference(mainPackageEClass, MAIN_PACKAGE__APP);
 
     uiApplicationEClass = createEClass(UI_APPLICATION);
     createEReference(uiApplicationEClass, UI_APPLICATION__MODELS);
@@ -451,12 +430,10 @@ public class MvcPackageImpl extends EPackageImpl implements MvcPackage
     // Add supertypes to classes
 
     // Initialize classes and features; add operations and parameters
-    initEClass(packageEClass, fr.nantes.univ.alma.mvc.mvc.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPackage_Views(), this.getView(), null, "views", null, 0, -1, fr.nantes.univ.alma.mvc.mvc.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPackage_Models(), this.getModel(), null, "models", null, 0, -1, fr.nantes.univ.alma.mvc.mvc.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPackage_Actions(), this.getAction(), null, "actions", null, 0, -1, fr.nantes.univ.alma.mvc.mvc.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPackage_Properties(), this.getModelProperty(), null, "properties", null, 0, -1, fr.nantes.univ.alma.mvc.mvc.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPackage_MainApp(), this.getUIApplication(), null, "mainApp", null, 0, -1, fr.nantes.univ.alma.mvc.mvc.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(mainPackageEClass, MainPackage.class, "MainPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMainPackage_AllModels(), this.getModel(), null, "allModels", null, 0, -1, MainPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMainPackage_AllViews(), this.getView(), null, "allViews", null, 0, -1, MainPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMainPackage_App(), this.getUIApplication(), null, "app", null, 0, 1, MainPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(uiApplicationEClass, UIApplication.class, "UIApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getUIApplication_Models(), this.getModel(), null, "models", null, 0, -1, UIApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

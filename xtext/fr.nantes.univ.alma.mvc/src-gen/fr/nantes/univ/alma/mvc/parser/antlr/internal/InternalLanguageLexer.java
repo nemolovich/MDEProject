@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class InternalLanguageLexer extends Lexer {
     public static final int T__40=40;
     public static final int RULE_ID=6;
+    public static final int T__41=41;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -69,10 +70,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:11:7: ( '<?xml version=' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:11:9: '<?xml version='
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:11:7: ( '<UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:11:9: '<UIApplication>'
             {
-            match("<?xml version="); 
+            match("<UIApplication>"); 
 
 
             }
@@ -90,10 +91,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:12:7: ( ' encoding=' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:12:9: ' encoding='
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:12:7: ( '<models>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:12:9: '<models>'
             {
-            match(" encoding="); 
+            match("<models>"); 
 
 
             }
@@ -111,10 +112,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:13:7: ( ' ?>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:13:9: ' ?>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:13:7: ( '<model ref=' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:13:9: '<model ref='
             {
-            match(" ?>"); 
+            match("<model ref="); 
 
 
             }
@@ -132,10 +133,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:14:7: ( '<UIApplication>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:14:9: '<UIApplication>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:14:7: ( ' />' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:14:9: ' />'
             {
-            match("<UIApplication>"); 
+            match(" />"); 
 
 
             }
@@ -153,10 +154,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:15:7: ( '<models>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:15:9: '<models>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:15:7: ( '</models>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:15:9: '</models>'
             {
-            match("<models>"); 
+            match("</models>"); 
 
 
             }
@@ -174,10 +175,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:16:7: ( '<model ref=' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:16:9: '<model ref='
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:16:7: ( '<pages>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:16:9: '<pages>'
             {
-            match("<model ref="); 
+            match("<pages>"); 
 
 
             }
@@ -195,10 +196,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:17:7: ( ' />' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:17:9: ' />'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:17:7: ( '<page ref=' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:17:9: '<page ref='
             {
-            match(" />"); 
+            match("<page ref="); 
 
 
             }
@@ -216,10 +217,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:18:7: ( '</models>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:18:9: '</models>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:18:7: ( '</pages>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:18:9: '</pages>'
             {
-            match("</models>"); 
+            match("</pages>"); 
 
 
             }
@@ -237,10 +238,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:19:7: ( '<pages>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:19:9: '<pages>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:19:7: ( '</UIApplication>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:19:9: '</UIApplication>'
             {
-            match("<pages>"); 
+            match("</UIApplication>"); 
 
 
             }
@@ -258,10 +259,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:20:7: ( '<page ref=' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:20:9: '<page ref='
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:20:7: ( '<?xml version=' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:20:9: '<?xml version='
             {
-            match("<page ref="); 
+            match("<?xml version="); 
 
 
             }
@@ -279,10 +280,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:21:7: ( '</pages>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:21:9: '</pages>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:21:7: ( ' encoding=' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:21:9: ' encoding='
             {
-            match("</pages>"); 
+            match(" encoding="); 
 
 
             }
@@ -300,10 +301,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:22:7: ( '</UIApplication>' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:22:9: '</UIApplication>'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:22:7: ( ' ?>' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:22:9: ' ?>'
             {
-            match("</UIApplication>"); 
+            match(" ?>"); 
 
 
             }
@@ -321,10 +322,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:23:7: ( '<view id=' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:23:9: '<view id='
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:23:7: ( '<view name=' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:23:9: '<view name='
             {
-            match("<view id="); 
+            match("<view name="); 
 
 
             }
@@ -468,10 +469,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:30:7: ( '<model id=' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:30:9: '<model id='
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:30:7: ( '<model name=' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:30:9: '<model name='
             {
-            match("<model id="); 
+            match("<model name="); 
 
 
             }
@@ -673,16 +674,36 @@ public class InternalLanguageLexer extends Lexer {
     }
     // $ANTLR end "T__40"
 
+    // $ANTLR start "T__41"
+    public final void mT__41() throws RecognitionException {
+        try {
+            int _type = T__41;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:40:7: ( '.' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:40:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__41"
+
     // $ANTLR start "RULE_VERSION"
     public final void mRULE_VERSION() throws RecognitionException {
         try {
             int _type = RULE_VERSION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:910:14: ( '\"' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '\"' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:910:16: '\"' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '\"'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:837:14: ( '\"' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '\"' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:837:16: '\"' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '\"'
             {
             match('\"'); 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:910:20: ( '0' .. '9' )+
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:837:20: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -696,7 +717,7 @@ public class InternalLanguageLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:910:21: '0' .. '9'
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:837:21: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -713,7 +734,7 @@ public class InternalLanguageLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:910:36: ( '0' .. '9' )+
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:837:36: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -727,7 +748,7 @@ public class InternalLanguageLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:910:37: '0' .. '9'
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:837:37: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -760,10 +781,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:912:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:912:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:839:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:839:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:912:11: ( '^' )?
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:839:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -772,7 +793,7 @@ public class InternalLanguageLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:912:11: '^'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:839:11: '^'
                     {
                     match('^'); 
 
@@ -790,7 +811,7 @@ public class InternalLanguageLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:912:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:839:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -839,10 +860,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:914:10: ( ( '0' .. '9' )+ )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:914:12: ( '0' .. '9' )+
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:841:10: ( ( '0' .. '9' )+ )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:841:12: ( '0' .. '9' )+
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:914:12: ( '0' .. '9' )+
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:841:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -856,7 +877,7 @@ public class InternalLanguageLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:914:13: '0' .. '9'
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:841:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -888,10 +909,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -909,10 +930,10 @@ public class InternalLanguageLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -928,7 +949,7 @@ public class InternalLanguageLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -944,7 +965,7 @@ public class InternalLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -969,10 +990,10 @@ public class InternalLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -988,7 +1009,7 @@ public class InternalLanguageLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1004,7 +1025,7 @@ public class InternalLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:916:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:843:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1047,12 +1068,12 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:918:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:918:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:845:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:845:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:918:24: ( options {greedy=false; } : . )*
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:845:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1077,7 +1098,7 @@ public class InternalLanguageLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:918:52: .
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:845:52: .
             	    {
             	    matchAny(); 
 
@@ -1107,12 +1128,12 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1125,7 +1146,7 @@ public class InternalLanguageLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1145,7 +1166,7 @@ public class InternalLanguageLexer extends Lexer {
                 }
             } while (true);
 
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:40: ( ( '\\r' )? '\\n' )?
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1154,9 +1175,9 @@ public class InternalLanguageLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:41: ( '\\r' )? '\\n'
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:41: ( '\\r' )? '\\n'
                     {
-                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:41: ( '\\r' )?
+                    // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1165,7 +1186,7 @@ public class InternalLanguageLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:920:41: '\\r'
+                            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:847:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1197,10 +1218,10 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:922:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:922:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:849:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:849:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:922:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:849:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1254,8 +1275,8 @@ public class InternalLanguageLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:924:16: ( . )
-            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:924:18: .
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:851:16: ( . )
+            // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:851:18: .
             {
             matchAny(); 
 
@@ -1270,8 +1291,8 @@ public class InternalLanguageLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | RULE_VERSION | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt14=37;
+        // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RULE_VERSION | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt14=38;
         alt14 = dfa14.predict(input);
         switch (alt14) {
             case 1 :
@@ -1478,56 +1499,63 @@ public class InternalLanguageLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:184: RULE_VERSION
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:184: T__41
+                {
+                mT__41(); 
+
+                }
+                break;
+            case 31 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:190: RULE_VERSION
                 {
                 mRULE_VERSION(); 
 
                 }
                 break;
-            case 31 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:197: RULE_ID
+            case 32 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:203: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 32 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:205: RULE_INT
+            case 33 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:211: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 33 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:214: RULE_STRING
+            case 34 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:220: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 34 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:226: RULE_ML_COMMENT
+            case 35 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:232: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 35 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:242: RULE_SL_COMMENT
+            case 36 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:248: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 36 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:258: RULE_WS
+            case 37 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:264: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 37 :
-                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:266: RULE_ANY_OTHER
+            case 38 :
+                // ../fr.nantes.univ.alma.mvc/src-gen/fr/nantes/univ/alma/mvc/parser/antlr/internal/InternalLanguage.g:1:272: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1541,112 +1569,115 @@ public class InternalLanguageLexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\1\uffff\1\12\1\31\2\12\2\uffff\2\12\107\uffff";
+        "\1\uffff\1\13\1\32\1\uffff\2\13\2\uffff\2\13\110\uffff";
     static final String DFA14_eofS =
-        "\120\uffff";
+        "\122\uffff";
     static final String DFA14_minS =
-        "\1\0\2\57\1\0\1\101\2\uffff\1\0\1\52\4\uffff\1\157\1\125\1\141\2"+
-        "\uffff\1\143\7\uffff\1\0\5\uffff\1\144\1\157\1\141\2\uffff\1\143"+
-        "\2\uffff\1\147\1\uffff\1\164\1\0\1\145\1\144\2\uffff\1\164\1\145"+
-        "\1\151\1\0\1\154\1\145\1\151\1\40\1\157\1\uffff\1\40\1\154\1\157"+
-        "\2\uffff\1\156\2\uffff\1\151\1\uffff\1\76\1\156\1\40\4\uffff\1\76"+
-        "\4\uffff";
+        "\1\0\2\57\1\uffff\1\0\1\101\2\uffff\1\0\1\52\3\uffff\1\157\1\125"+
+        "\1\141\3\uffff\1\143\11\uffff\1\0\4\uffff\1\144\1\157\1\141\2\uffff"+
+        "\1\143\2\uffff\1\147\1\uffff\1\164\1\0\1\145\1\144\2\uffff\1\164"+
+        "\1\145\1\151\1\0\1\154\1\145\1\151\1\40\1\157\1\uffff\1\40\1\154"+
+        "\1\157\2\uffff\1\156\2\uffff\1\156\1\uffff\1\76\1\156\1\40\4\uffff"+
+        "\1\76\4\uffff";
     static final String DFA14_maxS =
-        "\1\uffff\1\166\1\145\1\uffff\1\172\2\uffff\1\uffff\1\57\4\uffff"+
-        "\1\157\1\166\1\162\2\uffff\1\143\7\uffff\1\uffff\5\uffff\1\144\1"+
-        "\157\1\162\2\uffff\1\143\2\uffff\1\147\1\uffff\1\164\1\uffff\1\145"+
-        "\1\144\2\uffff\1\164\1\145\1\151\1\uffff\1\154\1\145\1\151\1\163"+
-        "\1\157\1\uffff\1\163\1\154\1\157\2\uffff\1\156\2\uffff\1\162\1\uffff"+
-        "\1\163\1\156\1\163\4\uffff\1\163\4\uffff";
+        "\1\uffff\1\166\1\145\1\uffff\1\uffff\1\172\2\uffff\1\uffff\1\57"+
+        "\3\uffff\1\157\1\166\1\162\3\uffff\1\143\11\uffff\1\uffff\4\uffff"+
+        "\1\144\1\157\1\162\2\uffff\1\143\2\uffff\1\147\1\uffff\1\164\1\uffff"+
+        "\1\145\1\144\2\uffff\1\164\1\145\1\151\1\uffff\1\154\1\145\1\151"+
+        "\1\163\1\157\1\uffff\1\163\1\154\1\157\2\uffff\1\156\2\uffff\1\162"+
+        "\1\uffff\1\163\1\156\1\163\4\uffff\1\163\4\uffff";
     static final String DFA14_acceptS =
-        "\5\uffff\1\37\1\40\2\uffff\1\44\1\45\1\1\1\4\3\uffff\1\15\1\17\1"+
-        "\uffff\1\27\1\33\1\2\1\3\1\7\1\16\1\44\1\uffff\1\41\1\37\1\40\1"+
-        "\42\1\43\3\uffff\1\14\1\20\1\uffff\1\23\1\30\1\uffff\1\25\4\uffff"+
-        "\1\13\1\26\11\uffff\1\36\3\uffff\1\11\1\12\1\uffff\1\36\1\5\1\uffff"+
-        "\1\35\3\uffff\1\6\1\24\1\10\1\31\1\uffff\1\21\1\32\1\22\1\34";
+        "\3\uffff\1\36\2\uffff\1\40\1\41\2\uffff\1\45\1\46\1\1\3\uffff\1"+
+        "\12\1\15\1\17\1\uffff\1\27\1\33\1\4\1\13\1\14\1\16\1\45\1\36\1\42"+
+        "\1\uffff\1\40\1\41\1\43\1\44\3\uffff\1\11\1\20\1\uffff\1\23\1\30"+
+        "\1\uffff\1\25\4\uffff\1\10\1\26\11\uffff\1\37\3\uffff\1\6\1\7\1"+
+        "\uffff\1\37\1\2\1\uffff\1\35\3\uffff\1\3\1\24\1\5\1\31\1\uffff\1"+
+        "\21\1\32\1\22\1\34";
     static final String DFA14_specialS =
-        "\1\3\2\uffff\1\0\3\uffff\1\1\22\uffff\1\4\20\uffff\1\5\7\uffff\1"+
-        "\2\34\uffff}>";
+        "\1\0\3\uffff\1\3\3\uffff\1\4\24\uffff\1\5\17\uffff\1\2\7\uffff\1"+
+        "\1\34\uffff}>";
     static final String[] DFA14_transitionS = {
-            "\11\12\2\11\2\12\1\11\22\12\1\2\1\12\1\3\4\12\1\7\7\12\1\10"+
-            "\12\6\2\12\1\1\4\12\32\5\3\12\1\4\1\5\1\12\32\5\uff85\12",
-            "\1\16\17\uffff\1\13\25\uffff\1\14\13\uffff\1\22\2\uffff\1\21"+
-            "\10\uffff\1\15\1\24\1\23\1\17\5\uffff\1\20",
-            "\1\27\16\uffff\1\30\1\26\45\uffff\1\25",
-            "\60\33\12\32\uffc6\33",
-            "\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\11\13\2\12\2\13\1\12\22\13\1\2\1\13\1\4\4\13\1\10\6\13\1\3"+
+            "\1\11\12\7\2\13\1\1\4\13\32\6\3\13\1\5\1\6\1\13\32\6\uff85\13",
+            "\1\16\17\uffff\1\20\25\uffff\1\14\13\uffff\1\23\2\uffff\1\22"+
+            "\10\uffff\1\15\1\25\1\24\1\17\5\uffff\1\21",
+            "\1\26\16\uffff\1\31\1\30\45\uffff\1\27",
+            "",
+            "\60\34\12\35\uffc6\34",
+            "\32\36\4\uffff\1\36\1\uffff\32\36",
             "",
             "",
-            "\0\33",
-            "\1\36\4\uffff\1\37",
-            "",
-            "",
-            "",
-            "",
-            "\1\40",
-            "\1\43\13\uffff\1\45\2\uffff\1\44\10\uffff\1\41\1\uffff\1\47"+
-            "\1\42\5\uffff\1\46",
-            "\1\50\20\uffff\1\51",
-            "",
-            "",
-            "\1\52",
+            "\0\34",
+            "\1\40\4\uffff\1\41",
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\56\33\1\53\1\33\12\32\uffc6\33",
-            "",
-            "",
+            "\1\42",
+            "\1\45\13\uffff\1\47\2\uffff\1\46\10\uffff\1\43\1\uffff\1\51"+
+            "\1\44\5\uffff\1\50",
+            "\1\52\20\uffff\1\53",
             "",
             "",
             "",
             "\1\54",
-            "\1\55",
-            "\1\56\20\uffff\1\57",
             "",
             "",
-            "\1\60",
             "",
             "",
-            "\1\61",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\56\34\1\55\1\34\12\35\uffc6\34",
+            "",
+            "",
+            "",
+            "",
+            "\1\56",
+            "\1\57",
+            "\1\60\20\uffff\1\61",
+            "",
             "",
             "\1\62",
-            "\60\33\12\63\uffc6\33",
+            "",
+            "",
+            "\1\63",
+            "",
             "\1\64",
-            "\1\65",
-            "",
-            "",
+            "\60\34\12\65\uffc6\34",
             "\1\66",
             "\1\67",
+            "",
+            "",
             "\1\70",
-            "\42\33\1\71\15\33\12\63\uffc6\33",
+            "\1\71",
             "\1\72",
-            "\1\73",
+            "\42\34\1\73\15\34\12\65\uffc6\34",
             "\1\74",
-            "\1\76\122\uffff\1\75",
-            "\1\77",
+            "\1\75",
+            "\1\76",
+            "\1\100\122\uffff\1\77",
+            "\1\101",
             "",
-            "\1\102\57\uffff\1\103\42\uffff\1\101",
-            "\1\104",
-            "\1\105",
-            "",
-            "",
+            "\1\104\57\uffff\1\105\42\uffff\1\103",
             "\1\106",
+            "\1\107",
             "",
             "",
-            "\1\110\10\uffff\1\107",
-            "",
-            "\1\112\64\uffff\1\111",
-            "\1\113",
-            "\1\115\122\uffff\1\114",
+            "\1\110",
             "",
             "",
+            "\1\112\3\uffff\1\111",
+            "",
+            "\1\114\64\uffff\1\113",
+            "\1\115",
+            "\1\117\122\uffff\1\116",
             "",
             "",
-            "\1\117\64\uffff\1\116",
+            "",
+            "",
+            "\1\121\64\uffff\1\120",
             "",
             "",
             "",
@@ -1683,47 +1714,13 @@ public class InternalLanguageLexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | RULE_VERSION | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RULE_VERSION | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA14_3 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_3>='0' && LA14_3<='9')) ) {s = 26;}
-
-                        else if ( ((LA14_3>='\u0000' && LA14_3<='/')||(LA14_3>=':' && LA14_3<='\uFFFF')) ) {s = 27;}
-
-                        else s = 10;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA14_7 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_7>='\u0000' && LA14_7<='\uFFFF')) ) {s = 27;}
-
-                        else s = 10;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA14_51 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA14_51=='\"') ) {s = 57;}
-
-                        else if ( ((LA14_51>='\u0000' && LA14_51<='!')||(LA14_51>='#' && LA14_51<='/')||(LA14_51>=':' && LA14_51<='\uFFFF')) ) {s = 27;}
-
-                        else if ( ((LA14_51>='0' && LA14_51<='9')) ) {s = 51;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
                         int LA14_0 = input.LA(1);
 
                         s = -1;
@@ -1731,43 +1728,79 @@ public class InternalLanguageLexer extends Lexer {
 
                         else if ( (LA14_0==' ') ) {s = 2;}
 
-                        else if ( (LA14_0=='\"') ) {s = 3;}
+                        else if ( (LA14_0=='.') ) {s = 3;}
 
-                        else if ( (LA14_0=='^') ) {s = 4;}
+                        else if ( (LA14_0=='\"') ) {s = 4;}
 
-                        else if ( ((LA14_0>='A' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='a' && LA14_0<='z')) ) {s = 5;}
+                        else if ( (LA14_0=='^') ) {s = 5;}
 
-                        else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 6;}
+                        else if ( ((LA14_0>='A' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='a' && LA14_0<='z')) ) {s = 6;}
 
-                        else if ( (LA14_0=='\'') ) {s = 7;}
+                        else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 7;}
 
-                        else if ( (LA14_0=='/') ) {s = 8;}
+                        else if ( (LA14_0=='\'') ) {s = 8;}
 
-                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r') ) {s = 9;}
+                        else if ( (LA14_0=='/') ) {s = 9;}
 
-                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||LA14_0=='!'||(LA14_0>='#' && LA14_0<='&')||(LA14_0>='(' && LA14_0<='.')||(LA14_0>=':' && LA14_0<=';')||(LA14_0>='=' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||(LA14_0>='{' && LA14_0<='\uFFFF')) ) {s = 10;}
+                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r') ) {s = 10;}
+
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||LA14_0=='!'||(LA14_0>='#' && LA14_0<='&')||(LA14_0>='(' && LA14_0<='-')||(LA14_0>=':' && LA14_0<=';')||(LA14_0>='=' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||(LA14_0>='{' && LA14_0<='\uFFFF')) ) {s = 11;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA14_53 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA14_53=='\"') ) {s = 59;}
+
+                        else if ( ((LA14_53>='0' && LA14_53<='9')) ) {s = 53;}
+
+                        else if ( ((LA14_53>='\u0000' && LA14_53<='!')||(LA14_53>='#' && LA14_53<='/')||(LA14_53>=':' && LA14_53<='\uFFFF')) ) {s = 28;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA14_45 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_45>='0' && LA14_45<='9')) ) {s = 53;}
+
+                        else if ( ((LA14_45>='\u0000' && LA14_45<='/')||(LA14_45>=':' && LA14_45<='\uFFFF')) ) {s = 28;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA14_4 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_4>='\u0000' && LA14_4<='/')||(LA14_4>=':' && LA14_4<='\uFFFF')) ) {s = 28;}
+
+                        else if ( ((LA14_4>='0' && LA14_4<='9')) ) {s = 29;}
+
+                        else s = 11;
 
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA14_26 = input.LA(1);
+                        int LA14_8 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_26=='.') ) {s = 43;}
+                        if ( ((LA14_8>='\u0000' && LA14_8<='\uFFFF')) ) {s = 28;}
 
-                        else if ( ((LA14_26>='0' && LA14_26<='9')) ) {s = 26;}
-
-                        else if ( ((LA14_26>='\u0000' && LA14_26<='-')||LA14_26=='/'||(LA14_26>=':' && LA14_26<='\uFFFF')) ) {s = 27;}
+                        else s = 11;
 
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA14_43 = input.LA(1);
+                        int LA14_29 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA14_43>='\u0000' && LA14_43<='/')||(LA14_43>=':' && LA14_43<='\uFFFF')) ) {s = 27;}
+                        if ( ((LA14_29>='\u0000' && LA14_29<='-')||LA14_29=='/'||(LA14_29>=':' && LA14_29<='\uFFFF')) ) {s = 28;}
 
-                        else if ( ((LA14_43>='0' && LA14_43<='9')) ) {s = 51;}
+                        else if ( (LA14_29=='.') ) {s = 45;}
+
+                        else if ( ((LA14_29>='0' && LA14_29<='9')) ) {s = 29;}
 
                         if ( s>=0 ) return s;
                         break;

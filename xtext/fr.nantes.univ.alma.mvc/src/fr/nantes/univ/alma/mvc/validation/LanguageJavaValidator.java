@@ -22,7 +22,7 @@ public class LanguageJavaValidator extends AbstractLanguageJavaValidator {
 		if (o instanceof Model) {
 			name = ((Model) o).getName();
 			className = "Model";
-			attr = MvcPackage.Literals.MODEL__NAME;
+			attr = MvcPackage.Literals.MODEL__NAME; 
 		} else if (o instanceof View) {
 			name = ((View) o).getName();
 			className = "View";
@@ -35,7 +35,12 @@ public class LanguageJavaValidator extends AbstractLanguageJavaValidator {
 		if (name.isEmpty()) {
 			return;
 		}
-		if (!Character.isUpperCase(name.charAt(0))) {
+		if (name.charAt(0) == '"') {
+			if (!Character.isUpperCase(name.charAt(1))) {
+				error("The " + className + " name must start with a capital",
+						attr);
+			}
+		} else if (!Character.isUpperCase(name.charAt(0))) {
 			error("The " + className + " name must start with a capital", attr);
 		}
 	}
@@ -53,7 +58,12 @@ public class LanguageJavaValidator extends AbstractLanguageJavaValidator {
 		if (name.isEmpty()) {
 			return;
 		}
-		if (!Character.isLowerCase(name.charAt(0))) {
+		if (name.charAt(0) == '"') {
+			if (!Character.isLowerCase(name.charAt(1))) {
+				error("The " + className + " name can not start with a capital",
+						attr);
+			}
+		} else if (!Character.isLowerCase(name.charAt(0))) {
 			error("The " + className + " name can not start with a capital",
 					attr);
 		}
@@ -109,12 +119,12 @@ public class LanguageJavaValidator extends AbstractLanguageJavaValidator {
 			for (int i = 0; i < models.length - 1; i++) {
 				for (int j = i + 1; j < models.length; j++) {
 					if (this.containsModel(models[i], models[j])) {
-						error("This Model is present in the Model \""
-								+ models[i].getName() + "\"", app,
+						error("This Model is present in the Model "
+								+ models[i].getName(), app,
 								MvcPackage.Literals.UI_APPLICATION__MODELS, j);
 					} else if (this.containsModel(models[j], models[i])) {
-						error("This Model is present in the Model \""
-								+ models[j].getName() + "\"", app,
+						error("This Model is present in the Model "
+								+ models[j].getName(), app,
 								MvcPackage.Literals.UI_APPLICATION__MODELS, i);
 					}
 				}

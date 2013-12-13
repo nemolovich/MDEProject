@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mvc:MainPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mvc="http://mvc/1.0">
+  <allModels name="Operation">
+    <properties name="Numero"/>
+    <properties name="Montant"/>
+  </allModels>
+  <allModels name="Compte" ownedElements="//@allModels.0">
+    <properties name="Numero"/>
+  </allModels>
+  <allModels name="Client" ownedElements="//@allModels.1">
+    <properties name="Nom"/>
+    <properties name="Prenom"/>
+    <properties name="Adresse"/>
+  </allModels>
+  <allModels name="Banque" ownedElements="//@allModels.2"/>
+  <allViews name="BanqueView" model="//@allModels.3">
+    <actions name="afficherClient" nextPage="//@allViews.1"/>
+    <actions name="quitter"/>
+  </allViews>
+  <allViews name="ClientView" model="//@allModels.2">
+    <actions name="afficherCompte" nextPage="//@allViews.2"/>
+    <actions name="quitter"/>
+  </allViews>
+  <allViews name="CompteView" model="//@allModels.1">
+    <actions name="afficherOperation" nextPage="//@allViews.3"/>
+    <actions name="quitter"/>
+  </allViews>
+  <allViews name="OperationView" model="//@allModels.0">
+    <actions name="quitter"/>
+  </allViews>
+  <app models="//@allModels.3" pages="//@allViews.0 //@allViews.1 //@allViews.2 //@allViews.3"/>
+</mvc:MainPackage>

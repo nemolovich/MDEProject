@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="ASCII" ?>
 
-<model id=Operation >
+<model name=Operation >
 	<properties>
 		<modelProperty name=Numero />
 		<modelProperty name=Montant />
 	</properties>
 </model>
 
-<model id=Compte >
+<model name=Compte >
 	<properties>
 		<modelProperty name=Numero />
 	</properties>
@@ -16,7 +16,7 @@
 	</ownedElements>
 </model>
 
-<model id=Client >
+<model name=Client >
 	<properties>
 		<modelProperty name=Nom />
 		<modelProperty name=Prenom />
@@ -27,49 +27,46 @@
 	</ownedElements>
 </model>
 
-<model id=Banque >
+<model name=Banque >
 	<ownedElements>
 		<model ref=Client />
-	</ownedElements>
+	</ownedElements> 
 </model>
-
-<model id=Banque1 >
-	<ownedElements>
-		<model ref=Operation />
-	</ownedElements>
-</model>
-
-<view id=BanqueView >
+ 
+<view name=BanqueView >
 	<model ref=Banque />
 	<actions>
 		<action name=afficherClient >
+			<nextPage ref=ClientView />
 		</action>
 		<action name=quitter >
 		</action>
 	</actions>
 </view>
 
-<view id=ClientView >
+<view name=ClientView >
 	<model ref=Client />
 	<actions>
 		<action name=afficherCompte >
+			<nextPage ref=CompteView />
 		</action>
 		<action name=quitter >
 		</action>
 	</actions>
 </view>
 
-<view id=CompteView >
+<view name=CompteView >
 	<model ref=Compte />
 	<actions>
 		<action name=afficherOperation >
+			<nextPage ref=OperationView />
 		</action>
 		<action name=quitter >
 		</action>
 	</actions>
 </view>
 
-<view id=OperationView >
+<view name=OperationView >
 	<model ref=Operation />
 	<actions>
 		<action name=quitter >

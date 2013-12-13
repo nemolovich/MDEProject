@@ -37,15 +37,15 @@ public class LanguageParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getPackageAccess().getAlternatives_1(), "rule__Package__Alternatives_1");
+					put(grammarAccess.getMainPackageAccess().getAlternatives_1(), "rule__MainPackage__Alternatives_1");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
-					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
-					put(grammarAccess.getXMLDeclarationAccess().getGroup(), "rule__XMLDeclaration__Group__0");
+					put(grammarAccess.getMainPackageAccess().getGroup(), "rule__MainPackage__Group__0");
 					put(grammarAccess.getUIApplicationAccess().getGroup(), "rule__UIApplication__Group__0");
 					put(grammarAccess.getUIApplicationAccess().getGroup_2(), "rule__UIApplication__Group_2__0");
 					put(grammarAccess.getUIApplicationAccess().getGroup_2_4(), "rule__UIApplication__Group_2_4__0");
 					put(grammarAccess.getUIApplicationAccess().getGroup_3(), "rule__UIApplication__Group_3__0");
 					put(grammarAccess.getUIApplicationAccess().getGroup_3_4(), "rule__UIApplication__Group_3_4__0");
+					put(grammarAccess.getXMLDeclarationAccess().getGroup(), "rule__XMLDeclaration__Group__0");
 					put(grammarAccess.getViewAccess().getGroup(), "rule__View__Group__0");
 					put(grammarAccess.getViewAccess().getGroup_4(), "rule__View__Group_4__0");
 					put(grammarAccess.getViewAccess().getGroup_8(), "rule__View__Group_8__0");
@@ -56,11 +56,11 @@ public class LanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionAccess().getGroup(), "rule__Action__Group__0");
 					put(grammarAccess.getActionAccess().getGroup_4(), "rule__Action__Group_4__0");
 					put(grammarAccess.getModelPropertyAccess().getGroup(), "rule__ModelProperty__Group__0");
-					put(grammarAccess.getPackageAccess().getViewsAssignment_1_0(), "rule__Package__ViewsAssignment_1_0");
-					put(grammarAccess.getPackageAccess().getModelsAssignment_1_1(), "rule__Package__ModelsAssignment_1_1");
-					put(grammarAccess.getPackageAccess().getActionsAssignment_1_2(), "rule__Package__ActionsAssignment_1_2");
-					put(grammarAccess.getPackageAccess().getPropertiesAssignment_1_3(), "rule__Package__PropertiesAssignment_1_3");
-					put(grammarAccess.getPackageAccess().getMainAppAssignment_2(), "rule__Package__MainAppAssignment_2");
+					put(grammarAccess.getEStringAccess().getGroup_1(), "rule__EString__Group_1__0");
+					put(grammarAccess.getEStringAccess().getGroup_1_1(), "rule__EString__Group_1_1__0");
+					put(grammarAccess.getMainPackageAccess().getAllModelsAssignment_1_0(), "rule__MainPackage__AllModelsAssignment_1_0");
+					put(grammarAccess.getMainPackageAccess().getAllViewsAssignment_1_1(), "rule__MainPackage__AllViewsAssignment_1_1");
+					put(grammarAccess.getMainPackageAccess().getAppAssignment_2(), "rule__MainPackage__AppAssignment_2");
 					put(grammarAccess.getUIApplicationAccess().getModelsAssignment_2_2(), "rule__UIApplication__ModelsAssignment_2_2");
 					put(grammarAccess.getUIApplicationAccess().getModelsAssignment_2_4_1(), "rule__UIApplication__ModelsAssignment_2_4_1");
 					put(grammarAccess.getUIApplicationAccess().getPagesAssignment_3_2(), "rule__UIApplication__PagesAssignment_3_2");
@@ -88,7 +88,7 @@ public class LanguageParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			fr.nantes.univ.alma.mvc.ui.contentassist.antlr.internal.InternalLanguageParser typedParser = (fr.nantes.univ.alma.mvc.ui.contentassist.antlr.internal.InternalLanguageParser) parser;
-			typedParser.entryRulePackage();
+			typedParser.entryRuleMainPackage();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

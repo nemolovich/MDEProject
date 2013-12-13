@@ -18,96 +18,48 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class PackageElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Package");
+	public class MainPackageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MainPackage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cXMLDeclarationParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Assignment cViewsAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
-		private final RuleCall cViewsViewParserRuleCall_1_0_0 = (RuleCall)cViewsAssignment_1_0.eContents().get(0);
-		private final Assignment cModelsAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
-		private final RuleCall cModelsModelParserRuleCall_1_1_0 = (RuleCall)cModelsAssignment_1_1.eContents().get(0);
-		private final Assignment cActionsAssignment_1_2 = (Assignment)cAlternatives_1.eContents().get(2);
-		private final RuleCall cActionsActionParserRuleCall_1_2_0 = (RuleCall)cActionsAssignment_1_2.eContents().get(0);
-		private final Assignment cPropertiesAssignment_1_3 = (Assignment)cAlternatives_1.eContents().get(3);
-		private final RuleCall cPropertiesModelPropertyParserRuleCall_1_3_0 = (RuleCall)cPropertiesAssignment_1_3.eContents().get(0);
-		private final Assignment cMainAppAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMainAppUIApplicationParserRuleCall_2_0 = (RuleCall)cMainAppAssignment_2.eContents().get(0);
+		private final Assignment cAllModelsAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cAllModelsModelParserRuleCall_1_0_0 = (RuleCall)cAllModelsAssignment_1_0.eContents().get(0);
+		private final Assignment cAllViewsAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cAllViewsViewParserRuleCall_1_1_0 = (RuleCall)cAllViewsAssignment_1_1.eContents().get(0);
+		private final Assignment cAppAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAppUIApplicationParserRuleCall_2_0 = (RuleCall)cAppAssignment_2.eContents().get(0);
 		
-		//Package:
-		//	XMLDeclaration (views+=View | models+=Model | actions+=Action | properties+=ModelProperty)* mainApp+=UIApplication;
+		//MainPackage:
+		//	XMLDeclaration (allModels+=Model | allViews+=View)* app=UIApplication;
 		public ParserRule getRule() { return rule; }
 
-		//XMLDeclaration (views+=View | models+=Model | actions+=Action | properties+=ModelProperty)* mainApp+=UIApplication
+		//XMLDeclaration (allModels+=Model | allViews+=View)* app=UIApplication
 		public Group getGroup() { return cGroup; }
 
 		//XMLDeclaration
 		public RuleCall getXMLDeclarationParserRuleCall_0() { return cXMLDeclarationParserRuleCall_0; }
 
-		//(views+=View | models+=Model | actions+=Action | properties+=ModelProperty)*
+		//(allModels+=Model | allViews+=View)*
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//views+=View
-		public Assignment getViewsAssignment_1_0() { return cViewsAssignment_1_0; }
-
-		//View
-		public RuleCall getViewsViewParserRuleCall_1_0_0() { return cViewsViewParserRuleCall_1_0_0; }
-
-		//models+=Model
-		public Assignment getModelsAssignment_1_1() { return cModelsAssignment_1_1; }
+		//allModels+=Model
+		public Assignment getAllModelsAssignment_1_0() { return cAllModelsAssignment_1_0; }
 
 		//Model
-		public RuleCall getModelsModelParserRuleCall_1_1_0() { return cModelsModelParserRuleCall_1_1_0; }
+		public RuleCall getAllModelsModelParserRuleCall_1_0_0() { return cAllModelsModelParserRuleCall_1_0_0; }
 
-		//actions+=Action
-		public Assignment getActionsAssignment_1_2() { return cActionsAssignment_1_2; }
+		//allViews+=View
+		public Assignment getAllViewsAssignment_1_1() { return cAllViewsAssignment_1_1; }
 
-		//Action
-		public RuleCall getActionsActionParserRuleCall_1_2_0() { return cActionsActionParserRuleCall_1_2_0; }
+		//View
+		public RuleCall getAllViewsViewParserRuleCall_1_1_0() { return cAllViewsViewParserRuleCall_1_1_0; }
 
-		//properties+=ModelProperty
-		public Assignment getPropertiesAssignment_1_3() { return cPropertiesAssignment_1_3; }
-
-		//ModelProperty
-		public RuleCall getPropertiesModelPropertyParserRuleCall_1_3_0() { return cPropertiesModelPropertyParserRuleCall_1_3_0; }
-
-		//mainApp+=UIApplication
-		public Assignment getMainAppAssignment_2() { return cMainAppAssignment_2; }
+		//app=UIApplication
+		public Assignment getAppAssignment_2() { return cAppAssignment_2; }
 
 		//UIApplication
-		public RuleCall getMainAppUIApplicationParserRuleCall_2_0() { return cMainAppUIApplicationParserRuleCall_2_0; }
-	}
-
-	public class XMLDeclarationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "XMLDeclaration");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cXmlVersionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cVERSIONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Keyword cEncodingKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final RuleCall cEStringParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Keyword cSpaceQuestionMarkGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//XMLDeclaration:
-		//	"<?xml version=" VERSION " encoding=" EString " ?>";
-		public ParserRule getRule() { return rule; }
-
-		//"<?xml version=" VERSION " encoding=" EString " ?>"
-		public Group getGroup() { return cGroup; }
-
-		//"<?xml version="
-		public Keyword getXmlVersionKeyword_0() { return cXmlVersionKeyword_0; }
-
-		//VERSION
-		public RuleCall getVERSIONTerminalRuleCall_1() { return cVERSIONTerminalRuleCall_1; }
-
-		//" encoding="
-		public Keyword getEncodingKeyword_2() { return cEncodingKeyword_2; }
-
-		//EString
-		public RuleCall getEStringParserRuleCall_3() { return cEStringParserRuleCall_3; }
-
-		//" ?>"
-		public Keyword getSpaceQuestionMarkGreaterThanSignKeyword_4() { return cSpaceQuestionMarkGreaterThanSignKeyword_4; }
+		public RuleCall getAppUIApplicationParserRuleCall_2_0() { return cAppUIApplicationParserRuleCall_2_0; }
 	}
 
 	public class UIApplicationElements extends AbstractParserRuleElementFinder {
@@ -250,11 +202,45 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getUIApplicationKeyword_4() { return cUIApplicationKeyword_4; }
 	}
 
+	public class XMLDeclarationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "XMLDeclaration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cXmlVersionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cVERSIONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cEncodingKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cEStringParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Keyword cSpaceQuestionMarkGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//XMLDeclaration: //	{XMLDeclaration}
+		//	"<?xml version=" VERSION " encoding=" EString " ?>";
+		public ParserRule getRule() { return rule; }
+
+		////	{XMLDeclaration}
+		//"<?xml version=" VERSION " encoding=" EString " ?>"
+		public Group getGroup() { return cGroup; }
+
+		////	{XMLDeclaration}
+		//"<?xml version="
+		public Keyword getXmlVersionKeyword_0() { return cXmlVersionKeyword_0; }
+
+		//VERSION
+		public RuleCall getVERSIONTerminalRuleCall_1() { return cVERSIONTerminalRuleCall_1; }
+
+		//" encoding="
+		public Keyword getEncodingKeyword_2() { return cEncodingKeyword_2; }
+
+		//EString
+		public RuleCall getEStringParserRuleCall_3() { return cEStringParserRuleCall_3; }
+
+		//" ?>"
+		public Keyword getSpaceQuestionMarkGreaterThanSignKeyword_4() { return cSpaceQuestionMarkGreaterThanSignKeyword_4; }
+	}
+
 	public class ViewElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "View");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cViewAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cViewIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cViewNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cSpaceGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -278,19 +264,19 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cViewKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//View:
-		//	{View} "<view id=" name=EString " >" ("<description>" description=EString "</description>")? "<model ref="
+		//	{View} "<view name=" name=EString " >" ("<description>" description=EString "</description>")? "<model ref="
 		//	model=[Model|EString] " />" ("<actions>" actions+=Action actions+=Action* "</actions>")? "</view>";
 		public ParserRule getRule() { return rule; }
 
-		//{View} "<view id=" name=EString " >" ("<description>" description=EString "</description>")? "<model ref="
+		//{View} "<view name=" name=EString " >" ("<description>" description=EString "</description>")? "<model ref="
 		//model=[Model|EString] " />" ("<actions>" actions+=Action actions+=Action* "</actions>")? "</view>"
 		public Group getGroup() { return cGroup; }
 
 		//{View}
 		public Action getViewAction_0() { return cViewAction_0; }
 
-		//"<view id="
-		public Keyword getViewIdKeyword_1() { return cViewIdKeyword_1; }
+		//"<view name="
+		public Keyword getViewNameKeyword_1() { return cViewNameKeyword_1; }
 
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -360,7 +346,7 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cModelIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cModelNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cSpaceGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -388,12 +374,12 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModelKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Model:
-		//	{Model} "<model id=" name=EString " >" ("<properties>" properties+=ModelProperty properties+=ModelProperty*
+		//	{Model} "<model name=" name=EString " >" ("<properties>" properties+=ModelProperty properties+=ModelProperty*
 		//	"</properties>")? ("<ownedElements>" "<model ref=" ownedElements+=[Model|EString] " />" ("<model ref="
 		//	ownedElements+=[Model|EString] " />")* "</ownedElements>")? "</model>";
 		public ParserRule getRule() { return rule; }
 
-		//{Model} "<model id=" name=EString " >" ("<properties>" properties+=ModelProperty properties+=ModelProperty*
+		//{Model} "<model name=" name=EString " >" ("<properties>" properties+=ModelProperty properties+=ModelProperty*
 		//"</properties>")? ("<ownedElements>" "<model ref=" ownedElements+=[Model|EString] " />" ("<model ref="
 		//ownedElements+=[Model|EString] " />")* "</ownedElements>")? "</model>"
 		public Group getGroup() { return cGroup; }
@@ -401,8 +387,8 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//{Model}
 		public Action getModelAction_0() { return cModelAction_0; }
 
-		//"<model id="
-		public Keyword getModelIdKeyword_1() { return cModelIdKeyword_1; }
+		//"<model name="
+		public Keyword getModelNameKeyword_1() { return cModelNameKeyword_1; }
 
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -577,26 +563,42 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EString");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1_1 = (RuleCall)cGroup_1_1.eContents().get(1);
 		
 		//EString returns ecore::EString:
-		//	STRING | ID;
+		//	STRING | ID ("." ID)*;
 		public ParserRule getRule() { return rule; }
 
-		//STRING | ID
+		//STRING | ID ("." ID)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
 
+		//ID ("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
 		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+		public RuleCall getIDTerminalRuleCall_1_0() { return cIDTerminalRuleCall_1_0; }
+
+		//("." ID)*
+		public Group getGroup_1_1() { return cGroup_1_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_1_0() { return cFullStopKeyword_1_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1_1() { return cIDTerminalRuleCall_1_1_1; }
 	}
 	
 	
-	private PackageElements pPackage;
-	private XMLDeclarationElements pXMLDeclaration;
+	private MainPackageElements pMainPackage;
 	private UIApplicationElements pUIApplication;
+	private XMLDeclarationElements pXMLDeclaration;
 	private ViewElements pView;
 	private ModelElements pModel;
 	private ActionElements pAction;
@@ -642,24 +644,14 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Package:
-	//	XMLDeclaration (views+=View | models+=Model | actions+=Action | properties+=ModelProperty)* mainApp+=UIApplication;
-	public PackageElements getPackageAccess() {
-		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
+	//MainPackage:
+	//	XMLDeclaration (allModels+=Model | allViews+=View)* app=UIApplication;
+	public MainPackageElements getMainPackageAccess() {
+		return (pMainPackage != null) ? pMainPackage : (pMainPackage = new MainPackageElements());
 	}
 	
-	public ParserRule getPackageRule() {
-		return getPackageAccess().getRule();
-	}
-
-	//XMLDeclaration:
-	//	"<?xml version=" VERSION " encoding=" EString " ?>";
-	public XMLDeclarationElements getXMLDeclarationAccess() {
-		return (pXMLDeclaration != null) ? pXMLDeclaration : (pXMLDeclaration = new XMLDeclarationElements());
-	}
-	
-	public ParserRule getXMLDeclarationRule() {
-		return getXMLDeclarationAccess().getRule();
+	public ParserRule getMainPackageRule() {
+		return getMainPackageAccess().getRule();
 	}
 
 	//UIApplication:
@@ -674,8 +666,18 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 		return getUIApplicationAccess().getRule();
 	}
 
+	//XMLDeclaration: //	{XMLDeclaration}
+	//	"<?xml version=" VERSION " encoding=" EString " ?>";
+	public XMLDeclarationElements getXMLDeclarationAccess() {
+		return (pXMLDeclaration != null) ? pXMLDeclaration : (pXMLDeclaration = new XMLDeclarationElements());
+	}
+	
+	public ParserRule getXMLDeclarationRule() {
+		return getXMLDeclarationAccess().getRule();
+	}
+
 	//View:
-	//	{View} "<view id=" name=EString " >" ("<description>" description=EString "</description>")? "<model ref="
+	//	{View} "<view name=" name=EString " >" ("<description>" description=EString "</description>")? "<model ref="
 	//	model=[Model|EString] " />" ("<actions>" actions+=Action actions+=Action* "</actions>")? "</view>";
 	public ViewElements getViewAccess() {
 		return (pView != null) ? pView : (pView = new ViewElements());
@@ -686,7 +688,7 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Model:
-	//	{Model} "<model id=" name=EString " >" ("<properties>" properties+=ModelProperty properties+=ModelProperty*
+	//	{Model} "<model name=" name=EString " >" ("<properties>" properties+=ModelProperty properties+=ModelProperty*
 	//	"</properties>")? ("<ownedElements>" "<model ref=" ownedElements+=[Model|EString] " />" ("<model ref="
 	//	ownedElements+=[Model|EString] " />")* "</ownedElements>")? "</model>";
 	public ModelElements getModelAccess() {
@@ -724,7 +726,7 @@ public class LanguageGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//EString returns ecore::EString:
-	//	STRING | ID;
+	//	STRING | ID ("." ID)*;
 	public EStringElements getEStringAccess() {
 		return (pEString != null) ? pEString : (pEString = new EStringElements());
 	}

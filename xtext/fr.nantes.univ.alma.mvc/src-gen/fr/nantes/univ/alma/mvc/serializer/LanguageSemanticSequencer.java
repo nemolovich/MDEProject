@@ -3,6 +3,7 @@ package fr.nantes.univ.alma.mvc.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import fr.nantes.univ.alma.mvc.mvc.Action;
+import fr.nantes.univ.alma.mvc.mvc.MainPackage;
 import fr.nantes.univ.alma.mvc.mvc.Model;
 import fr.nantes.univ.alma.mvc.mvc.ModelProperty;
 import fr.nantes.univ.alma.mvc.mvc.MvcPackage;
@@ -35,6 +36,12 @@ public class LanguageSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
+			case MvcPackage.MAIN_PACKAGE:
+				if(context == grammarAccess.getMainPackageRule()) {
+					sequence_MainPackage(context, (MainPackage) semanticObject); 
+					return; 
+				}
+				else break;
 			case MvcPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
@@ -44,12 +51,6 @@ public class LanguageSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case MvcPackage.MODEL_PROPERTY:
 				if(context == grammarAccess.getModelPropertyRule()) {
 					sequence_ModelProperty(context, (ModelProperty) semanticObject); 
-					return; 
-				}
-				else break;
-			case MvcPackage.PACKAGE:
-				if(context == grammarAccess.getPackageRule()) {
-					sequence_Package(context, (fr.nantes.univ.alma.mvc.mvc.Package) semanticObject); 
 					return; 
 				}
 				else break;
@@ -80,6 +81,15 @@ public class LanguageSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     ((allModels+=Model | allViews+=View)* app=UIApplication)
+	 */
+	protected void sequence_MainPackage(EObject context, MainPackage semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     name=EString
 	 */
 	protected void sequence_ModelProperty(EObject context, ModelProperty semanticObject) {
@@ -99,15 +109,6 @@ public class LanguageSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     (name=EString (properties+=ModelProperty properties+=ModelProperty*)? (ownedElements+=[Model|EString] ownedElements+=[Model|EString]*)?)
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ((views+=View | models+=Model | actions+=Action | properties+=ModelProperty)* mainApp+=UIApplication)
-	 */
-	protected void sequence_Package(EObject context, fr.nantes.univ.alma.mvc.mvc.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
